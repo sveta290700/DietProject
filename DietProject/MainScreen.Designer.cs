@@ -30,13 +30,37 @@ namespace DietProject
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
+            this.ButtonToKE = new System.Windows.Forms.Button();
+            this.ButtonToTS = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // ButtonToKE
+            // 
+            resources.ApplyResources(this.ButtonToKE, "ButtonToKE");
+            this.ButtonToKE.BackColor = System.Drawing.Color.PaleGreen;
+            this.ButtonToKE.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.ButtonToKE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.ButtonToKE.Name = "ButtonToKE";
+            this.ButtonToKE.TabStop = false;
+            this.ButtonToKE.UseVisualStyleBackColor = false;
+            // 
+            // ButtonToTS
+            // 
+            resources.ApplyResources(this.ButtonToTS, "ButtonToTS");
+            this.ButtonToTS.BackColor = System.Drawing.Color.PaleGreen;
+            this.ButtonToTS.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.ButtonToTS.Name = "ButtonToTS";
+            this.ButtonToTS.TabStop = false;
+            this.ButtonToTS.UseVisualStyleBackColor = false;
             // 
             // MainScreen
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.ButtonToTS);
+            this.Controls.Add(this.ButtonToKE);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainScreen";
@@ -46,6 +70,9 @@ namespace DietProject
         }
 
         #endregion
+
+        private System.Windows.Forms.Button ButtonToKE;
+        private System.Windows.Forms.Button ButtonToTS;
     }
 }
 
