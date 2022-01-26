@@ -39,10 +39,10 @@ namespace DietProject
             resources.ApplyResources(this.ButtonToKE, "ButtonToKE");
             this.ButtonToKE.BackColor = System.Drawing.Color.PaleGreen;
             this.ButtonToKE.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.ButtonToKE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.ButtonToKE.Name = "ButtonToKE";
             this.ButtonToKE.TabStop = false;
             this.ButtonToKE.UseVisualStyleBackColor = false;
+            this.ButtonToKE.Click += new System.EventHandler(this.ButtonToKE_Click);
             // 
             // ButtonToTS
             // 

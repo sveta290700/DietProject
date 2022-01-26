@@ -21,5 +21,11 @@ namespace DietProject
         {
 
         }
+
+        private void ButtonToKE_Click(object sender, EventArgs e)
+        {
+            KnowledgeEditor KnowledgeEditor = new KnowledgeEditor();
+            KnowledgeEditor.ShowDialog();
+        }
     }
 }
