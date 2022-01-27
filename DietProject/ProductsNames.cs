@@ -5,11 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
+using System.Reflection;
 
 namespace DietProject
 {
     public partial class ProductsNames : Form
     {
+        private SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + new DirectoryInfo(Application.StartupPath).Parent.Parent.Parent.FullName + @"\Database.mdf;Integrated Security=True");
+        private SqlDataAdapter adapter;
+        private DataTable table = new DataTable();
         public ProductsNames()
         {
             InitializeComponent();
@@ -42,6 +48,15 @@ namespace DietProject
                         break;
                 }
             }
+        }
+
+        private void ProductsNames_Load(object sender, EventArgs e)
+        {
+            adapter = new SqlDataAdapter("SELECT * FROM ProductsNames", sqlConnection);
+            adapter.Fill(table);
+            PNProductsNamesListBox.DataSource = table;
+            PNProductsNamesListBox.DisplayMember = "Name";
+            PNProductsNamesListBox.ValueMember = "Id";
         }
     }
 }
