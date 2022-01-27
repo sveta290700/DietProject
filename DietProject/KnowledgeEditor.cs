@@ -27,8 +27,10 @@ namespace DietProject
                         ErrorForm.ShowDialog();
                         break;
                     }
-                case 1:
+                case 0:
                     {
+                        ProductsNames ProductsNames = new ProductsNames();
+                        ProductsNames.ShowDialog();
                         break;
                     }
                 default:

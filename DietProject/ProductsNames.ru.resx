@@ -58,14 +58,82 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ErrorLabel.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="ProductsNamesLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
-  <data name="ErrorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ProductsNamesLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="ErrorLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>449, 143</value>
+  <data name="ProductsNamesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 24</value>
+  </data>
+  <data name="ProductsNamesLabel.Text" xml:space="preserve">
+    <value>Продукты</value>
+  </data>
+  <data name="PNProductsNamesListBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PNProductsNamesListBox.ItemHeight" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="PNProductsNamesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 73</value>
+  </data>
+  <data name="PNProductsNamesListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 235</value>
+  </data>
+  <data name="PNProductsNamesListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="PNAddButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="PNAddButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="PNAddButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PNAddButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 38</value>
+  </data>
+  <data name="PNAddButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="PNAddButton.Text" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="PNDeleteButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="PNDeleteButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="PNDeleteButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PNDeleteButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 38</value>
+  </data>
+  <data name="PNDeleteButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="PNDeleteButton.Text" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="ProductNameTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="ProductNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 366</value>
+  </data>
+  <data name="ProductNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 29</value>
+  </data>
+  <data name="ProductNameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2828,8 +2896,5 @@
         AAAAoQAAALMAAAC2AAAAMwAAAAAAAAAAAAAAAAAAAADwjwAA8I8AAPAvAADwLwAA8C8AAPCPAADwjwAA
         8I8AAPCHAADgJwAA5jcAAOA3AADgJwAA4CcAAOAHAADgDwAA
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Ошибка</value>
   </data>
 </root>
