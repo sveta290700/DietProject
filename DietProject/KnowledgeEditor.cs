@@ -14,5 +14,26 @@ namespace DietProject
         {
             InitializeComponent();
         }
+
+        private void KEChoiceButton_Click(object sender, EventArgs e)
+        {
+            int choice = KLSectionsListBox.SelectedIndex;
+            switch (choice)
+            {
+                case -1:
+                    {
+                        ErrorForm ErrorForm = new ErrorForm();
+                        ErrorForm.ErrorLabel.Text = "Выберите раздел.";
+                        ErrorForm.ShowDialog();
+                        break;
+                    }
+                case 1:
+                    {
+                        break;
+                    }
+                default:
+                    break;
+            }
+        }
     }
 }

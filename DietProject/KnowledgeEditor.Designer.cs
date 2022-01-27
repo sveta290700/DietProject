@@ -72,6 +72,7 @@ namespace DietProject
             this.KEChoiceButton.Name = "KEChoiceButton";
             this.KEChoiceButton.TabStop = false;
             this.KEChoiceButton.UseVisualStyleBackColor = false;
+            this.KEChoiceButton.Click += new System.EventHandler(this.KEChoiceButton_Click);
             // 
             // KnowledgeEditor
             // 

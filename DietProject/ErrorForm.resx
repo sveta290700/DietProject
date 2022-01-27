@@ -57,71 +57,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="KEChoiceLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;ErrorLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ErrorLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="KEChoiceLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+  <data name="ErrorLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 64</value>
   </data>
-  <data name="KEChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 76</value>
-  </data>
-  <data name="KEChoiceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 21</value>
-  </data>
-  <data name="KEChoiceLabel.Text" xml:space="preserve">
-    <value>Выберите раздел для редактирования:</value>
-  </data>
-  <data name="KLSectionsListBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="KLSectionsListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="KLSectionsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 142</value>
-  </data>
-  <data name="KLSectionsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 193</value>
-  </data>
-  <data name="KLSectionsListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="SectionLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="SectionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 117</value>
-  </data>
-  <data name="SectionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 24</value>
-  </data>
-  <data name="SectionLabel.Text" xml:space="preserve">
-    <value>Разделы</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ErrorForm</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="KEChoiceButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
-  <data name="KEChoiceButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
   </data>
-  <data name="KEChoiceButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ErrorForm</value>
   </data>
-  <data name="KEChoiceButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 357</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="KEChoiceButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 38</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>473, 161</value>
   </data>
-  <data name="KEChoiceButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;ErrorLabel.Name" xml:space="preserve">
+    <value>ErrorLabel</value>
   </data>
-  <data name="KEChoiceButton.Text" xml:space="preserve">
-    <value>Выбрать</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ErrorLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ErrorLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2885,10 +2858,10 @@
         8I8AAPCHAADgJwAA5jcAAOA3AADgJwAA4CcAAOAHAADgDwAA
 </value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Редактор базы знаний</value>
-  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>ru</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
