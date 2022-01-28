@@ -13,6 +13,7 @@ namespace DietProject
     {
         private SqlDataAdapter adapter;
         private DataTable ProductsNamesTable = new DataTable();
+
         public ProductsNames()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace DietProject
                 SqlCommand cmd = new SqlCommand("INSERT INTO ProductsNames VALUES (N'" + ProductNameTextBox.Text.ToString() + "');", Program.sqlConnection);
                 cmd.ExecuteNonQuery();
                 Program.sqlConnection.Close();
+                ProductNameTextBox.Clear();
                 ProductsNamesTable = new DataTable();
                 PNProductsNamesListBox.DataSource = ProductsNamesTable;
                 Program.sqlConnection.Open();
@@ -46,32 +48,30 @@ namespace DietProject
 
         private void PNDeleteButton_Click(object sender, EventArgs e)
         {
+            int choice = PNProductsNamesListBox.SelectedIndex;
+            if (choice == -1)
             {
-                int choice = PNProductsNamesListBox.SelectedIndex;
-                if (choice == -1)
-                {
-                    ErrorForm ErrorForm = new ErrorForm();
-                    ErrorForm.ErrorLabel.Text = "Выберите название продукта.";
-                    ErrorForm.ShowDialog();
-                }
-                else
-                {
-                    Program.sqlConnection.Open();
-                    DataRowView item = (DataRowView) PNProductsNamesListBox.SelectedItem;
-                    string nameToDelete = item.Row[1].ToString();
-                    SqlCommand cmd = new SqlCommand("DELETE FROM ProductsNames WHERE Name = N'" + nameToDelete + "';", Program.sqlConnection);
-                    cmd.ExecuteNonQuery();
-                    Program.sqlConnection.Close();
-                    ProductsNamesTable = new DataTable();
-                    PNProductsNamesListBox.DataSource = ProductsNamesTable;
-                    Program.sqlConnection.Open();
-                    adapter = new SqlDataAdapter("SELECT * FROM ProductsNames", Program.sqlConnection);
-                    adapter.Fill(ProductsNamesTable);
-                    PNProductsNamesListBox.DataSource = ProductsNamesTable;
-                    PNProductsNamesListBox.DisplayMember = "Name";
-                    PNProductsNamesListBox.ValueMember = "Id";
-                    Program.sqlConnection.Close();
-                }
+                ErrorForm ErrorForm = new ErrorForm();
+                ErrorForm.ErrorLabel.Text = "Выберите название продукта.";
+                ErrorForm.ShowDialog();
+            }
+            else
+            {
+                Program.sqlConnection.Open();
+                DataRowView item = (DataRowView) PNProductsNamesListBox.SelectedItem;
+                string nameToDelete = item.Row[1].ToString();
+                SqlCommand cmd = new SqlCommand("DELETE FROM ProductsNames WHERE Name = N'" + nameToDelete + "';", Program.sqlConnection);
+                cmd.ExecuteNonQuery();
+                Program.sqlConnection.Close();
+                ProductsNamesTable = new DataTable();
+                PNProductsNamesListBox.DataSource = ProductsNamesTable;
+                Program.sqlConnection.Open();
+                adapter = new SqlDataAdapter("SELECT * FROM ProductsNames", Program.sqlConnection);
+                adapter.Fill(ProductsNamesTable);
+                PNProductsNamesListBox.DataSource = ProductsNamesTable;
+                PNProductsNamesListBox.DisplayMember = "Name";
+                PNProductsNamesListBox.ValueMember = "Id";
+                Program.sqlConnection.Close();
             }
         }
 

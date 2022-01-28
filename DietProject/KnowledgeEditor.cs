@@ -33,6 +33,18 @@ namespace DietProject
                         ProductsNames.ShowDialog();
                         break;
                     }
+                case 1:
+                    {
+                        Categories Categories = new Categories();
+                        Categories.ShowDialog();
+                        break;
+                    }
+                case 3:
+                    {
+                        Features Features = new Features();
+                        Features.ShowDialog();
+                        break;
+                    }
                 default:
                     break;
             }
