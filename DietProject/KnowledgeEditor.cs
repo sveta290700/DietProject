@@ -39,10 +39,28 @@ namespace DietProject
                         Categories.ShowDialog();
                         break;
                     }
+                case 2:
+                    {
+                        ProductsCategories ProductsCategories = new ProductsCategories();
+                        ProductsCategories.ShowDialog();
+                        break;
+                    }
                 case 3:
                     {
                         Features Features = new Features();
                         Features.ShowDialog();
+                        break;
+                    }
+                case 4:
+                    {
+                        PossibleValues PossibleValues = new PossibleValues();
+                        PossibleValues.ShowDialog();
+                        break;
+                    }
+                case 5:
+                    {
+                        FeatureDescription FeatureDescription = new FeatureDescription();
+                        FeatureDescription.ShowDialog();
                         break;
                     }
                 default:
