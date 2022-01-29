@@ -58,133 +58,151 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PCSaveButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="PVSaveButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PCSaveButton.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="PVSaveButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
-  <data name="PCSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="PVSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="PCSaveButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PVSaveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>553, 297</value>
+  </data>
+  <data name="PVSaveButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 38</value>
   </data>
-  <data name="PCSaveButton.Text" xml:space="preserve">
+  <data name="PVSaveButton.Text" xml:space="preserve">
     <value>Сохранить</value>
   </data>
-  <data name="PCProductsNamesLabel.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="PVFeaturesLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
-  <data name="PCProductsNamesLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="PVFeaturesLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="PCProductsNamesLabel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PVFeaturesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 65</value>
+  </data>
+  <data name="PVFeaturesLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 24</value>
   </data>
-  <data name="PCProductsNamesLabel.Text" xml:space="preserve">
-    <value>Признаки продуктов</value>
+  <data name="PVFeaturesLabel.Text" xml:space="preserve">
+    <value>Выберите признак продуктов:</value>
   </data>
-  <data name="PCProductsNamesListBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="PVFeaturesListBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PCProductsNamesListBox.ItemHeight" type="System.Int32, mscorlib">
+  <data name="PVFeaturesListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="PCProductsNamesListBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PVFeaturesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 92</value>
+  </data>
+  <data name="PVFeaturesListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 256</value>
   </data>
-  <data name="PCChoiceLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="PCChoiceLabel.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="PVValuesLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
-  <data name="PCChoiceLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="PVValuesLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="PCChoiceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 21</value>
+  <data name="PVValuesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>495, 124</value>
   </data>
-  <data name="PCChoiceLabel.Text" xml:space="preserve">
-    <value>Выберите признак продуктов:</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PVValuesLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>206, 25</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Признаки продуктов</value>
+  <data name="PVValuesLabel.Text" xml:space="preserve">
+    <value>Границы интервала</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="PVFromLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="PVFromLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="PVFromLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PVFromLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 178</value>
+  </data>
+  <data name="PVFromLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 21</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="PVFromLabel.Text" xml:space="preserve">
     <value>От:</value>
   </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+  <data name="PVToLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="PVToLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="PVToLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PVToLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 68</value>
+  </data>
+  <data name="PVToLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 21</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
+  <data name="PVToLabel.Text" xml:space="preserve">
     <value>До:</value>
   </data>
-  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="PVFromCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PVFromCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>622, 181</value>
+  </data>
+  <data name="PVFromCheckbox.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 19</value>
   </data>
-  <data name="checkBox1.Text" xml:space="preserve">
+  <data name="PVFromCheckbox.Text" xml:space="preserve">
     <value>Включая</value>
   </data>
-  <data name="checkBox2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="PVToCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="PVToCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PVToCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>621, 236</value>
+  </data>
+  <data name="PVToCheckbox.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 19</value>
   </data>
-  <data name="checkBox2.Text" xml:space="preserve">
+  <data name="PVToCheckbox.Text" xml:space="preserve">
     <value>Включая</value>
   </data>
-  <data name="numericUpDown1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>538, 188</value>
+  <data name="PVFromNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>538, 179</value>
   </data>
-  <data name="numericUpDown1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PVFromNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 23</value>
   </data>
-  <data name="numericUpDown2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PVToNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>538, 233</value>
+  </data>
+  <data name="PVToNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 23</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>495, 152</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>206, 125</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

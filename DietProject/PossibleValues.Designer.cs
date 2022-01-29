@@ -30,97 +30,105 @@ namespace DietProject
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PossibleValues));
-            this.PCSaveButton = new System.Windows.Forms.Button();
-            this.PCProductsNamesLabel = new System.Windows.Forms.Label();
-            this.PCProductsNamesListBox = new System.Windows.Forms.ListBox();
-            this.PCChoiceLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.PVSaveButton = new System.Windows.Forms.Button();
+            this.PVFeaturesLabel = new System.Windows.Forms.Label();
+            this.PVFeaturesListBox = new System.Windows.Forms.ListBox();
+            this.PVValuesLabel = new System.Windows.Forms.Label();
+            this.PVFromLabel = new System.Windows.Forms.Label();
+            this.PVToLabel = new System.Windows.Forms.Label();
+            this.PVFromCheckbox = new System.Windows.Forms.CheckBox();
+            this.PVToCheckbox = new System.Windows.Forms.CheckBox();
+            this.PVFromNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.PVToNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PVFromNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PVToNumericUpDown)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PCSaveButton
+            // PVSaveButton
             // 
-            resources.ApplyResources(this.PCSaveButton, "PCSaveButton");
-            this.PCSaveButton.BackColor = System.Drawing.Color.PaleGreen;
-            this.PCSaveButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.PCSaveButton.Name = "PCSaveButton";
-            this.PCSaveButton.TabStop = false;
-            this.PCSaveButton.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.PVSaveButton, "PVSaveButton");
+            this.PVSaveButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.PVSaveButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.PVSaveButton.Name = "PVSaveButton";
+            this.PVSaveButton.TabStop = false;
+            this.PVSaveButton.UseVisualStyleBackColor = false;
             // 
-            // PCProductsNamesLabel
+            // PVFeaturesLabel
             // 
-            resources.ApplyResources(this.PCProductsNamesLabel, "PCProductsNamesLabel");
-            this.PCProductsNamesLabel.BackColor = System.Drawing.Color.LightGreen;
-            this.PCProductsNamesLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PCProductsNamesLabel.Name = "PCProductsNamesLabel";
+            resources.ApplyResources(this.PVFeaturesLabel, "PVFeaturesLabel");
+            this.PVFeaturesLabel.BackColor = System.Drawing.Color.LightGreen;
+            this.PVFeaturesLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PVFeaturesLabel.Name = "PVFeaturesLabel";
             // 
-            // PCProductsNamesListBox
+            // PVFeaturesListBox
             // 
-            resources.ApplyResources(this.PCProductsNamesListBox, "PCProductsNamesListBox");
-            this.PCProductsNamesListBox.FormattingEnabled = true;
-            this.PCProductsNamesListBox.Name = "PCProductsNamesListBox";
-            this.PCProductsNamesListBox.TabStop = false;
+            resources.ApplyResources(this.PVFeaturesListBox, "PVFeaturesListBox");
+            this.PVFeaturesListBox.FormattingEnabled = true;
+            this.PVFeaturesListBox.Name = "PVFeaturesListBox";
+            this.PVFeaturesListBox.TabStop = false;
             // 
-            // PCChoiceLabel
+            // PVValuesLabel
             // 
-            resources.ApplyResources(this.PCChoiceLabel, "PCChoiceLabel");
-            this.PCChoiceLabel.Name = "PCChoiceLabel";
+            resources.ApplyResources(this.PVValuesLabel, "PVValuesLabel");
+            this.PVValuesLabel.BackColor = System.Drawing.Color.LightGreen;
+            this.PVValuesLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PVValuesLabel.Name = "PVValuesLabel";
             // 
-            // label1
+            // PVFromLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.Color.LightGreen;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.PVFromLabel, "PVFromLabel");
+            this.PVFromLabel.Name = "PVFromLabel";
             // 
-            // label2
+            // PVToLabel
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.PVToLabel, "PVToLabel");
+            this.PVToLabel.Name = "PVToLabel";
             // 
-            // label3
+            // PVFromCheckbox
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.PVFromCheckbox, "PVFromCheckbox");
+            this.PVFromCheckbox.Name = "PVFromCheckbox";
+            this.PVFromCheckbox.TabStop = false;
+            this.PVFromCheckbox.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // PVToCheckbox
             // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.PVToCheckbox, "PVToCheckbox");
+            this.PVToCheckbox.Name = "PVToCheckbox";
+            this.PVToCheckbox.TabStop = false;
+            this.PVToCheckbox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // PVFromNumericUpDown
             // 
-            resources.ApplyResources(this.checkBox2, "checkBox2");
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.PVFromNumericUpDown, "PVFromNumericUpDown");
+            this.PVFromNumericUpDown.DecimalPlaces = 5;
+            this.PVFromNumericUpDown.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
+            this.PVFromNumericUpDown.Name = "PVFromNumericUpDown";
+            this.PVFromNumericUpDown.TabStop = false;
             // 
-            // numericUpDown1
+            // PVToNumericUpDown
             // 
-            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
-            this.numericUpDown1.DecimalPlaces = 1;
-            this.numericUpDown1.Name = "numericUpDown1";
-            // 
-            // numericUpDown2
-            // 
-            resources.ApplyResources(this.numericUpDown2, "numericUpDown2");
-            this.numericUpDown2.DecimalPlaces = 1;
-            this.numericUpDown2.Name = "numericUpDown2";
+            resources.ApplyResources(this.PVToNumericUpDown, "PVToNumericUpDown");
+            this.PVToNumericUpDown.DecimalPlaces = 5;
+            this.PVToNumericUpDown.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            327680});
+            this.PVToNumericUpDown.Name = "PVToNumericUpDown";
+            this.PVToNumericUpDown.TabStop = false;
             // 
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.PVToLabel);
             this.panel1.Name = "panel1";
             // 
             // PossibleValues
@@ -128,23 +136,22 @@ namespace DietProject
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.PCChoiceLabel);
-            this.Controls.Add(this.PCSaveButton);
-            this.Controls.Add(this.PCProductsNamesLabel);
-            this.Controls.Add(this.PCProductsNamesListBox);
+            this.Controls.Add(this.PVToNumericUpDown);
+            this.Controls.Add(this.PVFromNumericUpDown);
+            this.Controls.Add(this.PVToCheckbox);
+            this.Controls.Add(this.PVFromCheckbox);
+            this.Controls.Add(this.PVFromLabel);
+            this.Controls.Add(this.PVValuesLabel);
+            this.Controls.Add(this.PVSaveButton);
+            this.Controls.Add(this.PVFeaturesLabel);
+            this.Controls.Add(this.PVFeaturesListBox);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PossibleValues";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PVFromNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PVToNumericUpDown)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -154,17 +161,16 @@ namespace DietProject
 
         #endregion
 
-        private System.Windows.Forms.Button PCSaveButton;
-        private System.Windows.Forms.Label PCProductsNamesLabel;
-        private System.Windows.Forms.ListBox PCProductsNamesListBox;
-        private System.Windows.Forms.Label PCChoiceLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Button PVSaveButton;
+        private System.Windows.Forms.Label PVFeaturesLabel;
+        private System.Windows.Forms.ListBox PVFeaturesListBox;
+        private System.Windows.Forms.Label PVValuesLabel;
+        private System.Windows.Forms.Label PVFromLabel;
+        private System.Windows.Forms.Label PVToLabel;
+        private System.Windows.Forms.CheckBox PVFromCheckbox;
+        private System.Windows.Forms.CheckBox PVToCheckbox;
+        private System.Windows.Forms.NumericUpDown PVFromNumericUpDown;
+        private System.Windows.Forms.NumericUpDown PVToNumericUpDown;
         private System.Windows.Forms.Panel panel1;
     }
 }

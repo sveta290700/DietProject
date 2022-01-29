@@ -63,6 +63,18 @@ namespace DietProject
                         FeatureDescription.ShowDialog();
                         break;
                     }
+                case 6:
+                    {
+                        FeatureValue FeatureValue = new FeatureValue();
+                        FeatureValue.ShowDialog();
+                        break;
+                    }
+                case 7:
+                    {
+                        DayNorms DayNorms = new DayNorms();
+                        DayNorms.ShowDialog();
+                        break;
+                    }
                 default:
                     break;
             }
