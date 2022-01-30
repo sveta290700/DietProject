@@ -66,6 +66,7 @@ namespace DietProject
             this.FDProductsComboBox.FormattingEnabled = true;
             this.FDProductsComboBox.Name = "FDProductsComboBox";
             this.FDProductsComboBox.TabStop = false;
+            this.FDProductsComboBox.SelectedIndexChanged += new System.EventHandler(this.FDProductsComboBox_SelectedIndexChanged);
             // 
             // FDSaveButton
             // 

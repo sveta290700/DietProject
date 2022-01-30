@@ -90,6 +90,7 @@ namespace DietProject
             this.PCCategoriesComboBox.FormattingEnabled = true;
             this.PCCategoriesComboBox.Name = "PCCategoriesComboBox";
             this.PCCategoriesComboBox.TabStop = false;
+            this.PCCategoriesComboBox.SelectedIndexChanged += new System.EventHandler(this.PCCategoriesComboBox_SelectedIndexChanged);
             // 
             // PCSelectButton
             // 

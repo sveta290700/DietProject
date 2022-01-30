@@ -32,11 +32,9 @@ namespace DietProject
                 Program.sqlConnection.Open();
                 SqlCommand cmd = new SqlCommand("INSERT INTO Categories VALUES (N'" + CategoryTextBox.Text.ToString() + "');", Program.sqlConnection);
                 cmd.ExecuteNonQuery();
-                Program.sqlConnection.Close();
                 CategoryTextBox.Clear();
                 CategoriesTable = new DataTable();
                 CCategoriesListBox.DataSource = CategoriesTable;
-                Program.sqlConnection.Open();
                 adapter = new SqlDataAdapter("SELECT * FROM Categories", Program.sqlConnection);
                 adapter.Fill(CategoriesTable);
                 CCategoriesListBox.DataSource = CategoriesTable;
@@ -62,10 +60,8 @@ namespace DietProject
                 string nameToDelete = item.Row[1].ToString();
                 SqlCommand cmd = new SqlCommand("DELETE FROM Categories WHERE Name = N'" + nameToDelete + "';", Program.sqlConnection);
                 cmd.ExecuteNonQuery();
-                Program.sqlConnection.Close();
                 CategoriesTable = new DataTable();
                 CCategoriesListBox.DataSource = CategoriesTable;
-                Program.sqlConnection.Open();
                 adapter = new SqlDataAdapter("SELECT * FROM Categories", Program.sqlConnection);
                 adapter.Fill(CategoriesTable);
                 CCategoriesListBox.DataSource = CategoriesTable;
@@ -77,13 +73,11 @@ namespace DietProject
 
         private void Categories_Load(object sender, EventArgs e)
         {
-            Program.sqlConnection.Open();
             adapter = new SqlDataAdapter("SELECT * FROM Categories", Program.sqlConnection);
             adapter.Fill(CategoriesTable);
             CCategoriesListBox.DataSource = CategoriesTable;
             CCategoriesListBox.DisplayMember = "Name";
             CCategoriesListBox.ValueMember = "Id";
-            Program.sqlConnection.Close();
         }
     }
 }

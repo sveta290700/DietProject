@@ -32,11 +32,9 @@ namespace DietProject
                 Program.sqlConnection.Open();
                 SqlCommand cmd = new SqlCommand("INSERT INTO ProductsNames VALUES (N'" + ProductNameTextBox.Text.ToString() + "');", Program.sqlConnection);
                 cmd.ExecuteNonQuery();
-                Program.sqlConnection.Close();
                 ProductNameTextBox.Clear();
                 ProductsNamesTable = new DataTable();
                 PNProductsNamesListBox.DataSource = ProductsNamesTable;
-                Program.sqlConnection.Open();
                 adapter = new SqlDataAdapter("SELECT * FROM ProductsNames", Program.sqlConnection);
                 adapter.Fill(ProductsNamesTable);
                 PNProductsNamesListBox.DataSource = ProductsNamesTable;
@@ -62,10 +60,8 @@ namespace DietProject
                 string nameToDelete = item.Row[1].ToString();
                 SqlCommand cmd = new SqlCommand("DELETE FROM ProductsNames WHERE Name = N'" + nameToDelete + "';", Program.sqlConnection);
                 cmd.ExecuteNonQuery();
-                Program.sqlConnection.Close();
                 ProductsNamesTable = new DataTable();
                 PNProductsNamesListBox.DataSource = ProductsNamesTable;
-                Program.sqlConnection.Open();
                 adapter = new SqlDataAdapter("SELECT * FROM ProductsNames", Program.sqlConnection);
                 adapter.Fill(ProductsNamesTable);
                 PNProductsNamesListBox.DataSource = ProductsNamesTable;
@@ -77,13 +73,11 @@ namespace DietProject
 
         private void ProductsNames_Load(object sender, EventArgs e)
         {
-            Program.sqlConnection.Open();
             adapter = new SqlDataAdapter("SELECT * FROM ProductsNames", Program.sqlConnection);
             adapter.Fill(ProductsNamesTable);
             PNProductsNamesListBox.DataSource = ProductsNamesTable;
             PNProductsNamesListBox.DisplayMember = "Name";
             PNProductsNamesListBox.ValueMember = "Id";
-            Program.sqlConnection.Close();
         }
     }
 }

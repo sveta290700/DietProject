@@ -32,11 +32,9 @@ namespace DietProject
                 Program.sqlConnection.Open();
                 SqlCommand cmd = new SqlCommand("INSERT INTO Features VALUES (N'" + FeatureTextBox.Text.ToString() + "');", Program.sqlConnection);
                 cmd.ExecuteNonQuery();
-                Program.sqlConnection.Close();
                 FeatureTextBox.Clear();
                 FeaturesTable = new DataTable();
                 FFeaturesListBox.DataSource = FeaturesTable;
-                Program.sqlConnection.Open();
                 adapter = new SqlDataAdapter("SELECT * FROM Features", Program.sqlConnection);
                 adapter.Fill(FeaturesTable);
                 FFeaturesListBox.DataSource = FeaturesTable;
@@ -70,10 +68,8 @@ namespace DietProject
                     Program.sqlConnection.Open();
                     SqlCommand cmd = new SqlCommand("DELETE FROM Features WHERE Name = N'" + nameToDelete + "';", Program.sqlConnection);
                     cmd.ExecuteNonQuery();
-                    Program.sqlConnection.Close();
                     FeaturesTable = new DataTable();
                     FFeaturesListBox.DataSource = FeaturesTable;
-                    Program.sqlConnection.Open();
                     adapter = new SqlDataAdapter("SELECT * FROM Features", Program.sqlConnection);
                     adapter.Fill(FeaturesTable);
                     FFeaturesListBox.DataSource = FeaturesTable;
@@ -89,15 +85,11 @@ namespace DietProject
             Program.sqlConnection.Open();
             SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Features WHERE Name = N'стоимость за 1 кг продукта';", Program.sqlConnection);
             int res = (int)cmd.ExecuteScalar();
-            Program.sqlConnection.Close();
             if (res == 0)
             {
-                Program.sqlConnection.Open();
                 SqlCommand cm = new SqlCommand("INSERT INTO Features VALUES (N'стоимость за 1 кг продукта');", Program.sqlConnection);
                 cm.ExecuteNonQuery();
-                Program.sqlConnection.Close();
             }
-            Program.sqlConnection.Open();
             adapter = new SqlDataAdapter("SELECT * FROM Features", Program.sqlConnection);
             adapter.Fill(FeaturesTable);
             FFeaturesListBox.DataSource = FeaturesTable;
