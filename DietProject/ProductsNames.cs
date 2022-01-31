@@ -30,16 +30,27 @@ namespace DietProject
             else
             {
                 Program.sqlConnection.Open();
-                SqlCommand addProductName = new SqlCommand("INSERT INTO ProductsNames VALUES (N'" + ProductNameTextBox.Text.ToString() + "');", Program.sqlConnection);
-                addProductName.ExecuteNonQuery();
-                ProductNameTextBox.Clear();
-                ProductsNamesTable = new DataTable();
-                PNProductsNamesListBox.DataSource = ProductsNamesTable;
-                adapter = new SqlDataAdapter("SELECT * FROM ProductsNames", Program.sqlConnection);
-                adapter.Fill(ProductsNamesTable);
-                PNProductsNamesListBox.DataSource = ProductsNamesTable;
-                PNProductsNamesListBox.DisplayMember = "Name";
-                PNProductsNamesListBox.ValueMember = "Id";
+                SqlCommand checkIsUnique = new SqlCommand("SELECT COUNT(*) FROM ProductsNames WHERE Name = N'" + ProductNameTextBox.Text.ToString() + "';", Program.sqlConnection);
+                int res = (int)checkIsUnique.ExecuteScalar();
+                if (res == 0)
+                {
+                    SqlCommand addProductName = new SqlCommand("INSERT INTO ProductsNames VALUES (N'" + ProductNameTextBox.Text.ToString() + "');", Program.sqlConnection);
+                    addProductName.ExecuteNonQuery();
+                    ProductNameTextBox.Clear();
+                    ProductsNamesTable = new DataTable();
+                    PNProductsNamesListBox.DataSource = ProductsNamesTable;
+                    adapter = new SqlDataAdapter("SELECT * FROM ProductsNames", Program.sqlConnection);
+                    adapter.Fill(ProductsNamesTable);
+                    PNProductsNamesListBox.DataSource = ProductsNamesTable;
+                    PNProductsNamesListBox.DisplayMember = "Name";
+                    PNProductsNamesListBox.ValueMember = "Id";
+                }
+                else
+                {
+                    ErrorForm ErrorForm = new ErrorForm();
+                    ErrorForm.ErrorLabel.Text = "Продукт с таким названием уже существует.";
+                    ErrorForm.ShowDialog();
+                }
                 Program.sqlConnection.Close();
             }
         }

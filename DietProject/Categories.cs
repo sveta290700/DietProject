@@ -30,16 +30,27 @@ namespace DietProject
             else
             {
                 Program.sqlConnection.Open();
-                SqlCommand addCategory = new SqlCommand("INSERT INTO Categories VALUES (N'" + CategoryTextBox.Text.ToString() + "');", Program.sqlConnection);
-                addCategory.ExecuteNonQuery();
-                CategoryTextBox.Clear();
-                CategoriesTable = new DataTable();
-                CCategoriesListBox.DataSource = CategoriesTable;
-                adapter = new SqlDataAdapter("SELECT * FROM Categories", Program.sqlConnection);
-                adapter.Fill(CategoriesTable);
-                CCategoriesListBox.DataSource = CategoriesTable;
-                CCategoriesListBox.DisplayMember = "Name";
-                CCategoriesListBox.ValueMember = "Id";
+                SqlCommand checkIsUnique = new SqlCommand("SELECT COUNT(*) FROM Categories WHERE Name = N'" + CategoryTextBox.Text.ToString() + "';", Program.sqlConnection);
+                int res = (int)checkIsUnique.ExecuteScalar();
+                if (res == 0)
+                {
+                    SqlCommand addProductName = new SqlCommand("INSERT INTO Categories VALUES (N'" + CategoryTextBox.Text.ToString() + "');", Program.sqlConnection);
+                    addProductName.ExecuteNonQuery();
+                    CategoryTextBox.Clear();
+                    CategoriesTable = new DataTable();
+                    CCategoriesListBox.DataSource = CategoriesTable;
+                    adapter = new SqlDataAdapter("SELECT * FROM Categories", Program.sqlConnection);
+                    adapter.Fill(CategoriesTable);
+                    CCategoriesListBox.DataSource = CategoriesTable;
+                    CCategoriesListBox.DisplayMember = "Name";
+                    CCategoriesListBox.ValueMember = "Id";
+                }
+                else
+                {
+                    ErrorForm ErrorForm = new ErrorForm();
+                    ErrorForm.ErrorLabel.Text = "Категория с таким названием уже существует.";
+                    ErrorForm.ShowDialog();
+                }
                 Program.sqlConnection.Close();
             }
         }

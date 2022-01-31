@@ -24,22 +24,33 @@ namespace DietProject
             if (FeatureTextBox.Text == "")
             {
                 ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "Название признака продукта не может быть пустым.";
+                ErrorForm.ErrorLabel.Text = "Название признака не может быть пустым.";
                 ErrorForm.ShowDialog();
             }
             else
             {
                 Program.sqlConnection.Open();
-                SqlCommand addFeature = new SqlCommand("INSERT INTO Features VALUES (N'" + FeatureTextBox.Text.ToString() + "');", Program.sqlConnection);
-                addFeature.ExecuteNonQuery();
-                FeatureTextBox.Clear();
-                FeaturesTable = new DataTable();
-                FFeaturesListBox.DataSource = FeaturesTable;
-                adapter = new SqlDataAdapter("SELECT * FROM Features", Program.sqlConnection);
-                adapter.Fill(FeaturesTable);
-                FFeaturesListBox.DataSource = FeaturesTable;
-                FFeaturesListBox.DisplayMember = "Name";
-                FFeaturesListBox.ValueMember = "Id";
+                SqlCommand checkIsUnique = new SqlCommand("SELECT COUNT(*) FROM Features WHERE Name = N'" + FeatureTextBox.Text.ToString() + "';", Program.sqlConnection);
+                int res = (int)checkIsUnique.ExecuteScalar();
+                if (res == 0)
+                {
+                    SqlCommand addProductName = new SqlCommand("INSERT INTO Features VALUES (N'" + FeatureTextBox.Text.ToString() + "');", Program.sqlConnection);
+                    addProductName.ExecuteNonQuery();
+                    FeatureTextBox.Clear();
+                    FeaturesTable = new DataTable();
+                    FFeaturesListBox.DataSource = FeaturesTable;
+                    adapter = new SqlDataAdapter("SELECT * FROM Features", Program.sqlConnection);
+                    adapter.Fill(FeaturesTable);
+                    FFeaturesListBox.DataSource = FeaturesTable;
+                    FFeaturesListBox.DisplayMember = "Name";
+                    FFeaturesListBox.ValueMember = "Id";
+                }
+                else
+                {
+                    ErrorForm ErrorForm = new ErrorForm();
+                    ErrorForm.ErrorLabel.Text = "Признак продуктов с таким названием уже существует.";
+                    ErrorForm.ShowDialog();
+                }
                 Program.sqlConnection.Close();
             }
         }
