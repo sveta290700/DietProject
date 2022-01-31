@@ -30,8 +30,8 @@ namespace DietProject
             else
             {
                 Program.sqlConnection.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO ProductsNames VALUES (N'" + ProductNameTextBox.Text.ToString() + "');", Program.sqlConnection);
-                cmd.ExecuteNonQuery();
+                SqlCommand addProductName = new SqlCommand("INSERT INTO ProductsNames VALUES (N'" + ProductNameTextBox.Text.ToString() + "');", Program.sqlConnection);
+                addProductName.ExecuteNonQuery();
                 ProductNameTextBox.Clear();
                 ProductsNamesTable = new DataTable();
                 PNProductsNamesListBox.DataSource = ProductsNamesTable;
@@ -58,8 +58,8 @@ namespace DietProject
                 Program.sqlConnection.Open();
                 DataRowView item = (DataRowView) PNProductsNamesListBox.SelectedItem;
                 string nameToDelete = item.Row[1].ToString();
-                SqlCommand cmd = new SqlCommand("DELETE FROM ProductsNames WHERE Name = N'" + nameToDelete + "';", Program.sqlConnection);
-                cmd.ExecuteNonQuery();
+                SqlCommand deleteProductName = new SqlCommand("DELETE FROM ProductsNames WHERE Name = N'" + nameToDelete + "';", Program.sqlConnection);
+                deleteProductName.ExecuteNonQuery();
                 ProductsNamesTable = new DataTable();
                 PNProductsNamesListBox.DataSource = ProductsNamesTable;
                 adapter = new SqlDataAdapter("SELECT * FROM ProductsNames", Program.sqlConnection);

@@ -53,6 +53,7 @@ namespace DietProject
             resources.ApplyResources(this.PCProductsNamesListBox, "PCProductsNamesListBox");
             this.PCProductsNamesListBox.FormattingEnabled = true;
             this.PCProductsNamesListBox.Name = "PCProductsNamesListBox";
+            this.PCProductsNamesListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.PCProductsNamesListBox.TabStop = false;
             // 
             // ProductsCategoryLabel
@@ -67,6 +68,7 @@ namespace DietProject
             resources.ApplyResources(this.PCProductsCategoryListBox, "PCProductsCategoryListBox");
             this.PCProductsCategoryListBox.FormattingEnabled = true;
             this.PCProductsCategoryListBox.Name = "PCProductsCategoryListBox";
+            this.PCProductsCategoryListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.PCProductsCategoryListBox.TabStop = false;
             // 
             // PCSaveButton
@@ -77,6 +79,7 @@ namespace DietProject
             this.PCSaveButton.Name = "PCSaveButton";
             this.PCSaveButton.TabStop = false;
             this.PCSaveButton.UseVisualStyleBackColor = false;
+            this.PCSaveButton.Click += new System.EventHandler(this.PCSaveButton_Click);
             // 
             // PCChoiceLabel
             // 
@@ -100,6 +103,7 @@ namespace DietProject
             this.PCSelectButton.Name = "PCSelectButton";
             this.PCSelectButton.TabStop = false;
             this.PCSelectButton.UseVisualStyleBackColor = false;
+            this.PCSelectButton.Click += new System.EventHandler(this.PCSelectButton_Click);
             // 
             // PCUnselectButton
             // 
@@ -109,6 +113,7 @@ namespace DietProject
             this.PCUnselectButton.Name = "PCUnselectButton";
             this.PCUnselectButton.TabStop = false;
             this.PCUnselectButton.UseVisualStyleBackColor = false;
+            this.PCUnselectButton.Click += new System.EventHandler(this.PCUnselectButton_Click);
             // 
             // ProductsCategories
             // 

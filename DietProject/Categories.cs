@@ -30,8 +30,8 @@ namespace DietProject
             else
             {
                 Program.sqlConnection.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO Categories VALUES (N'" + CategoryTextBox.Text.ToString() + "');", Program.sqlConnection);
-                cmd.ExecuteNonQuery();
+                SqlCommand addCategory = new SqlCommand("INSERT INTO Categories VALUES (N'" + CategoryTextBox.Text.ToString() + "');", Program.sqlConnection);
+                addCategory.ExecuteNonQuery();
                 CategoryTextBox.Clear();
                 CategoriesTable = new DataTable();
                 CCategoriesListBox.DataSource = CategoriesTable;
@@ -58,8 +58,8 @@ namespace DietProject
                 Program.sqlConnection.Open();
                 DataRowView item = (DataRowView)CCategoriesListBox.SelectedItem;
                 string nameToDelete = item.Row[1].ToString();
-                SqlCommand cmd = new SqlCommand("DELETE FROM Categories WHERE Name = N'" + nameToDelete + "';", Program.sqlConnection);
-                cmd.ExecuteNonQuery();
+                SqlCommand deleteCategory = new SqlCommand("DELETE FROM Categories WHERE Name = N'" + nameToDelete + "';", Program.sqlConnection);
+                deleteCategory.ExecuteNonQuery();
                 CategoriesTable = new DataTable();
                 CCategoriesListBox.DataSource = CategoriesTable;
                 adapter = new SqlDataAdapter("SELECT * FROM Categories", Program.sqlConnection);

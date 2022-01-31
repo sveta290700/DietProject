@@ -30,8 +30,8 @@ namespace DietProject
             else
             {
                 Program.sqlConnection.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO Features VALUES (N'" + FeatureTextBox.Text.ToString() + "');", Program.sqlConnection);
-                cmd.ExecuteNonQuery();
+                SqlCommand addFeature = new SqlCommand("INSERT INTO Features VALUES (N'" + FeatureTextBox.Text.ToString() + "');", Program.sqlConnection);
+                addFeature.ExecuteNonQuery();
                 FeatureTextBox.Clear();
                 FeaturesTable = new DataTable();
                 FFeaturesListBox.DataSource = FeaturesTable;
@@ -66,8 +66,8 @@ namespace DietProject
                 else
                 {
                     Program.sqlConnection.Open();
-                    SqlCommand cmd = new SqlCommand("DELETE FROM Features WHERE Name = N'" + nameToDelete + "';", Program.sqlConnection);
-                    cmd.ExecuteNonQuery();
+                    SqlCommand deleteFeature = new SqlCommand("DELETE FROM Features WHERE Name = N'" + nameToDelete + "';", Program.sqlConnection);
+                    deleteFeature.ExecuteNonQuery();
                     FeaturesTable = new DataTable();
                     FFeaturesListBox.DataSource = FeaturesTable;
                     adapter = new SqlDataAdapter("SELECT * FROM Features", Program.sqlConnection);
@@ -83,12 +83,12 @@ namespace DietProject
         private void Features_Load(object sender, EventArgs e)
         {
             Program.sqlConnection.Open();
-            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Features WHERE Name = N'стоимость за 1 кг продукта';", Program.sqlConnection);
-            int res = (int)cmd.ExecuteScalar();
+            SqlCommand countFeatures = new SqlCommand("SELECT COUNT(*) FROM Features WHERE Name = N'стоимость за 1 кг продукта';", Program.sqlConnection);
+            int res = (int)countFeatures.ExecuteScalar();
             if (res == 0)
             {
-                SqlCommand cm = new SqlCommand("INSERT INTO Features VALUES (N'стоимость за 1 кг продукта');", Program.sqlConnection);
-                cm.ExecuteNonQuery();
+                SqlCommand addPriceFeature = new SqlCommand("INSERT INTO Features VALUES (N'стоимость за 1 кг продукта');", Program.sqlConnection);
+                addPriceFeature.ExecuteNonQuery();
             }
             adapter = new SqlDataAdapter("SELECT * FROM Features", Program.sqlConnection);
             adapter.Fill(FeaturesTable);

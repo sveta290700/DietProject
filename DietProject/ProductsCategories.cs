@@ -42,31 +42,77 @@ namespace DietProject
 
         private void PCCategoriesComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PCProductsNamesListBox.Items.Clear();
-            PCProductsCategoryListBox.Items.Clear();
+            if (PCCategoriesComboBox.SelectedIndex != -1)
+            {
+                PCProductsNamesListBox.Items.Clear();
+                PCProductsCategoryListBox.Items.Clear();
+                DataRowView item = (DataRowView)PCCategoriesComboBox.SelectedItem;
+                int selectedCategoryId = (int)item.Row[0];
+                leftList = new List<string>(ProductsNamesList);
+                SelectedProductsNamesTable = new DataTable();
+                adapter = new SqlDataAdapter("SELECT Name FROM ProductsNames JOIN ProductsOfCategories ON ProductsNames.Id = ProductsOfCategories.ProductId WHERE CategoryId = " + selectedCategoryId + ";", Program.sqlConnection);
+                adapter.Fill(SelectedProductsNamesTable);
+                rightList = SelectedProductsNamesTable.AsEnumerable().Select(n => n.Field<string>(0)).ToList();
+                foreach (var categoryId in CategoriesIdPOCList)
+                {
+                    NotSelectedProductsNamesTable = new DataTable();
+                    adapter = new SqlDataAdapter("SELECT Name FROM ProductsNames JOIN ProductsOfCategories ON ProductsNames.Id = ProductsOfCategories.ProductId WHERE CategoryId = " + categoryId + ";", Program.sqlConnection);
+                    adapter.Fill(NotSelectedProductsNamesTable);
+                    NotSelectedProductsNamesList = NotSelectedProductsNamesTable.AsEnumerable().Select(n => n.Field<string>(0)).ToList();
+                    leftList = leftList.Except(NotSelectedProductsNamesList).ToList();
+                }
+                foreach (var itemLeft in leftList)
+                {
+                    PCProductsNamesListBox.Items.Add(itemLeft);
+                }
+                foreach (var itemRight in rightList)
+                {
+                    PCProductsCategoryListBox.Items.Add(itemRight);
+                }
+            }
+        }
+
+        private void MoveSelectedItems(ListBox lstFrom, ListBox lstTo)
+        {
+            while (lstFrom.SelectedItems.Count > 0)
+            {
+                string item = (string)lstFrom.SelectedItems[0];
+                lstTo.Items.Add(item);
+                lstFrom.Items.Remove(item);
+            }
+        }
+
+        private void PCSelectButton_Click(object sender, EventArgs e)
+        {
+            MoveSelectedItems(PCProductsNamesListBox, PCProductsCategoryListBox);
+        }
+
+        private void PCUnselectButton_Click(object sender, EventArgs e)
+        {
+            MoveSelectedItems(PCProductsCategoryListBox, PCProductsNamesListBox);
+        }
+
+        private void PCSaveButton_Click(object sender, EventArgs e)
+        {
+            Program.sqlConnection.Open();
             DataRowView item = (DataRowView)PCCategoriesComboBox.SelectedItem;
             int selectedCategoryId = (int)item.Row[0];
-            leftList = new List<string>(ProductsNamesList);
-            SelectedProductsNamesTable = new DataTable();
-            adapter = new SqlDataAdapter("SELECT Name FROM ProductsNames JOIN ProductsOfCategories ON ProductsNames.Id = ProductsOfCategories.ProductId WHERE CategoryId = " + selectedCategoryId + ";", Program.sqlConnection);
-            adapter.Fill(SelectedProductsNamesTable);
-            rightList = SelectedProductsNamesTable.AsEnumerable().Select(n => n.Field<string>(0)).ToList();
-            foreach (var categoryId in CategoriesIdPOCList)
+            SqlCommand deleteOldRecords = new SqlCommand("DELETE FROM ProductsOfCategories WHERE CategoryId = " + selectedCategoryId + ";", Program.sqlConnection);
+            deleteOldRecords.ExecuteNonQuery();
+            foreach (var itemToAdd in PCProductsCategoryListBox.Items)
             {
-                NotSelectedProductsNamesTable = new DataTable();
-                adapter = new SqlDataAdapter("SELECT Name FROM ProductsNames JOIN ProductsOfCategories ON ProductsNames.Id = ProductsOfCategories.ProductId WHERE CategoryId = " + categoryId + ";", Program.sqlConnection);
-                adapter.Fill(NotSelectedProductsNamesTable);
-                NotSelectedProductsNamesList = NotSelectedProductsNamesTable.AsEnumerable().Select(n => n.Field<string>(0)).ToList();
-                leftList = leftList.Except(NotSelectedProductsNamesList).ToList();
+                SqlCommand getProdId = new SqlCommand("SELECT Id FROM ProductsNames WHERE Name = N'" + itemToAdd + "';", Program.sqlConnection);
+                int prodId = (int)getProdId.ExecuteScalar();
+                SqlCommand insertNewRecord = new SqlCommand("INSERT INTO ProductsOfCategories VALUES (" + selectedCategoryId + ", " + prodId + ");", Program.sqlConnection);
+                insertNewRecord.ExecuteNonQuery();
             }
-            foreach (var itemLeft in leftList)
-            {
-                PCProductsNamesListBox.Items.Add(itemLeft);
-            }
-            foreach (var itemRight in rightList)
-            {
-                PCProductsCategoryListBox.Items.Add(itemRight);
-            }
+            adapter = new SqlDataAdapter("SELECT CategoryId FROM ProductsOfCategories", Program.sqlConnection);
+            adapter.Fill(CategoriesTablePOC);
+            CategoriesIdPOCList = CategoriesTablePOC.AsEnumerable().Select(n => n.Field<int>(0)).ToList();
+            int selectedIndex = PCCategoriesComboBox.SelectedIndex;
+            PCCategoriesComboBox.SelectedIndex = -1;
+            PCCategoriesComboBox.SelectedIndex = selectedIndex;
+            Program.sqlConnection.Close();
         }
     }
 }

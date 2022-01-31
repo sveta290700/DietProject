@@ -17,11 +17,6 @@ namespace DietProject
             InitializeComponent();
         }
 
-        private void MainScreen_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void ButtonToKE_Click(object sender, EventArgs e)
         {
             KnowledgeEditor KnowledgeEditor = new KnowledgeEditor();

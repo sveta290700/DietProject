@@ -57,24 +57,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;PCProductsNamesListBox.Name" xml:space="preserve">
-    <value>PCProductsNamesListBox</value>
+  <data name="&gt;&gt;PCProductsNamesLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PCCategoriesComboBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PCChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 19</value>
+  </data>
+  <data name="PCSaveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 366</value>
+  </data>
+  <data name="&gt;&gt;PCProductsNamesListBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PCUnselectButton.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;PCChoiceLabel.Name" xml:space="preserve">
     <value>PCChoiceLabel</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PCChoiceLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="ProductsCategoryLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 110</value>
   </data>
-  <data name="&gt;&gt;PCCategoriesComboBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PCSelectButton.Name" xml:space="preserve">
+    <value>PCSelectButton</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PCProductsNamesListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PCChoiceLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;PCUnselectButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
+  <data name="&gt;&gt;PCChoiceLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAAAAAAAEAIAD6DQAAlgAAAICAAAABACAAKAgBAJAOAABgYAAAAQAgAKiUAAC4FgEASEgAAAEA
@@ -2837,86 +2863,8 @@
         8I8AAPCHAADgJwAA5jcAAOA3AADgJwAA4CcAAOAHAADgDwAA
 </value>
   </data>
-  <data name="&gt;&gt;PCSaveButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ProductsCategoryLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PCSelectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>379, 170</value>
-  </data>
-  <data name="PCProductsNamesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 137</value>
-  </data>
-  <data name="&gt;&gt;PCProductsNamesLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="PCProductsCategoryListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;PCUnselectButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PCProductsNamesLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;PCProductsCategoryListBox.Name" xml:space="preserve">
-    <value>PCProductsCategoryListBox</value>
-  </data>
-  <data name="PCCategoriesComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 60</value>
-  </data>
-  <data name="&gt;&gt;PCUnselectButton.Name" xml:space="preserve">
-    <value>PCUnselectButton</value>
-  </data>
-  <data name="&gt;&gt;PCUnselectButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PCProductsNamesListBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;PCSaveButton.Name" xml:space="preserve">
-    <value>PCSaveButton</value>
-  </data>
-  <data name="&gt;&gt;PCProductsNamesLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProductsCategoryLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;PCUnselectButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PCUnselectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>379, 217</value>
-  </data>
-  <data name="&gt;&gt;PCSelectButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ProductsCategories</value>
-  </data>
-  <data name="PCChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 19</value>
-  </data>
-  <data name="ProductsCategoryLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>427, 110</value>
-  </data>
-  <data name="&gt;&gt;PCCategoriesComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;PCSaveButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="PCProductsCategoryListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>427, 137</value>
-  </data>
-  <data name="&gt;&gt;PCChoiceLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PCChoiceLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;PCProductsNamesListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PCProductsCategoryListBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2924,88 +2872,140 @@
   <data name="&gt;&gt;ProductsCategoryLabel.Name" xml:space="preserve">
     <value>ProductsCategoryLabel</value>
   </data>
-  <data name="PCProductsNamesListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;PCSelectButton.Name" xml:space="preserve">
-    <value>PCSelectButton</value>
+  <data name="&gt;&gt;PCProductsCategoryListBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;PCSelectButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="PCSaveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="ProductsCategoryLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;PCSaveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProductsCategoryLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PCProductsNamesListBox.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;PCSaveButton.Name" xml:space="preserve">
+    <value>PCSaveButton</value>
   </data>
   <data name="PCSelectButton.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
+  <data name="&gt;&gt;PCProductsCategoryListBox.Name" xml:space="preserve">
+    <value>PCProductsCategoryListBox</value>
+  </data>
+  <data name="&gt;&gt;PCSelectButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;PCSaveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PCSaveButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PCChoiceLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="PCUnselectButton.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
-  </data>
-  <data name="PCSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 366</value>
   </data>
   <data name="&gt;&gt;PCProductsCategoryListBox.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
+  <data name="&gt;&gt;PCSaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="PCCategoriesComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;PCSelectButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PCProductsNamesLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="PCProductsNamesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 110</value>
-  </data>
-  <data name="&gt;&gt;PCCategoriesComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+  <data name="&gt;&gt;ProductsCategoryLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Продукты категории</value>
   </data>
-  <data name="&gt;&gt;PCCategoriesComboBox.Name" xml:space="preserve">
-    <value>PCCategoriesComboBox</value>
-  </data>
-  <data name="&gt;&gt;PCProductsCategoryListBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ProductsCategoryLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;PCProductsNamesListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;PCProductsNamesLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;PCChoiceLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="PCProductsCategoryListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 137</value>
   </data>
   <data name="&gt;&gt;PCProductsNamesLabel.Name" xml:space="preserve">
     <value>PCProductsNamesLabel</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>ru</value>
-  </metadata>
+  <data name="PCSaveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;PCUnselectButton.Name" xml:space="preserve">
+    <value>PCUnselectButton</value>
+  </data>
+  <data name="&gt;&gt;PCCategoriesComboBox.Name" xml:space="preserve">
+    <value>PCCategoriesComboBox</value>
+  </data>
+  <data name="PCUnselectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 217</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ProductsCategories</value>
+  </data>
+  <data name="&gt;&gt;PCProductsNamesListBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="PCSelectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 170</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="PCChoiceLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="PCCategoriesComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ProductsCategoryLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;PCSelectButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PCProductsNamesListBox.Name" xml:space="preserve">
+    <value>PCProductsNamesListBox</value>
+  </data>
+  <data name="&gt;&gt;PCCategoriesComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PCProductsNamesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 110</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="PCCategoriesComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 60</value>
+  </data>
+  <data name="ProductsCategoryLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="PCProductsNamesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 137</value>
+  </data>
+  <data name="&gt;&gt;PCCategoriesComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PCUnselectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PCProductsNamesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PCProductsNamesLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="PCProductsCategoryListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>ru</value>
   </metadata>
 </root>
