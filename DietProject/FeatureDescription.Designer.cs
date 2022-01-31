@@ -49,6 +49,7 @@ namespace DietProject
             this.FDUnselectButton.Name = "FDUnselectButton";
             this.FDUnselectButton.TabStop = false;
             this.FDUnselectButton.UseVisualStyleBackColor = false;
+            this.FDUnselectButton.Click += new System.EventHandler(this.FDUnselectButton_Click);
             // 
             // FDSelectButton
             // 
@@ -58,6 +59,7 @@ namespace DietProject
             this.FDSelectButton.Name = "FDSelectButton";
             this.FDSelectButton.TabStop = false;
             this.FDSelectButton.UseVisualStyleBackColor = false;
+            this.FDSelectButton.Click += new System.EventHandler(this.FDSelectButton_Click);
             // 
             // FDProductsComboBox
             // 
@@ -76,6 +78,7 @@ namespace DietProject
             this.FDSaveButton.Name = "FDSaveButton";
             this.FDSaveButton.TabStop = false;
             this.FDSaveButton.UseVisualStyleBackColor = false;
+            this.FDSaveButton.Click += new System.EventHandler(this.FDSaveButton_Click);
             // 
             // FDChoiceLabel
             // 
@@ -94,6 +97,7 @@ namespace DietProject
             resources.ApplyResources(this.FDSelectedFeaturesListBox, "FDSelectedFeaturesListBox");
             this.FDSelectedFeaturesListBox.FormattingEnabled = true;
             this.FDSelectedFeaturesListBox.Name = "FDSelectedFeaturesListBox";
+            this.FDSelectedFeaturesListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.FDSelectedFeaturesListBox.TabStop = false;
             // 
             // FDFeaturesLabel
@@ -108,6 +112,7 @@ namespace DietProject
             resources.ApplyResources(this.FDFeaturesListBox, "FDFeaturesListBox");
             this.FDFeaturesListBox.FormattingEnabled = true;
             this.FDFeaturesListBox.Name = "FDFeaturesListBox";
+            this.FDFeaturesListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.FDFeaturesListBox.TabStop = false;
             // 
             // FeatureDescription

@@ -57,155 +57,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="FDChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 34</value>
-  </data>
-  <data name="&gt;&gt;FDSelectButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="&gt;&gt;FDSelectButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="FDFeaturesLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Признаковое описание продуктов</value>
-  </data>
-  <data name="&gt;&gt;FDProductsComboBox.Name" xml:space="preserve">
-    <value>FDProductsComboBox</value>
-  </data>
-  <data name="&gt;&gt;FDUnselectButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;FDSelectedFeaturesListBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="FDSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 379</value>
-  </data>
-  <data name="&gt;&gt;FDUnselectButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="FDProductsComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;FDSaveButton.Name" xml:space="preserve">
-    <value>FDSaveButton</value>
-  </data>
-  <data name="&gt;&gt;FDFeaturesListBox.Name" xml:space="preserve">
-    <value>FDFeaturesListBox</value>
-  </data>
-  <data name="FDFeaturesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 123</value>
-  </data>
-  <data name="&gt;&gt;SelectedFeaturesLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FDFeaturesLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;FDUnselectButton.Name" xml:space="preserve">
-    <value>FDUnselectButton</value>
-  </data>
-  <data name="&gt;&gt;FDChoiceLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;FDFeaturesListBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="FDSelectedFeaturesListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;FDSaveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="FDProductsComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 73</value>
-  </data>
-  <data name="&gt;&gt;SelectedFeaturesLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="SelectedFeaturesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>427, 123</value>
-  </data>
-  <data name="&gt;&gt;FDFeaturesLabel.Name" xml:space="preserve">
-    <value>FDFeaturesLabel</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FeatureDescription</value>
-  </data>
-  <data name="FDFeaturesListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
   <data name="&gt;&gt;FDProductsComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FDSaveButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;FDSelectButton.Name" xml:space="preserve">
-    <value>FDSelectButton</value>
-  </data>
-  <data name="&gt;&gt;FDUnselectButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;FDSelectedFeaturesListBox.Name" xml:space="preserve">
+    <value>FDSelectedFeaturesListBox</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="FDUnselectButton.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="FDSaveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>354, 379</value>
   </data>
-  <data name="FDSelectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>383, 190</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FDSaveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
-  <data name="&gt;&gt;SelectedFeaturesLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;FDSaveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FDSelectButton.Name" xml:space="preserve">
+    <value>FDSelectButton</value>
+  </data>
+  <data name="&gt;&gt;FDSelectButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FDFeaturesListBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;FDSelectedFeaturesListBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="FDProductsComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 73</value>
   </data>
   <data name="&gt;&gt;FDSelectedFeaturesListBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FDSelectedFeaturesListBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;FDProductsComboBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;FDFeaturesListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="SelectedFeaturesLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="FDFeaturesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 150</value>
-  </data>
-  <data name="&gt;&gt;FDChoiceLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;FDSelectButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="FDSelectButton.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;FDChoiceLabel.Name" xml:space="preserve">
-    <value>FDChoiceLabel</value>
-  </data>
-  <data name="&gt;&gt;FDFeaturesListBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;FDProductsComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2969,20 +2858,59 @@
         8I8AAPCHAADgJwAA5jcAAOA3AADgJwAA4CcAAOAHAADgDwAA
 </value>
   </data>
-  <data name="FDSaveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="FDSelectedFeaturesListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
-  <data name="&gt;&gt;FDFeaturesLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;FDFeaturesLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+  <data name="&gt;&gt;FDProductsComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;FDSelectedFeaturesListBox.Name" xml:space="preserve">
-    <value>FDSelectedFeaturesListBox</value>
+  <data name="&gt;&gt;FDFeaturesListBox.Name" xml:space="preserve">
+    <value>FDFeaturesListBox</value>
   </data>
-  <data name="FDChoiceLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Признаковое описание продуктов</value>
+  </data>
+  <data name="&gt;&gt;FDUnselectButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;FDChoiceLabel.Name" xml:space="preserve">
+    <value>FDChoiceLabel</value>
+  </data>
+  <data name="&gt;&gt;FDProductsComboBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="FDProductsComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="FDUnselectButton.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="SelectedFeaturesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 123</value>
+  </data>
+  <data name="&gt;&gt;FDSelectedFeaturesListBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="FDSelectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 190</value>
+  </data>
+  <data name="&gt;&gt;FDSaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SelectedFeaturesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FDUnselectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FDSelectButton.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
   <data name="FDSelectedFeaturesListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>427, 150</value>
@@ -2990,22 +2918,94 @@
   <data name="&gt;&gt;FDFeaturesLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FDChoiceLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="FDFeaturesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 123</value>
   </data>
-  <data name="&gt;&gt;FDSaveButton.Parent" xml:space="preserve">
+  <data name="FDFeaturesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 150</value>
+  </data>
+  <data name="&gt;&gt;FDSaveButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;SelectedFeaturesLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="FDChoiceLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;FDProductsComboBox.Name" xml:space="preserve">
+    <value>FDProductsComboBox</value>
+  </data>
+  <data name="&gt;&gt;SelectedFeaturesLabel.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FDChoiceLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="FDFeaturesLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="SelectedFeaturesLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;FDUnselectButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FDSaveButton.Name" xml:space="preserve">
+    <value>FDSaveButton</value>
   </data>
   <data name="&gt;&gt;SelectedFeaturesLabel.Name" xml:space="preserve">
     <value>SelectedFeaturesLabel</value>
   </data>
+  <data name="&gt;&gt;FDFeaturesLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;FDUnselectButton.Name" xml:space="preserve">
+    <value>FDUnselectButton</value>
+  </data>
+  <data name="FDChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 34</value>
+  </data>
+  <data name="&gt;&gt;FDFeaturesLabel.Name" xml:space="preserve">
+    <value>FDFeaturesLabel</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FeatureDescription</value>
+  </data>
+  <data name="&gt;&gt;FDChoiceLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="FDUnselectButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>383, 238</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>ru</value>
-  </metadata>
+  <data name="&gt;&gt;FDFeaturesListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FDSelectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FDFeaturesListBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FDSelectButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="&gt;&gt;FDChoiceLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="FDFeaturesListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>ru</value>
   </metadata>
 </root>
