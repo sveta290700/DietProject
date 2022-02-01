@@ -111,6 +111,11 @@ namespace DietProject
             0,
             0,
             327680});
+            this.PVFromNumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.PVFromNumericUpDown.Name = "PVFromNumericUpDown";
             this.PVFromNumericUpDown.TabStop = false;
             // 
@@ -123,6 +128,11 @@ namespace DietProject
             0,
             0,
             327680});
+            this.PVToNumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.PVToNumericUpDown.Name = "PVToNumericUpDown";
             this.PVToNumericUpDown.TabStop = false;
             // 

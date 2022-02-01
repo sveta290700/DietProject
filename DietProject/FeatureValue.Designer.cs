@@ -36,8 +36,8 @@ namespace DietProject
             this.FVFeaturesLabel = new System.Windows.Forms.Label();
             this.FVFeaturesListBox = new System.Windows.Forms.ListBox();
             this.FVValueChoiceLabel = new System.Windows.Forms.Label();
-            this.FVFromNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.FVFromNumericUpDown)).BeginInit();
+            this.FVNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.FVNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // FVProductsNamesComboBox
@@ -47,6 +47,7 @@ namespace DietProject
             this.FVProductsNamesComboBox.FormattingEnabled = true;
             this.FVProductsNamesComboBox.Name = "FVProductsNamesComboBox";
             this.FVProductsNamesComboBox.TabStop = false;
+            this.FVProductsNamesComboBox.SelectedIndexChanged += new System.EventHandler(this.FVProductsNamesComboBox_SelectedIndexChanged);
             // 
             // FVSaveButton
             // 
@@ -56,6 +57,7 @@ namespace DietProject
             this.FVSaveButton.Name = "FVSaveButton";
             this.FVSaveButton.TabStop = false;
             this.FVSaveButton.UseVisualStyleBackColor = false;
+            this.FVSaveButton.Click += new System.EventHandler(this.FVSaveButton_Click);
             // 
             // FVProductNameChoiceLabel
             // 
@@ -75,30 +77,36 @@ namespace DietProject
             this.FVFeaturesListBox.FormattingEnabled = true;
             this.FVFeaturesListBox.Name = "FVFeaturesListBox";
             this.FVFeaturesListBox.TabStop = false;
+            this.FVFeaturesListBox.SelectedIndexChanged += new System.EventHandler(this.FVFeaturesListBox_SelectedIndexChanged);
             // 
             // FVValueChoiceLabel
             // 
             resources.ApplyResources(this.FVValueChoiceLabel, "FVValueChoiceLabel");
             this.FVValueChoiceLabel.Name = "FVValueChoiceLabel";
             // 
-            // FVFromNumericUpDown
+            // FVNumericUpDown
             // 
-            resources.ApplyResources(this.FVFromNumericUpDown, "FVFromNumericUpDown");
-            this.FVFromNumericUpDown.DecimalPlaces = 7;
-            this.FVFromNumericUpDown.Increment = new decimal(new int[] {
+            resources.ApplyResources(this.FVNumericUpDown, "FVNumericUpDown");
+            this.FVNumericUpDown.DecimalPlaces = 7;
+            this.FVNumericUpDown.Increment = new decimal(new int[] {
             1,
             0,
             0,
             458752});
-            this.FVFromNumericUpDown.Name = "FVFromNumericUpDown";
-            this.FVFromNumericUpDown.TabStop = false;
+            this.FVNumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.FVNumericUpDown.Name = "FVNumericUpDown";
+            this.FVNumericUpDown.TabStop = false;
             // 
             // FeatureValue
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.Controls.Add(this.FVFromNumericUpDown);
+            this.Controls.Add(this.FVNumericUpDown);
             this.Controls.Add(this.FVValueChoiceLabel);
             this.Controls.Add(this.FVProductsNamesComboBox);
             this.Controls.Add(this.FVSaveButton);
@@ -109,7 +117,7 @@ namespace DietProject
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FeatureValue";
-            ((System.ComponentModel.ISupportInitialize)(this.FVFromNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FVNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,6 +131,6 @@ namespace DietProject
         private System.Windows.Forms.Label FVFeaturesLabel;
         private System.Windows.Forms.ListBox FVFeaturesListBox;
         private System.Windows.Forms.Label FVValueChoiceLabel;
-        private System.Windows.Forms.NumericUpDown FVFromNumericUpDown;
+        private System.Windows.Forms.NumericUpDown FVNumericUpDown;
     }
 }

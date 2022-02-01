@@ -76,7 +76,7 @@
     <value>NoControl</value>
   </data>
   <data name="FVSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>555, 273</value>
+    <value>553, 273</value>
   </data>
   <data name="FVSaveButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 38</value>
@@ -150,14 +150,11 @@
   <data name="FVValueChoiceLabel.Text" xml:space="preserve">
     <value>Выберите значение:</value>
   </data>
-  <data name="FVFromNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>562, 227</value>
+  <data name="FVNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>552, 227</value>
   </data>
-  <data name="FVFromNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 23</value>
-  </data>
-  <data name="FVFromNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="FVNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

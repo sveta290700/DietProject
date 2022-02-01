@@ -15,7 +15,9 @@ namespace DietProject
         private SqlDataAdapter adapter;
         private DataTable FeaturesTable = new DataTable();
         private DataTable FeaturesIdTable = new DataTable();
+        private DataTable FeaturesIdTable2 = new DataTable();
         private List<int> FeaturesIdList = new List<int>();
+        private List<int> FeaturesIdList2 = new List<int>();
 
         public PossibleValues()
         {
@@ -26,12 +28,28 @@ namespace DietProject
             Program.sqlConnection.Open();
             SqlCommand countPFV = new SqlCommand("SELECT COUNT(*) FROM PossibleFeaturesValues;", Program.sqlConnection);
             int res = (int)countPFV.ExecuteScalar();
+            adapter = new SqlDataAdapter("SELECT FeatureId FROM PossibleFeaturesValues", Program.sqlConnection);
+            adapter.Fill(FeaturesIdTable2);
+            FeaturesIdList2 = FeaturesIdTable2.AsEnumerable().Select(n => n.Field<int>(0)).ToList();
+            SqlCommand countFeatures = new SqlCommand("SELECT COUNT(*) FROM Features;", Program.sqlConnection);
+            int resAll = (int)countFeatures.ExecuteScalar();
             if (res == 0)
             {
                 foreach (var featureId in FeaturesIdList)
                 {
                     SqlCommand initPFV = new SqlCommand("INSERT INTO PossibleFeaturesValues VALUES (" + featureId + ", 0.0, 0, 0.0, 0);", Program.sqlConnection);
                     initPFV.ExecuteNonQuery();
+                }
+            }
+            else if (res != resAll)
+            {
+                foreach (var featureId in FeaturesIdList)
+                {
+                    if (!FeaturesIdList2.Contains(featureId))
+                    {
+                        SqlCommand insNew = new SqlCommand("INSERT INTO PossibleFeaturesValues VALUES (" + featureId + ", 0.0, 0, 0.0, 0);", Program.sqlConnection);
+                        insNew.ExecuteNonQuery();
+                    }
                 }
             }
             Program.sqlConnection.Close();

@@ -57,95 +57,79 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;PCCategoriesComboBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;FVFromNumericUpDown.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PCChoiceLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="&gt;&gt;PCProductsNamesLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PCChoiceLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;PCProductsNamesListBox.Name" xml:space="preserve">
     <value>PCProductsNamesListBox</value>
   </data>
-  <data name="&gt;&gt;FVFeaturesListBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PVFromNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>566, 227</value>
+  </data>
+  <data name="&gt;&gt;PCSaveButton.Name" xml:space="preserve">
+    <value>PCSaveButton</value>
+  </data>
+  <data name="&gt;&gt;PVFromNumericUpDown.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FeatureValue</value>
+  <data name="FVProductNameChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 53</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="PCChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 53</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>532, 184</value>
+  <data name="&gt;&gt;FVValueChoiceLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="FVFeaturesListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="PCProductsNamesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 141</value>
   </data>
   <data name="&gt;&gt;PCChoiceLabel.Name" xml:space="preserve">
     <value>PCChoiceLabel</value>
   </data>
-  <data name="PCProductsNamesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 168</value>
-  </data>
-  <data name="&gt;&gt;FVProductNameChoiceLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="FVProductNameChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 53</value>
-  </data>
-  <data name="FVFeaturesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 168</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="PVFromNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>566, 227</value>
-  </data>
-  <data name="FVProductsNamesComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="&gt;&gt;FVFeaturesListBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="FVValueChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>532, 184</value>
   </data>
-  <data name="&gt;&gt;PCChoiceLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="FVFromNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>566, 227</value>
-  </data>
-  <data name="&gt;&gt;FVProductsNamesComboBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="&gt;&gt;FVProductsNamesComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PCSaveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>FeatureValue</value>
-  </data>
-  <data name="&gt;&gt;FVFeaturesLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PCProductsNamesListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FVFeaturesListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="FVProductNameChoiceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
+  </data>
+  <data name="&gt;&gt;PCChoiceLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FVFeaturesListBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="FVFromNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="FVProductsNamesComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;FVFromNumericUpDown.Name" xml:space="preserve">
+    <value>FVFromNumericUpDown</value>
+  </data>
+  <data name="&gt;&gt;PCProductsNamesLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;PCSaveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="PCProductsNamesListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2909,188 +2893,222 @@
         8I8AAPCHAADgJwAA5jcAAOA3AADgJwAA4CcAAOAHAADgDwAA
 </value>
   </data>
-  <data name="&gt;&gt;FVFeaturesLabel.Name" xml:space="preserve">
-    <value>FVFeaturesLabel</value>
+  <data name="FVSaveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="FVFromNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>566, 227</value>
   </data>
   <data name="&gt;&gt;FVFromNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FVSaveButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;FVNumericUpDown.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;PCCategoriesComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PCProductsNamesLabel.Name" xml:space="preserve">
-    <value>PCProductsNamesLabel</value>
-  </data>
-  <data name="&gt;&gt;FVProductNameChoiceLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="FVSaveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;PCProductsNamesListBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
-  </data>
-  <data name="&gt;&gt;PCProductsNamesLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;PVFromNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PCChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 53</value>
-  </data>
-  <data name="&gt;&gt;PCSaveButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;FVProductsNamesComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;FVValueChoiceLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FVFeaturesLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;FVSaveButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;PVFromNumericUpDown.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PCSaveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;PCProductsNamesListBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PCProductsNamesLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FVFromNumericUpDown.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="FVSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>556, 275</value>
-  </data>
-  <data name="&gt;&gt;FVSaveButton.Name" xml:space="preserve">
-    <value>FVSaveButton</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="PCProductsNamesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 141</value>
-  </data>
-  <data name="&gt;&gt;PCSaveButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="PCProductsNamesLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="&gt;&gt;FVSaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="PCCategoriesComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>114, 93</value>
   </data>
-  <data name="&gt;&gt;FVFeaturesListBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="PVFromNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="FVFromNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;FVProductsNamesComboBox.Name" xml:space="preserve">
-    <value>FVProductsNamesComboBox</value>
-  </data>
-  <data name="&gt;&gt;PCProductsNamesLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;FVValueChoiceLabel.Name" xml:space="preserve">
+    <value>FVValueChoiceLabel</value>
   </data>
   <data name="PCSaveButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 275</value>
   </data>
-  <data name="&gt;&gt;PCChoiceLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;PCSaveButton.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="PCProductsNamesListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="FVNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>562, 227</value>
   </data>
-  <data name="&gt;&gt;PVFromNumericUpDown.Parent" xml:space="preserve">
+  <data name="&gt;&gt;FVFromNumericUpDown.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PCProductsNamesLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;FVFeaturesLabel.Name" xml:space="preserve">
+    <value>FVFeaturesLabel</value>
+  </data>
+  <data name="PCProductsNamesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 168</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FeatureValue</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FVNumericUpDown.Name" xml:space="preserve">
+    <value>FVNumericUpDown</value>
+  </data>
+  <data name="&gt;&gt;FVValueChoiceLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;PVFromNumericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="PCCategoriesComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;FVProductsNamesComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PCCategoriesComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;FVProductsNamesComboBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;FVValueChoiceLabel.Parent" xml:space="preserve">
+  <data name="FVFeaturesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 168</value>
+  </data>
+  <data name="PCSaveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;PCChoiceLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="FVNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="FVProductsNamesComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 93</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>532, 184</value>
+  </data>
+  <data name="&gt;&gt;PCProductsNamesListBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FVNumericUpDown.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FeatureValue</value>
+  </data>
+  <data name="&gt;&gt;FVProductNameChoiceLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;PCSaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FVFeaturesLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;FVProductNameChoiceLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="FVFeaturesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 141</value>
+  <data name="&gt;&gt;FVProductNameChoiceLabel.Name" xml:space="preserve">
+    <value>FVProductNameChoiceLabel</value>
   </data>
-  <data name="FVProductsNamesComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 93</value>
-  </data>
-  <data name="&gt;&gt;PCChoiceLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;PCProductsNamesListBox.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;FVFeaturesListBox.Name" xml:space="preserve">
     <value>FVFeaturesListBox</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;FVSaveButton.Name" xml:space="preserve">
+    <value>FVSaveButton</value>
   </data>
-  <data name="&gt;&gt;FVValueChoiceLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;FVFeaturesListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FVFeaturesLabel.Type" xml:space="preserve">
+  <data name="FVFeaturesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 141</value>
+  </data>
+  <data name="&gt;&gt;FVValueChoiceLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FVSaveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FVProductNameChoiceLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="PCCategoriesComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="&gt;&gt;PCCategoriesComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;PVFromNumericUpDown.Name" xml:space="preserve">
     <value>PVFromNumericUpDown</value>
   </data>
-  <data name="&gt;&gt;FVValueChoiceLabel.Name" xml:space="preserve">
-    <value>FVValueChoiceLabel</value>
+  <data name="&gt;&gt;FVProductsNamesComboBox.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;FVProductNameChoiceLabel.Name" xml:space="preserve">
-    <value>FVProductNameChoiceLabel</value>
+  <data name="&gt;&gt;PCProductsNamesLabel.Name" xml:space="preserve">
+    <value>PCProductsNamesLabel</value>
   </data>
-  <data name="FVValueChoiceLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;PCSaveButton.Name" xml:space="preserve">
-    <value>PCSaveButton</value>
+  <data name="&gt;&gt;FVFeaturesLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;PCCategoriesComboBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;FVFromNumericUpDown.Name" xml:space="preserve">
-    <value>FVFromNumericUpDown</value>
+  <data name="&gt;&gt;PCProductsNamesListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FVSaveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;FVSaveButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PCProductsNamesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FVNumericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FVSaveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>556, 275</value>
+  </data>
+  <data name="PVFromNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
   <data name="&gt;&gt;PCCategoriesComboBox.Name" xml:space="preserve">
     <value>PCCategoriesComboBox</value>
   </data>
+  <data name="&gt;&gt;FVFeaturesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PCChoiceLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
   <data name="FVFeaturesLabel.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;FVFromNumericUpDown.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="FVValueChoiceLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="FVFeaturesListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;FVProductsNamesComboBox.Name" xml:space="preserve">
+    <value>FVProductsNamesComboBox</value>
+  </data>
+  <data name="&gt;&gt;PVFromNumericUpDown.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

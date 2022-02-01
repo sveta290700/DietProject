@@ -71,7 +71,7 @@ namespace DietProject
                 if (nameToDelete == "стоимость за 1 кг продукта")
                 {
                     ErrorForm ErrorForm = new ErrorForm();
-                    ErrorForm.ErrorLabel.Text = "Признак стоимости является зафиксированным. Его удаление невозможно.";
+                    ErrorForm.ErrorLabel.Text = "Признак стоимости является зафиксированным.\nЕго удаление невозможно.";
                     ErrorForm.ShowDialog();
                 }
                 else

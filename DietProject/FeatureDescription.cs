@@ -14,16 +14,12 @@ namespace DietProject
     {
         private SqlDataAdapter adapter;
         private DataTable ProductsNamesTable = new DataTable();
-        private DataTable ProductsNamesTableFD = new DataTable();
         private DataTable FeaturesTable = new DataTable();
         private DataTable SelectedFeaturesTable = new DataTable();
-        private DataTable NotSelectedFeaturesTable = new DataTable();
         private List<int> ProductsNamesIdList = new List<int>();
-        private List<int> ProductsNamesIdFDList = new List<int>();
         private List<string> FeaturesList = new List<string>();
         private List<string> leftList = new List<string>();
         private List<string> rightList = new List<string>();
-        private List<string> NotSelectedFeaturesList = new List<string>();
 
         public FeatureDescription()
         {
@@ -31,9 +27,6 @@ namespace DietProject
             adapter = new SqlDataAdapter("SELECT * FROM ProductsNames", Program.sqlConnection);
             adapter.Fill(ProductsNamesTable);
             ProductsNamesIdList = ProductsNamesTable.AsEnumerable().Select(n => n.Field<int>(0)).ToList();
-            adapter = new SqlDataAdapter("SELECT ProductId FROM FeatureDescriptions", Program.sqlConnection);
-            adapter.Fill(ProductsNamesTableFD);
-            ProductsNamesIdFDList = ProductsNamesTableFD.AsEnumerable().Select(n => n.Field<int>(0)).ToList();
             Program.sqlConnection.Open();
             SqlCommand countFeatures = new SqlCommand("SELECT COUNT(*) FROM Features;", Program.sqlConnection);
             int resCountFeatures = (int)countFeatures.ExecuteScalar();
@@ -133,9 +126,6 @@ namespace DietProject
                 SqlCommand insertNewRecord = new SqlCommand("INSERT INTO FeatureDescriptions VALUES (" + selectedProductId + ", " + featId + ");", Program.sqlConnection);
                 insertNewRecord.ExecuteNonQuery();
             }
-            adapter = new SqlDataAdapter("SELECT ProductId FROM FeatureDescriptions", Program.sqlConnection);
-            adapter.Fill(ProductsNamesTableFD);
-            ProductsNamesIdFDList = ProductsNamesTableFD.AsEnumerable().Select(n => n.Field<int>(0)).ToList();
             int selectedIndex = FDProductsComboBox.SelectedIndex;
             FDProductsComboBox.SelectedIndex = -1;
             FDProductsComboBox.SelectedIndex = selectedIndex;
