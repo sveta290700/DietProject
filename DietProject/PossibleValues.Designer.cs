@@ -54,6 +54,7 @@ namespace DietProject
             this.PVSaveButton.Name = "PVSaveButton";
             this.PVSaveButton.TabStop = false;
             this.PVSaveButton.UseVisualStyleBackColor = false;
+            this.PVSaveButton.Click += new System.EventHandler(this.PVSaveButton_Click);
             // 
             // PVFeaturesLabel
             // 
@@ -68,6 +69,7 @@ namespace DietProject
             this.PVFeaturesListBox.FormattingEnabled = true;
             this.PVFeaturesListBox.Name = "PVFeaturesListBox";
             this.PVFeaturesListBox.TabStop = false;
+            this.PVFeaturesListBox.SelectedIndexChanged += new System.EventHandler(this.PVFeaturesListBox_SelectedIndexChanged);
             // 
             // PVValuesLabel
             // 
@@ -150,6 +152,7 @@ namespace DietProject
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PossibleValues";
+            this.Load += new System.EventHandler(this.PossibleValues_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PVFromNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PVToNumericUpDown)).EndInit();
             this.panel1.ResumeLayout(false);
