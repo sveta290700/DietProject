@@ -14,8 +14,10 @@ namespace DietProject
     {
         private SqlDataAdapter adapter;
         private DataTable CategoriesTable = new DataTable();
+        private DataTable CategoriesIdTableCC = new DataTable();
         private DataTable SelectedCategoriesTable = new DataTable();
         private DataTable Category1Table = new DataTable();
+        private List<int> CategoriesIdCCList = new List<int>();
         private List<string> CategoriesList = new List<string>();
         private List<string> leftList = new List<string>();
         private List<string> rightList = new List<string>();
@@ -27,10 +29,24 @@ namespace DietProject
             adapter = new SqlDataAdapter("SELECT * FROM Categories", Program.sqlConnection);
             adapter.Fill(CategoriesTable);
             CategoriesList = CategoriesTable.AsEnumerable().Select(n => n.Field<string>(1)).ToList();
+            adapter = new SqlDataAdapter("SELECT CategoryId2 FROM CompatibleCategories", Program.sqlConnection);
+            adapter.Fill(CategoriesIdTableCC);
+            CategoriesIdCCList = CategoriesIdTableCC.AsEnumerable().Select(n => n.Field<int>(0)).ToList();
+            Program.sqlConnection.Open();
+            foreach (var categoryIdCC in CategoriesIdCCList)
+            {
+                SqlCommand checkIfExists2 = new SqlCommand("SELECT COUNT(*) FROM Categories WHERE Id = " + categoryIdCC + ";", Program.sqlConnection);
+                int resIfExists = (int)checkIfExists2.ExecuteScalar();
+                if (resIfExists == 0)
+                {
+                    SqlCommand deleteOld = new SqlCommand("DELETE FROM CompatibleCategories WHERE CategoryId2 = " + categoryIdCC + ";", Program.sqlConnection);
+                    deleteOld.ExecuteNonQuery();
+                }
+            }
+            Program.sqlConnection.Close();
             CCCategoriesComboBox.DataSource = CategoriesTable;
             CCCategoriesComboBox.DisplayMember = "Name";
             CCCategoriesComboBox.ValueMember = "Id";
-            //delete records where CategoryId2 does not exist
         }
 
         private void CCCategoriesComboBox_SelectedIndexChanged(object sender, EventArgs e)
