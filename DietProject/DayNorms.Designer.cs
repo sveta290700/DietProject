@@ -61,6 +61,7 @@ namespace DietProject
             this.DNSubstanceComboBox.FormattingEnabled = true;
             this.DNSubstanceComboBox.Name = "DNSubstanceComboBox";
             this.DNSubstanceComboBox.TabStop = false;
+            this.DNSubstanceComboBox.SelectedIndexChanged += new System.EventHandler(this.DNSubstanceComboBox_SelectedIndexChanged);
             // 
             // DNAddButton
             // 
@@ -70,6 +71,7 @@ namespace DietProject
             this.DNAddButton.Name = "DNAddButton";
             this.DNAddButton.TabStop = false;
             this.DNAddButton.UseVisualStyleBackColor = false;
+            this.DNAddButton.Click += new System.EventHandler(this.DNAddButton_Click);
             // 
             // DNSubstanceChoiceLabel
             // 
