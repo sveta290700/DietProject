@@ -53,7 +53,8 @@ namespace DietProject
             resources.GetString("KLSectionsListBox.Items4"),
             resources.GetString("KLSectionsListBox.Items5"),
             resources.GetString("KLSectionsListBox.Items6"),
-            resources.GetString("KLSectionsListBox.Items7")});
+            resources.GetString("KLSectionsListBox.Items7"),
+            resources.GetString("KLSectionsListBox.Items8")});
             this.KLSectionsListBox.Name = "KLSectionsListBox";
             this.KLSectionsListBox.TabStop = false;
             // 

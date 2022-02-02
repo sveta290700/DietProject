@@ -66,7 +66,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="KEChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 76</value>
+    <value>260, 72</value>
   </data>
   <data name="KEChoiceLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>287, 21</value>
@@ -80,11 +80,29 @@
   <data name="KLSectionsListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
+  <data name="KLSectionsListBox.Items2" xml:space="preserve">
+    <value>Совместимые категории</value>
+  </data>
+  <data name="KLSectionsListBox.Items3" xml:space="preserve">
+    <value>Продукты категории</value>
+  </data>
+  <data name="KLSectionsListBox.Items4" xml:space="preserve">
+    <value>Признаки продуктов</value>
+  </data>
+  <data name="KLSectionsListBox.Items5" xml:space="preserve">
+    <value>Возможные значения признаков продуктов</value>
+  </data>
+  <data name="KLSectionsListBox.Items6" xml:space="preserve">
+    <value>Признаковое описание продуктов</value>
+  </data>
+  <data name="KLSectionsListBox.Items7" xml:space="preserve">
+    <value>Значения признаков продуктов</value>
+  </data>
   <data name="KLSectionsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 142</value>
+    <value>203, 137</value>
   </data>
   <data name="KLSectionsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 193</value>
+    <value>405, 214</value>
   </data>
   <data name="KLSectionsListBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -93,7 +111,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="SectionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 117</value>
+    <value>203, 112</value>
   </data>
   <data name="SectionLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>405, 24</value>
@@ -112,7 +130,7 @@
     <value>NoControl</value>
   </data>
   <data name="KEChoiceButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 357</value>
+    <value>355, 376</value>
   </data>
   <data name="KEChoiceButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 38</value>

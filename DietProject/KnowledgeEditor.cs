@@ -41,35 +41,41 @@ namespace DietProject
                     }
                 case 2:
                     {
+                        CompatibleCategories CompatibleCategories = new CompatibleCategories();
+                        CompatibleCategories.ShowDialog();
+                        break;
+                    }
+                case 3:
+                    {
                         ProductsCategories ProductsCategories = new ProductsCategories();
                         ProductsCategories.ShowDialog();
                         break;
                     }
-                case 3:
+                case 4:
                     {
                         Features Features = new Features();
                         Features.ShowDialog();
                         break;
                     }
-                case 4:
+                case 5:
                     {
                         PossibleValues PossibleValues = new PossibleValues();
                         PossibleValues.ShowDialog();
                         break;
                     }
-                case 5:
+                case 6:
                     {
                         FeatureDescription FeatureDescription = new FeatureDescription();
                         FeatureDescription.ShowDialog();
                         break;
                     }
-                case 6:
+                case 7:
                     {
                         FeatureValue FeatureValue = new FeatureValue();
                         FeatureValue.ShowDialog();
                         break;
                     }
-                case 7:
+                case 8:
                     {
                         DayNorms DayNorms = new DayNorms();
                         DayNorms.ShowDialog();
