@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Globalization;
 
 namespace DietProject
 {
@@ -80,7 +81,11 @@ namespace DietProject
                 Program.sqlConnection.Open();
                 DataRowView feature = (DataRowView)PVFeaturesListBox.SelectedItem;
                 int featureId = (int)feature.Row[0];
-                SqlCommand addPossibleValues = new SqlCommand("UPDATE PossibleFeaturesValues SET Low = " + (double)PVFromNumericUpDown.Value + ", LowIncl = " + Convert.ToByte(PVFromCheckbox.Checked) + ", High = " + (double)PVToNumericUpDown.Value + ", HighIncl = " + Convert.ToByte(PVToCheckbox.Checked) + " WHERE FeatureId = " + featureId + ";", Program.sqlConnection);
+                string a = PVFromNumericUpDown.Value.ToString();
+                a = a.Replace(',', '.');
+                string b = PVToNumericUpDown.Value.ToString();
+                b = b.Replace(',', '.');
+                SqlCommand addPossibleValues = new SqlCommand("UPDATE PossibleFeaturesValues SET Low = CONVERT(DECIMAL(8, 5), " + a + "), LowIncl = " + Convert.ToByte(PVFromCheckbox.Checked) + ", High = CONVERT(DECIMAL(8, 5), " + b + "), HighIncl = " + Convert.ToByte(PVToCheckbox.Checked) + " WHERE FeatureId = " + featureId + ";", Program.sqlConnection);
                 addPossibleValues.ExecuteNonQuery();
                 Program.sqlConnection.Close();
                 int selectedIndex = PVFeaturesListBox.SelectedIndex;

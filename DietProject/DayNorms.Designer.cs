@@ -46,6 +46,11 @@ namespace DietProject
             0,
             0,
             458752});
+            this.DNNumericUpDown.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.DNNumericUpDown.Name = "DNNumericUpDown";
             this.DNNumericUpDown.TabStop = false;
             // 

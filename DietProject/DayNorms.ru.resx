@@ -58,24 +58,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="DNNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 214</value>
-  </data>
   <data name="DNNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 23</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DNNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="DNSubstanceComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 161</value>
-  </data>
   <data name="DNSubstanceComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>595, 23</value>
-  </data>
-  <data name="DNSubstanceComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="DNAddButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -87,18 +74,13 @@
   <data name="DNAddButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="DNAddButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 267</value>
-  </data>
   <data name="DNAddButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 38</value>
-  </data>
-  <data name="DNAddButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
   </data>
   <data name="DNAddButton.Text" xml:space="preserve">
     <value>Добавить</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="DNSubstanceChoiceLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -108,14 +90,8 @@
   <data name="DNSubstanceChoiceLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="DNSubstanceChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 119</value>
-  </data>
   <data name="DNSubstanceChoiceLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>435, 21</value>
-  </data>
-  <data name="DNSubstanceChoiceLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="DNSubstanceChoiceLabel.Text" xml:space="preserve">
     <value>Выберите признак-вещество для задания суточной нормы:</value>

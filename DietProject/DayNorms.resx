@@ -57,36 +57,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;DNNumericUpDown.Name" xml:space="preserve">
-    <value>DNNumericUpDown</value>
+  <data name="&gt;&gt;DNAddButton.Name" xml:space="preserve">
+    <value>DNAddButton</value>
+  </data>
+  <data name="&gt;&gt;DNSubstanceComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="DNSubstanceComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 161</value>
-  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 15</value>
   </data>
-  <data name="&gt;&gt;DNAddButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="DNNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 214</value>
   </data>
-  <data name="&gt;&gt;DNSubstanceComboBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;DNSubstanceChoiceLabel.Name" xml:space="preserve">
+    <value>DNSubstanceChoiceLabel</value>
+  </data>
+  <data name="&gt;&gt;DNNumericUpDown.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DNSubstanceChoiceLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DNSubstanceComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;DNAddButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;DNSubstanceChoiceLabel.Name" xml:space="preserve">
-    <value>DNSubstanceChoiceLabel</value>
+  <data name="&gt;&gt;DNSubstanceChoiceLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="&gt;&gt;DNSubstanceComboBox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2850,67 +2857,60 @@
         8I8AAPCHAADgJwAA5jcAAOA3AADgJwAA4CcAAOAHAADgDwAA
 </value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DNSubstanceComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;DNSubstanceComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DNAddButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Суточные нормы веществ</value>
-  </data>
   <data name="DNSubstanceChoiceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="DNAddButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;DNNumericUpDown.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="DNNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 214</value>
-  </data>
-  <data name="&gt;&gt;DNSubstanceComboBox.Name" xml:space="preserve">
-    <value>DNSubstanceComboBox</value>
-  </data>
-  <data name="&gt;&gt;DNSubstanceComboBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="DNAddButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 267</value>
   </data>
   <data name="&gt;&gt;DNNumericUpDown.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>DayNorms</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Суточные нормы веществ</value>
   </data>
-  <data name="DNNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;DNNumericUpDown.Name" xml:space="preserve">
+    <value>DNNumericUpDown</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="&gt;&gt;DNSubstanceChoiceLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DNSubstanceComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DNSubstanceComboBox.Name" xml:space="preserve">
+    <value>DNSubstanceComboBox</value>
+  </data>
+  <data name="&gt;&gt;DNAddButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DNAddButton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;DNSubstanceChoiceLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;DNSubstanceChoiceLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="DNSubstanceChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>199, 119</value>
   </data>
-  <data name="&gt;&gt;DNAddButton.Name" xml:space="preserve">
-    <value>DNAddButton</value>
+  <data name="DNNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="DNAddButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 267</value>
   </data>
   <data name="&gt;&gt;DNNumericUpDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DNSubstanceChoiceLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="DNSubstanceComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 161</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>DayNorms</value>
+  </data>
+  <data name="&gt;&gt;DNAddButton.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -122,7 +122,9 @@ namespace DietProject
                     SqlCommand deleteExisting = new SqlCommand("DELETE FROM ProductsFeaturesValues WHERE ProductId = " + selectedProductId + " AND FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
                     deleteExisting.ExecuteNonQuery();
                 }
-                SqlCommand addValue = new SqlCommand("INSERT INTO ProductsFeaturesValues VALUES (" + selectedProductId + ", " + selectedFeatureId + ", " + (double)FVNumericUpDown.Value + ");", Program.sqlConnection);
+                string a = FVNumericUpDown.Value.ToString();
+                a = a.Replace(',', '.');
+                SqlCommand addValue = new SqlCommand("INSERT INTO ProductsFeaturesValues VALUES (" + selectedProductId + ", " + selectedFeatureId + ", CONVERT(DECIMAL(10, 7), " + a + "));", Program.sqlConnection);
                 addValue.ExecuteNonQuery();
                 Program.sqlConnection.Close();
                 int selectedIndex = FVFeaturesListBox.SelectedIndex;
