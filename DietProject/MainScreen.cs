@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DietProject
 {
     public partial class MainScreen : Form
     {
+        private List<KECheck> ErrorsList = new List<KECheck>();
+
         public MainScreen()
         {
             InitializeComponent();
@@ -21,6 +24,227 @@ namespace DietProject
         {
             KnowledgeEditor KnowledgeEditor = new KnowledgeEditor();
             KnowledgeEditor.ShowDialog();
+        }
+
+        private class KECheck
+        {
+            private bool resultCheck;
+            private string messageCheck;
+            public bool ResultCheck { get => resultCheck; set => resultCheck = value; }
+            public string MessageCheck { get => messageCheck; set => messageCheck = value; }
+            public KECheck()
+            {
+                ResultCheck = true;
+                MessageCheck = "";
+            }
+            public KECheck(bool resultCheck, string messageCheck)
+            {
+                ResultCheck = resultCheck;
+                MessageCheck = messageCheck;
+            }
+        }
+
+        private KECheck CheckIfHasProductsNames()
+        {
+            Program.sqlConnection.Open();
+            KECheck result = new KECheck();
+            SqlCommand countProductsNames = new SqlCommand("SELECT COUNT(*) FROM ProductsNames;", Program.sqlConnection);
+            int countProductsNamesRes = (int)countProductsNames.ExecuteScalar();
+            if (countProductsNamesRes == 0)
+            {
+                result.ResultCheck = false;
+                result.MessageCheck = "Не задано ни одно название продукта.\n\n";
+                ErrorsList.Add(result);
+            }
+            Program.sqlConnection.Close();
+            return result;
+        }
+
+        private KECheck CheckIfHasCategories()
+        {
+            Program.sqlConnection.Open();
+            KECheck result = new KECheck();
+            SqlCommand countCategories = new SqlCommand("SELECT COUNT(*) FROM Categories;", Program.sqlConnection);
+            int countCategoriesRes = (int)countCategories.ExecuteScalar();
+            if (countCategoriesRes == 0)
+            {
+                result.ResultCheck = false;
+                result.MessageCheck = "Не задана ни одна категория продуктов.\n\n";
+                ErrorsList.Add(result);
+            }
+            Program.sqlConnection.Close();
+            return result;
+        }
+
+        private KECheck CheckIfHasCompatibleCategories()
+        {
+            Program.sqlConnection.Open();
+            KECheck result = new KECheck();
+            SqlCommand countCompatibleCategories = new SqlCommand("SELECT COUNT(*) FROM CompatibleCategories;", Program.sqlConnection);
+            int countCompatibleCategoriesRes = (int)countCompatibleCategories.ExecuteScalar();
+            if (countCompatibleCategoriesRes == 0)
+            {
+                result.ResultCheck = false;
+                result.MessageCheck = "Не задано ни одного отношения совместимости категорий продуктов.\n\n";
+                ErrorsList.Add(result);
+            }
+            Program.sqlConnection.Close();
+            return result;
+        }
+
+        private KECheck CheckIfHasProductsOfCategories()
+        {
+            Program.sqlConnection.Open();
+            KECheck result = new KECheck();
+            SqlCommand countProductsOfCategories = new SqlCommand("SELECT COUNT(*) FROM ProductsOfCategories;", Program.sqlConnection);
+            int countProductsOfCategoriesRes = (int)countProductsOfCategories.ExecuteScalar();
+            if (countProductsOfCategoriesRes == 0)
+            {
+                result.ResultCheck = false;
+                result.MessageCheck = "Ни один продукт не отнесён к какой-либо категории продуктов.\n\n";
+                ErrorsList.Add(result);
+            }
+            Program.sqlConnection.Close();
+            return result;
+        }
+
+        private KECheck CheckIfHasProductsWithoutCategories()
+        {
+            Program.sqlConnection.Open();
+            KECheck result = new KECheck();
+            SqlCommand countNotProductsOfCategories = new SqlCommand("SELECT COUNT(*) FROM ProductsNames LEFT JOIN ProductsOfCategories ON ProductsNames.Id = ProductsOfCategories.ProductId WHERE ProductsOfCategories.ProductId IS NULL;", Program.sqlConnection);
+            int countNotProductsOfCategoriesRes = (int)countNotProductsOfCategories.ExecuteScalar();
+            if (countNotProductsOfCategoriesRes > 0)
+            {
+                result.ResultCheck = false;
+                result.MessageCheck = "Не все продукты были отнесены к категориям продуктов.\n\n";
+                ErrorsList.Add(result);
+            }
+            Program.sqlConnection.Close();
+            return result;
+        }
+
+        private KECheck CheckIfHasSubstances()
+        {
+            Program.sqlConnection.Open();
+            KECheck result = new KECheck();
+            SqlCommand countSubstances = new SqlCommand("SELECT COUNT(*) FROM Features WHERE Name != N'стоимость за 1 кг продукта';", Program.sqlConnection);
+            int countSubstancesRes = (int)countSubstances.ExecuteScalar();
+            if (countSubstancesRes == 0)
+            {
+                result.ResultCheck = false;
+                result.MessageCheck = "Не задан ни один признак-вещество продуктов.\n\n";
+                ErrorsList.Add(result);
+            }
+            Program.sqlConnection.Close();
+            return result;
+        }
+
+        private KECheck CheckIfAllHasPossibleValues()
+        {
+            Program.sqlConnection.Open();
+            KECheck result = new KECheck();
+            SqlCommand countNullPV = new SqlCommand("SELECT COUNT(*) FROM PossibleFeaturesValues WHERE Low IS NULL OR LowIncl IS NULL OR High IS NULL OR HighIncl IS NULL;", Program.sqlConnection);
+            int countNullPVRes = (int)countNullPV.ExecuteScalar();
+            if (countNullPVRes > 0)
+            {
+                result.ResultCheck = false;
+                result.MessageCheck = "Не все возможные значения признаков продуктов были заданы.\n\n";
+                ErrorsList.Add(result);
+            }
+            Program.sqlConnection.Close();
+            return result;
+        }
+
+        private KECheck CheckIfHasFeatureOutOfFeatureDescriptions()
+        {
+            Program.sqlConnection.Open();
+            KECheck result = new KECheck();
+            SqlCommand countFeaturesOutOfFDs = new SqlCommand("SELECT COUNT(*) FROM Features LEFT JOIN FeatureDescriptions ON Features.Id = FeatureDescriptions.FeatureId WHERE FeatureDescriptions.FeatureId IS NULL;", Program.sqlConnection);
+            int countFeaturesOutOfFDsRes = (int)countFeaturesOutOfFDs.ExecuteScalar();
+            if (countFeaturesOutOfFDsRes > 0)
+            {
+                result.ResultCheck = false;
+                result.MessageCheck = "Не все признаки-вещества продуктов вошли в признаковые описания продуктов.\n\n";
+                ErrorsList.Add(result);
+            }
+            Program.sqlConnection.Close();
+            return result;
+        }
+
+        private KECheck CheckIfAllHasFeatureValues()
+        {
+            Program.sqlConnection.Open();
+            KECheck result = new KECheck();
+            SqlCommand countNullFV = new SqlCommand("SELECT COUNT(*) FROM ProductsFeaturesValues WHERE Value IS NULL;", Program.sqlConnection);
+            int countNullFVRes = (int)countNullFV.ExecuteScalar();
+            if (countNullFVRes > 0)
+            {
+                result.ResultCheck = false;
+                result.MessageCheck = "Не все значения признаков продуктов из признаковых описаний продуктов были заданы.\n\n";
+                ErrorsList.Add(result);
+            }
+            Program.sqlConnection.Close();
+            return result;
+        }
+
+        private KECheck CheckIfAllHasDayNorms()
+        {
+            Program.sqlConnection.Open();
+            KECheck result = new KECheck();
+            SqlCommand countNullDN = new SqlCommand("SELECT COUNT(*) FROM DayNorms WHERE Value IS NULL;", Program.sqlConnection);
+            int countNullDNRes = (int)countNullDN.ExecuteScalar();
+            if (countNullDNRes > 0)
+            {
+                result.ResultCheck = false;
+                result.MessageCheck = "Не все значения суточных норм веществ были заданы.\n\n";
+                ErrorsList.Add(result);
+            }
+            Program.sqlConnection.Close();
+            return result;
+        }
+
+        private string CheckKnowledgeIntegrity()
+        {
+            string errorsText = "";
+            ErrorsList.Clear();
+            CheckIfHasProductsNames();
+            CheckIfHasCategories();
+            CheckIfHasCompatibleCategories();
+            CheckIfHasProductsOfCategories();
+            CheckIfHasProductsWithoutCategories();
+            PossibleValues PossibleValues = new PossibleValues();
+            PossibleValues.Close();
+            CheckIfHasSubstances();
+            CheckIfAllHasPossibleValues();
+            CheckIfHasFeatureOutOfFeatureDescriptions();
+            CheckIfAllHasFeatureValues();
+            DayNorms DayNorms = new DayNorms();
+            DayNorms.Close();
+            CheckIfAllHasDayNorms();
+            if (ErrorsList.Count != 0)
+            {
+                foreach (KECheck item in ErrorsList)
+                {
+                    errorsText += item.MessageCheck;
+                }
+            }
+            return errorsText;
+        }
+        private void ButtonToTS_Click(object sender, EventArgs e)
+        {
+            string knowledgeErrors = CheckKnowledgeIntegrity();
+            if (knowledgeErrors != "")
+            {
+                ErrorFormIntegrity ErrorFormIntegrity = new ErrorFormIntegrity();
+                ErrorFormIntegrity.ErrorLabel.Text = knowledgeErrors;
+                ErrorFormIntegrity.ShowDialog();
+            }
+            else 
+            {
+                TaskDataInput TaskDataInput = new TaskDataInput();
+                TaskDataInput.ShowDialog();
+            }
         }
     }
 }

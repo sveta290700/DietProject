@@ -94,25 +94,34 @@ namespace DietProject
 
         private void PCSaveButton_Click(object sender, EventArgs e)
         {
-            Program.sqlConnection.Open();
-            DataRowView item = (DataRowView)PCCategoriesComboBox.SelectedItem;
-            int selectedCategoryId = (int)item.Row[0];
-            SqlCommand deleteOldRecords = new SqlCommand("DELETE FROM ProductsOfCategories WHERE CategoryId = " + selectedCategoryId + ";", Program.sqlConnection);
-            deleteOldRecords.ExecuteNonQuery();
-            foreach (var itemToAdd in PCProductsCategoryListBox.Items)
+            if (PCCategoriesComboBox.SelectedIndex != -1)
             {
-                SqlCommand getProdId = new SqlCommand("SELECT Id FROM ProductsNames WHERE Name = N'" + itemToAdd + "';", Program.sqlConnection);
-                int prodId = (int)getProdId.ExecuteScalar();
-                SqlCommand insertNewRecord = new SqlCommand("INSERT INTO ProductsOfCategories VALUES (" + selectedCategoryId + ", " + prodId + ");", Program.sqlConnection);
-                insertNewRecord.ExecuteNonQuery();
+                Program.sqlConnection.Open();
+                DataRowView item = (DataRowView)PCCategoriesComboBox.SelectedItem;
+                int selectedCategoryId = (int)item.Row[0];
+                SqlCommand deleteOldRecords = new SqlCommand("DELETE FROM ProductsOfCategories WHERE CategoryId = " + selectedCategoryId + ";", Program.sqlConnection);
+                deleteOldRecords.ExecuteNonQuery();
+                foreach (var itemToAdd in PCProductsCategoryListBox.Items)
+                {
+                    SqlCommand getProdId = new SqlCommand("SELECT Id FROM ProductsNames WHERE Name = N'" + itemToAdd + "';", Program.sqlConnection);
+                    int prodId = (int)getProdId.ExecuteScalar();
+                    SqlCommand insertNewRecord = new SqlCommand("INSERT INTO ProductsOfCategories VALUES (" + selectedCategoryId + ", " + prodId + ");", Program.sqlConnection);
+                    insertNewRecord.ExecuteNonQuery();
+                }
+                adapter = new SqlDataAdapter("SELECT CategoryId FROM ProductsOfCategories", Program.sqlConnection);
+                adapter.Fill(CategoriesTablePOC);
+                CategoriesIdPOCList = CategoriesTablePOC.AsEnumerable().Select(n => n.Field<int>(0)).ToList();
+                int selectedIndex = PCCategoriesComboBox.SelectedIndex;
+                PCCategoriesComboBox.SelectedIndex = -1;
+                PCCategoriesComboBox.SelectedIndex = selectedIndex;
+                Program.sqlConnection.Close();
             }
-            adapter = new SqlDataAdapter("SELECT CategoryId FROM ProductsOfCategories", Program.sqlConnection);
-            adapter.Fill(CategoriesTablePOC);
-            CategoriesIdPOCList = CategoriesTablePOC.AsEnumerable().Select(n => n.Field<int>(0)).ToList();
-            int selectedIndex = PCCategoriesComboBox.SelectedIndex;
-            PCCategoriesComboBox.SelectedIndex = -1;
-            PCCategoriesComboBox.SelectedIndex = selectedIndex;
-            Program.sqlConnection.Close();
+            else
+            {
+                ErrorForm ErrorForm = new ErrorForm();
+                ErrorForm.ErrorLabel.Text = "Выберите категорию продуктов.";
+                ErrorForm.ShowDialog();
+            }
         }
     }
 }

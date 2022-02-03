@@ -97,13 +97,13 @@
     <value>NoControl</value>
   </data>
   <data name="FVProductNameChoiceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 21</value>
+    <value>224, 21</value>
   </data>
   <data name="FVProductNameChoiceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="FVProductNameChoiceLabel.Text" xml:space="preserve">
-    <value>Выберите продукт:</value>
+    <value>Выберите название продукт:а</value>
   </data>
   <data name="FVFeaturesLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>

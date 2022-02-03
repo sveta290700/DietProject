@@ -130,13 +130,13 @@
     <value>NoControl</value>
   </data>
   <data name="FDChoiceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 21</value>
+    <value>224, 21</value>
   </data>
   <data name="FDChoiceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="FDChoiceLabel.Text" xml:space="preserve">
-    <value>Выберите продукт:</value>
+    <value>Выберите название продукта:</value>
   </data>
   <data name="SelectedFeaturesLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>

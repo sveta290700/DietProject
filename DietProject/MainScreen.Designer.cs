@@ -52,6 +52,7 @@ namespace DietProject
             this.ButtonToTS.Name = "ButtonToTS";
             this.ButtonToTS.TabStop = false;
             this.ButtonToTS.UseVisualStyleBackColor = false;
+            this.ButtonToTS.Click += new System.EventHandler(this.ButtonToTS_Click);
             // 
             // MainScreen
             // 

@@ -81,19 +81,28 @@ namespace DietProject
 
         private void DNAddButton_Click(object sender, EventArgs e)
         {
-            Program.sqlConnection.Open();
-            DataRowView item = (DataRowView)DNSubstanceComboBox.SelectedItem;
-            int selectedSubstanceId = (int)item.Row[0];
-            SqlCommand deleteOld = new SqlCommand("DELETE FROM DayNorms WHERE SubstanceId = " + selectedSubstanceId + ";", Program.sqlConnection);
-            deleteOld.ExecuteNonQuery();
-            string a = DNNumericUpDown.Value.ToString();
-            a = a.Replace(',', '.');
-            SqlCommand insertNewRecord = new SqlCommand("INSERT INTO DayNorms VALUES (" + selectedSubstanceId + ", CONVERT(DECIMAL(10, 7), " + a + "));", Program.sqlConnection);
-            insertNewRecord.ExecuteNonQuery();
-            Program.sqlConnection.Close();
-            int selectedIndex = DNSubstanceComboBox.SelectedIndex;
-            DNSubstanceComboBox.SelectedIndex = -1;
-            DNSubstanceComboBox.SelectedIndex = selectedIndex;
+            if (DNSubstanceComboBox.SelectedIndex != -1)
+            {
+                Program.sqlConnection.Open();
+                DataRowView item = (DataRowView)DNSubstanceComboBox.SelectedItem;
+                int selectedSubstanceId = (int)item.Row[0];
+                SqlCommand deleteOld = new SqlCommand("DELETE FROM DayNorms WHERE SubstanceId = " + selectedSubstanceId + ";", Program.sqlConnection);
+                deleteOld.ExecuteNonQuery();
+                string a = DNNumericUpDown.Value.ToString();
+                a = a.Replace(',', '.');
+                SqlCommand insertNewRecord = new SqlCommand("INSERT INTO DayNorms VALUES (" + selectedSubstanceId + ", CONVERT(DECIMAL(10, 7), " + a + "));", Program.sqlConnection);
+                insertNewRecord.ExecuteNonQuery();
+                Program.sqlConnection.Close();
+                int selectedIndex = DNSubstanceComboBox.SelectedIndex;
+                DNSubstanceComboBox.SelectedIndex = -1;
+                DNSubstanceComboBox.SelectedIndex = selectedIndex;
+            }
+            else
+            {
+                ErrorForm ErrorForm = new ErrorForm();
+                ErrorForm.ErrorLabel.Text = "Выберите признак-вещество для задания суточной нормы.";
+                ErrorForm.ShowDialog();
+            }
         }
     }
 }

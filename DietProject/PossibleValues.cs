@@ -22,10 +22,17 @@ namespace DietProject
         public PossibleValues()
         {
             InitializeComponent();
+            Program.sqlConnection.Open();
+            SqlCommand countPrice = new SqlCommand("SELECT COUNT(*) FROM Features WHERE Name = N'стоимость за 1 кг продукта';", Program.sqlConnection);
+            int resCountPrice = (int)countPrice.ExecuteScalar();
+            if (resCountPrice == 0)
+            {
+                SqlCommand addPriceFeature = new SqlCommand("INSERT INTO Features VALUES (N'стоимость за 1 кг продукта');", Program.sqlConnection);
+                addPriceFeature.ExecuteNonQuery();
+            }
             adapter = new SqlDataAdapter("SELECT Id FROM Features", Program.sqlConnection);
             adapter.Fill(FeaturesIdTable);
             FeaturesIdList = FeaturesIdTable.AsEnumerable().Select(n => n.Field<int>(0)).ToList();
-            Program.sqlConnection.Open();
             SqlCommand countPFV = new SqlCommand("SELECT COUNT(*) FROM PossibleFeaturesValues;", Program.sqlConnection);
             int res = (int)countPFV.ExecuteScalar();
             adapter = new SqlDataAdapter("SELECT FeatureId FROM PossibleFeaturesValues", Program.sqlConnection);
@@ -57,15 +64,6 @@ namespace DietProject
 
         private void PossibleValues_Load(object sender, EventArgs e)
         {
-            Program.sqlConnection.Open();
-            SqlCommand countFeatures = new SqlCommand("SELECT COUNT(*) FROM Features WHERE Name = N'стоимость за 1 кг продукта';", Program.sqlConnection);
-            int res = (int)countFeatures.ExecuteScalar();
-            if (res == 0)
-            {
-                SqlCommand addPriceFeature = new SqlCommand("INSERT INTO Features VALUES (N'стоимость за 1 кг продукта');", Program.sqlConnection);
-                addPriceFeature.ExecuteNonQuery();
-            }
-            Program.sqlConnection.Close();
             adapter = new SqlDataAdapter("SELECT * FROM Features", Program.sqlConnection);
             adapter.Fill(FeaturesTable);
             PVFeaturesListBox.DataSource = FeaturesTable;

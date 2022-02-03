@@ -106,75 +106,84 @@ namespace DietProject
 
         private void FVSaveButton_Click(object sender, EventArgs e)
         {
-            string leftBracket = "[";
-            string rightBracket = "]";
-            Program.sqlConnection.Open();
-            DataRowView itemProd = (DataRowView)FVProductsNamesComboBox.SelectedItem;
-            int selectedProductId = (int)itemProd.Row[0];
-            DataRowView itemFeat = (DataRowView)FVFeaturesListBox.SelectedItem;
-            int selectedFeatureId = (int)itemFeat.Row[0];
-            SqlCommand getLow = new SqlCommand("SELECT Low FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-            object getLowRes = getLow.ExecuteScalar();
-            decimal low = (decimal)0.00000;
-            if (getLowRes != DBNull.Value)
+            if (FVProductsNamesComboBox.SelectedIndex != -1)
             {
-                low = (decimal)getLowRes;
-            }
-            SqlCommand getLowIncl = new SqlCommand("SELECT LowIncl FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-            object getLowInclRes = getLowIncl.ExecuteScalar();
-            bool lowIncl = true;
-            if (getLowInclRes != DBNull.Value)
-            {
-                lowIncl = (bool)getLowInclRes;
-            }
-            SqlCommand getHigh = new SqlCommand("SELECT High FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-            object getHighRes = getHigh.ExecuteScalar();
-            decimal high = (decimal)0.00000;
-            if (getHighRes != DBNull.Value)
-            {
-                high = (decimal)getHighRes;
-            }
-            SqlCommand getHighIncl = new SqlCommand("SELECT HighIncl FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-            object getHighInclRes = getHighIncl.ExecuteScalar();
-            bool highIncl = true;
-            if (getHighInclRes != DBNull.Value)
-            {
-                highIncl = (bool)getHighInclRes;
-            }
-            Program.sqlConnection.Close();
-            if (!lowIncl && low != high)
-            {
-                leftBracket = "(";
-                low += FVNumericUpDown.Increment;
-            }
-            if (!highIncl && low != high)
-            {
-                rightBracket = ")";
-                high -= FVNumericUpDown.Increment;
-            }
-            if (low <= FVNumericUpDown.Value && FVNumericUpDown.Value <= high)
-            {
+                string leftBracket = "[";
+                string rightBracket = "]";
                 Program.sqlConnection.Open();
-                SqlCommand ifExists = new SqlCommand("SELECT COUNT (*) FROM ProductsFeaturesValues WHERE ProductId = " + selectedProductId + " AND FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-                int res = (int)ifExists.ExecuteScalar();
-                if (res != 0)
+                DataRowView itemProd = (DataRowView)FVProductsNamesComboBox.SelectedItem;
+                int selectedProductId = (int)itemProd.Row[0];
+                DataRowView itemFeat = (DataRowView)FVFeaturesListBox.SelectedItem;
+                int selectedFeatureId = (int)itemFeat.Row[0];
+                SqlCommand getLow = new SqlCommand("SELECT Low FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
+                object getLowRes = getLow.ExecuteScalar();
+                decimal low = (decimal)0.00000;
+                if (getLowRes != DBNull.Value)
                 {
-                    SqlCommand deleteExisting = new SqlCommand("DELETE FROM ProductsFeaturesValues WHERE ProductId = " + selectedProductId + " AND FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-                    deleteExisting.ExecuteNonQuery();
+                    low = (decimal)getLowRes;
                 }
-                string a = FVNumericUpDown.Value.ToString();
-                a = a.Replace(',', '.');
-                SqlCommand addValue = new SqlCommand("INSERT INTO ProductsFeaturesValues VALUES (" + selectedProductId + ", " + selectedFeatureId + ", CONVERT(DECIMAL(10, 7), " + a + "));", Program.sqlConnection);
-                addValue.ExecuteNonQuery();
+                SqlCommand getLowIncl = new SqlCommand("SELECT LowIncl FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
+                object getLowInclRes = getLowIncl.ExecuteScalar();
+                bool lowIncl = true;
+                if (getLowInclRes != DBNull.Value)
+                {
+                    lowIncl = (bool)getLowInclRes;
+                }
+                SqlCommand getHigh = new SqlCommand("SELECT High FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
+                object getHighRes = getHigh.ExecuteScalar();
+                decimal high = (decimal)0.00000;
+                if (getHighRes != DBNull.Value)
+                {
+                    high = (decimal)getHighRes;
+                }
+                SqlCommand getHighIncl = new SqlCommand("SELECT HighIncl FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
+                object getHighInclRes = getHighIncl.ExecuteScalar();
+                bool highIncl = true;
+                if (getHighInclRes != DBNull.Value)
+                {
+                    highIncl = (bool)getHighInclRes;
+                }
                 Program.sqlConnection.Close();
-                int selectedIndex = FVFeaturesListBox.SelectedIndex;
-                FVFeaturesListBox.SelectedIndex = -1;
-                FVFeaturesListBox.SelectedIndex = selectedIndex;
+                if (!lowIncl && low != high)
+                {
+                    leftBracket = "(";
+                    low += FVNumericUpDown.Increment;
+                }
+                if (!highIncl && low != high)
+                {
+                    rightBracket = ")";
+                    high -= FVNumericUpDown.Increment;
+                }
+                if (low <= FVNumericUpDown.Value && FVNumericUpDown.Value <= high)
+                {
+                    Program.sqlConnection.Open();
+                    SqlCommand ifExists = new SqlCommand("SELECT COUNT (*) FROM ProductsFeaturesValues WHERE ProductId = " + selectedProductId + " AND FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
+                    int res = (int)ifExists.ExecuteScalar();
+                    if (res != 0)
+                    {
+                        SqlCommand deleteExisting = new SqlCommand("DELETE FROM ProductsFeaturesValues WHERE ProductId = " + selectedProductId + " AND FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
+                        deleteExisting.ExecuteNonQuery();
+                    }
+                    string a = FVNumericUpDown.Value.ToString();
+                    a = a.Replace(',', '.');
+                    SqlCommand addValue = new SqlCommand("INSERT INTO ProductsFeaturesValues VALUES (" + selectedProductId + ", " + selectedFeatureId + ", CONVERT(DECIMAL(10, 7), " + a + "));", Program.sqlConnection);
+                    addValue.ExecuteNonQuery();
+                    Program.sqlConnection.Close();
+                    int selectedIndex = FVFeaturesListBox.SelectedIndex;
+                    FVFeaturesListBox.SelectedIndex = -1;
+                    FVFeaturesListBox.SelectedIndex = selectedIndex;
+                }
+                else
+                {
+                    ErrorForm ErrorForm = new ErrorForm();
+                    ErrorForm.ErrorLabel.Text = "Значение лежит вне границ заданного интервала возможных значений выбранного признака " + leftBracket + low + "; " + high + rightBracket + ".";
+                    ErrorForm.ShowDialog();
+                }
             }
             else
             {
                 ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "Значение лежит вне границ заданного интервала возможных значений выбранного признака " + leftBracket + low + "; " + high + rightBracket + ".";
+                ErrorForm.ErrorLabel.Text = "Выберите название продукта.";
                 ErrorForm.ShowDialog();
             }
         }

@@ -62,10 +62,10 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="ErrorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
+    <value>12, 11</value>
   </data>
   <data name="ErrorLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>481, 66</value>
+    <value>481, 59</value>
   </data>
   <data name="ErrorLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>

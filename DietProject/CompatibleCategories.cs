@@ -101,26 +101,35 @@ namespace DietProject
 
         private void CCSaveButton_Click(object sender, EventArgs e)
         {
-            Program.sqlConnection.Open();
-            DataRowView item = (DataRowView)CCCategoriesComboBox.SelectedItem;
-            int selectedCategoryId = (int)item.Row[0];
-            SqlCommand deleteOldRecords1 = new SqlCommand("DELETE FROM CompatibleCategories WHERE CategoryId1 = " + selectedCategoryId + ";", Program.sqlConnection);
-            deleteOldRecords1.ExecuteNonQuery();
-            SqlCommand deleteOldRecords2 = new SqlCommand("DELETE FROM CompatibleCategories WHERE CategoryId2 = " + selectedCategoryId + ";", Program.sqlConnection);
-            deleteOldRecords2.ExecuteNonQuery();
-            foreach (var itemToAdd in CCCompatibleCategoriesListBox.Items)
+            if (CCCategoriesComboBox.SelectedIndex != -1)
             {
-                SqlCommand getCatId = new SqlCommand("SELECT Id FROM Categories WHERE Name = N'" + itemToAdd + "';", Program.sqlConnection);
-                int catId = (int)getCatId.ExecuteScalar();
-                SqlCommand insertNewRecord1 = new SqlCommand("INSERT INTO CompatibleCategories VALUES (" + selectedCategoryId + ", " + catId + ");", Program.sqlConnection);
-                insertNewRecord1.ExecuteNonQuery();
-                SqlCommand insertNewRecord2 = new SqlCommand("INSERT INTO CompatibleCategories VALUES (" + catId + ", " + selectedCategoryId + ");", Program.sqlConnection);
-                insertNewRecord2.ExecuteNonQuery();
+                Program.sqlConnection.Open();
+                DataRowView item = (DataRowView)CCCategoriesComboBox.SelectedItem;
+                int selectedCategoryId = (int)item.Row[0];
+                SqlCommand deleteOldRecords1 = new SqlCommand("DELETE FROM CompatibleCategories WHERE CategoryId1 = " + selectedCategoryId + ";", Program.sqlConnection);
+                deleteOldRecords1.ExecuteNonQuery();
+                SqlCommand deleteOldRecords2 = new SqlCommand("DELETE FROM CompatibleCategories WHERE CategoryId2 = " + selectedCategoryId + ";", Program.sqlConnection);
+                deleteOldRecords2.ExecuteNonQuery();
+                foreach (var itemToAdd in CCCompatibleCategoriesListBox.Items)
+                {
+                    SqlCommand getCatId = new SqlCommand("SELECT Id FROM Categories WHERE Name = N'" + itemToAdd + "';", Program.sqlConnection);
+                    int catId = (int)getCatId.ExecuteScalar();
+                    SqlCommand insertNewRecord1 = new SqlCommand("INSERT INTO CompatibleCategories VALUES (" + selectedCategoryId + ", " + catId + ");", Program.sqlConnection);
+                    insertNewRecord1.ExecuteNonQuery();
+                    SqlCommand insertNewRecord2 = new SqlCommand("INSERT INTO CompatibleCategories VALUES (" + catId + ", " + selectedCategoryId + ");", Program.sqlConnection);
+                    insertNewRecord2.ExecuteNonQuery();
+                }
+                int selectedIndex = CCCategoriesComboBox.SelectedIndex;
+                CCCategoriesComboBox.SelectedIndex = -1;
+                CCCategoriesComboBox.SelectedIndex = selectedIndex;
+                Program.sqlConnection.Close();
             }
-            int selectedIndex = CCCategoriesComboBox.SelectedIndex;
-            CCCategoriesComboBox.SelectedIndex = -1;
-            CCCategoriesComboBox.SelectedIndex = selectedIndex;
-            Program.sqlConnection.Close();
+            else
+            {
+                ErrorForm ErrorForm = new ErrorForm();
+                ErrorForm.ErrorLabel.Text = "Выберите категорию продуктов.";
+                ErrorForm.ShowDialog();
+            }
         }
     }
 }

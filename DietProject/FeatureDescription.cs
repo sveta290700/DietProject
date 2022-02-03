@@ -114,22 +114,31 @@ namespace DietProject
 
         private void FDSaveButton_Click(object sender, EventArgs e)
         {
-            Program.sqlConnection.Open();
-            DataRowView item = (DataRowView)FDProductsComboBox.SelectedItem;
-            int selectedProductId = (int)item.Row[0];
-            SqlCommand deleteOldRecords = new SqlCommand("DELETE FROM FeatureDescriptions WHERE ProductId = " + selectedProductId + ";", Program.sqlConnection);
-            deleteOldRecords.ExecuteNonQuery();
-            foreach (var itemToAdd in FDSelectedFeaturesListBox.Items)
+            if (FDProductsComboBox.SelectedIndex != -1)
             {
-                SqlCommand getFeatId = new SqlCommand("SELECT Id FROM Features WHERE Name = N'" + itemToAdd + "';", Program.sqlConnection);
-                int featId = (int)getFeatId.ExecuteScalar();
-                SqlCommand insertNewRecord = new SqlCommand("INSERT INTO FeatureDescriptions VALUES (" + selectedProductId + ", " + featId + ");", Program.sqlConnection);
-                insertNewRecord.ExecuteNonQuery();
+                Program.sqlConnection.Open();
+                DataRowView item = (DataRowView)FDProductsComboBox.SelectedItem;
+                int selectedProductId = (int)item.Row[0];
+                SqlCommand deleteOldRecords = new SqlCommand("DELETE FROM FeatureDescriptions WHERE ProductId = " + selectedProductId + ";", Program.sqlConnection);
+                deleteOldRecords.ExecuteNonQuery();
+                foreach (var itemToAdd in FDSelectedFeaturesListBox.Items)
+                {
+                    SqlCommand getFeatId = new SqlCommand("SELECT Id FROM Features WHERE Name = N'" + itemToAdd + "';", Program.sqlConnection);
+                    int featId = (int)getFeatId.ExecuteScalar();
+                    SqlCommand insertNewRecord = new SqlCommand("INSERT INTO FeatureDescriptions VALUES (" + selectedProductId + ", " + featId + ");", Program.sqlConnection);
+                    insertNewRecord.ExecuteNonQuery();
+                }
+                int selectedIndex = FDProductsComboBox.SelectedIndex;
+                FDProductsComboBox.SelectedIndex = -1;
+                FDProductsComboBox.SelectedIndex = selectedIndex;
+                Program.sqlConnection.Close();
             }
-            int selectedIndex = FDProductsComboBox.SelectedIndex;
-            FDProductsComboBox.SelectedIndex = -1;
-            FDProductsComboBox.SelectedIndex = selectedIndex;
-            Program.sqlConnection.Close();
+            else
+            {
+                ErrorForm ErrorForm = new ErrorForm();
+                ErrorForm.ErrorLabel.Text = "Выберите название продукта.";
+                ErrorForm.ShowDialog();
+            }
         }
     }
 }
