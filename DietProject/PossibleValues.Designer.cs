@@ -91,6 +91,8 @@ namespace DietProject
             // PVFromCheckbox
             // 
             resources.ApplyResources(this.PVFromCheckbox, "PVFromCheckbox");
+            this.PVFromCheckbox.Checked = true;
+            this.PVFromCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.PVFromCheckbox.Name = "PVFromCheckbox";
             this.PVFromCheckbox.TabStop = false;
             this.PVFromCheckbox.UseVisualStyleBackColor = true;
@@ -98,6 +100,8 @@ namespace DietProject
             // PVToCheckbox
             // 
             resources.ApplyResources(this.PVToCheckbox, "PVToCheckbox");
+            this.PVToCheckbox.Checked = true;
+            this.PVToCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.PVToCheckbox.Name = "PVToCheckbox";
             this.PVToCheckbox.TabStop = false;
             this.PVToCheckbox.UseVisualStyleBackColor = true;

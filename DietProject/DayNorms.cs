@@ -16,7 +16,6 @@ namespace DietProject
         private DataTable SubstancesTable = new DataTable();
         private DataTable SubstancesIdTable = new DataTable();
         private DataTable SubstancesIdTable2 = new DataTable();
-        private List<string> SubstancesList = new List<string>();
         private List<int> SubstancesIdList = new List<int>();
         private List<int> SubstancesIdList2 = new List<int>();
 
@@ -38,7 +37,7 @@ namespace DietProject
             {
                 foreach (var substanceId in SubstancesIdList)
                 {
-                    SqlCommand initDN = new SqlCommand("INSERT INTO DayNorms VALUES (" + substanceId + ", 0.0);", Program.sqlConnection);
+                    SqlCommand initDN = new SqlCommand("INSERT INTO DayNorms VALUES (" + substanceId + ", NULL);", Program.sqlConnection);
                     initDN.ExecuteNonQuery();
                 }
             }
@@ -48,7 +47,7 @@ namespace DietProject
                 {
                     if (!SubstancesIdList2.Contains(substanceId))
                     {
-                        SqlCommand insNew = new SqlCommand("INSERT INTO DayNorms VALUES (" + substanceId + ", 0.0);", Program.sqlConnection);
+                        SqlCommand insNew = new SqlCommand("INSERT INTO DayNorms VALUES (" + substanceId + ", NULL);", Program.sqlConnection);
                         insNew.ExecuteNonQuery();
                     }
                 }
@@ -56,7 +55,6 @@ namespace DietProject
             Program.sqlConnection.Close();
             adapter = new SqlDataAdapter("SELECT * FROM Features WHERE Id != 1", Program.sqlConnection);
             adapter.Fill(SubstancesTable);
-            SubstancesList = SubstancesTable.AsEnumerable().Select(n => n.Field<string>(1)).ToList();
             DNSubstanceComboBox.DataSource = SubstancesTable;
             DNSubstanceComboBox.DisplayMember = "Name";
             DNSubstanceComboBox.ValueMember = "Id";
@@ -70,7 +68,12 @@ namespace DietProject
                 DataRowView item = (DataRowView)DNSubstanceComboBox.SelectedItem;
                 int selectedSubstanceId = (int)item.Row[0];
                 SqlCommand getDayNorm = new SqlCommand("SELECT Value FROM DayNorms WHERE SubstanceId = " + selectedSubstanceId + ";", Program.sqlConnection);
-                decimal dayNorm = (decimal)getDayNorm.ExecuteScalar();
+                object dayNormRes = getDayNorm.ExecuteScalar();
+                decimal dayNorm = (decimal)0.0000000;
+                if (dayNormRes != DBNull.Value)
+                {
+                    dayNorm = (decimal)dayNormRes;
+                }
                 Program.sqlConnection.Close();
                 DNNumericUpDown.Value = dayNorm;
             }

@@ -37,7 +37,7 @@ namespace DietProject
             {
                 foreach (var featureId in FeaturesIdList)
                 {
-                    SqlCommand initPFV = new SqlCommand("INSERT INTO PossibleFeaturesValues VALUES (" + featureId + ", 0.0, 0, 0.0, 0);", Program.sqlConnection);
+                    SqlCommand initPFV = new SqlCommand("INSERT INTO PossibleFeaturesValues VALUES (" + featureId + ", NULL, NULL, NULL, NULL);", Program.sqlConnection);
                     initPFV.ExecuteNonQuery();
                 }
             }
@@ -47,7 +47,7 @@ namespace DietProject
                 {
                     if (!FeaturesIdList2.Contains(featureId))
                     {
-                        SqlCommand insNew = new SqlCommand("INSERT INTO PossibleFeaturesValues VALUES (" + featureId + ", 0.0, 0, 0.0, 0);", Program.sqlConnection);
+                        SqlCommand insNew = new SqlCommand("INSERT INTO PossibleFeaturesValues VALUES (" + featureId + ", NULL, NULL, NULL, NULL);", Program.sqlConnection);
                         insNew.ExecuteNonQuery();
                     }
                 }
@@ -107,13 +107,33 @@ namespace DietProject
                 DataRowView feature = (DataRowView)PVFeaturesListBox.SelectedItem;
                 int featId = (int)feature.Row[0];
                 SqlCommand getLow = new SqlCommand("SELECT Low FROM PossibleFeaturesValues WHERE FeatureId = " + featId + ";", Program.sqlConnection);
-                decimal low = (decimal)getLow.ExecuteScalar();
+                object getLowRes = getLow.ExecuteScalar();
+                decimal low = (decimal)0.00000;
+                if (getLowRes != DBNull.Value)
+                {
+                    low = (decimal)getLowRes;
+                }
                 SqlCommand getLowIncl = new SqlCommand("SELECT LowIncl FROM PossibleFeaturesValues WHERE FeatureId = " + featId + ";", Program.sqlConnection);
-                bool lowIncl = (bool)getLowIncl.ExecuteScalar();
+                object getLowInclRes = getLowIncl.ExecuteScalar();
+                bool lowIncl = true;
+                if (getLowInclRes != DBNull.Value)
+                {
+                    lowIncl = (bool)getLowInclRes;
+                }
                 SqlCommand getHigh = new SqlCommand("SELECT High FROM PossibleFeaturesValues WHERE FeatureId = " + featId + ";", Program.sqlConnection);
-                decimal high = (decimal)getHigh.ExecuteScalar();
+                object getHighRes = getHigh.ExecuteScalar();
+                decimal high = (decimal)0.00000;
+                if (getHighRes != DBNull.Value)
+                {
+                    high = (decimal)getHighRes;
+                }
                 SqlCommand getHighIncl = new SqlCommand("SELECT HighIncl FROM PossibleFeaturesValues WHERE FeatureId = " + featId + ";", Program.sqlConnection);
-                bool highIncl = (bool)getHighIncl.ExecuteScalar();
+                object getHighInclRes = getHighIncl.ExecuteScalar();
+                bool highIncl = true;
+                if (getHighInclRes != DBNull.Value)
+                {
+                    highIncl = (bool)getHighInclRes;
+                }
                 Program.sqlConnection.Close();
                 PVFromNumericUpDown.Value = low;
                 PVFromCheckbox.Checked = lowIncl;

@@ -49,19 +49,39 @@ namespace DietProject
                 SqlCommand getValue = new SqlCommand("SELECT Value FROM ProductsFeaturesValues WHERE ProductId = " + selectedProductId + " AND FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
                 object value = getValue.ExecuteScalar();
                 SqlCommand getLow = new SqlCommand("SELECT Low FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-                decimal low = (decimal)getLow.ExecuteScalar();
+                object getLowRes = getLow.ExecuteScalar();
+                decimal low = (decimal)0.00000;
+                if (getLowRes != DBNull.Value)
+                {
+                    low = (decimal)getLowRes;
+                }
                 SqlCommand getLowIncl = new SqlCommand("SELECT LowIncl FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-                bool lowIncl = (bool)getLowIncl.ExecuteScalar();
+                object getLowInclRes = getLowIncl.ExecuteScalar();
+                bool lowIncl = true;
+                if (getLowInclRes != DBNull.Value)
+                {
+                    lowIncl = (bool)getLowInclRes;
+                }
                 SqlCommand getHigh = new SqlCommand("SELECT High FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-                decimal high = (decimal)getHigh.ExecuteScalar();
+                object getHighRes = getHigh.ExecuteScalar();
+                decimal high = (decimal)0.00000;
+                if (getHighRes != DBNull.Value)
+                {
+                    high = (decimal)getHighRes;
+                }
                 SqlCommand getHighIncl = new SqlCommand("SELECT HighIncl FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-                bool highIncl = (bool)getHighIncl.ExecuteScalar();
+                object getHighInclRes = getHighIncl.ExecuteScalar();
+                bool highIncl = true;
+                if (getHighInclRes != DBNull.Value)
+                {
+                    highIncl = (bool)getHighInclRes;
+                }
                 Program.sqlConnection.Close();
-                if (!lowIncl)
+                if (!lowIncl && low != high)
                 {
                     low += FVNumericUpDown.Increment;
                 }
-                if (!highIncl)
+                if (!highIncl && low != high)
                 {
                     high -= FVNumericUpDown.Increment;
                 }
@@ -94,20 +114,40 @@ namespace DietProject
             DataRowView itemFeat = (DataRowView)FVFeaturesListBox.SelectedItem;
             int selectedFeatureId = (int)itemFeat.Row[0];
             SqlCommand getLow = new SqlCommand("SELECT Low FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-            decimal low = (decimal)getLow.ExecuteScalar();
+            object getLowRes = getLow.ExecuteScalar();
+            decimal low = (decimal)0.00000;
+            if (getLowRes != DBNull.Value)
+            {
+                low = (decimal)getLowRes;
+            }
             SqlCommand getLowIncl = new SqlCommand("SELECT LowIncl FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-            bool lowIncl = (bool)getLowIncl.ExecuteScalar();
+            object getLowInclRes = getLowIncl.ExecuteScalar();
+            bool lowIncl = true;
+            if (getLowInclRes != DBNull.Value)
+            {
+                lowIncl = (bool)getLowInclRes;
+            }
             SqlCommand getHigh = new SqlCommand("SELECT High FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-            decimal high = (decimal)getHigh.ExecuteScalar();
+            object getHighRes = getHigh.ExecuteScalar();
+            decimal high = (decimal)0.00000;
+            if (getHighRes != DBNull.Value)
+            {
+                high = (decimal)getHighRes;
+            }
             SqlCommand getHighIncl = new SqlCommand("SELECT HighIncl FROM PossibleFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
-            bool highIncl = (bool)getHighIncl.ExecuteScalar();
+            object getHighInclRes = getHighIncl.ExecuteScalar();
+            bool highIncl = true;
+            if (getHighInclRes != DBNull.Value)
+            {
+                highIncl = (bool)getHighInclRes;
+            }
             Program.sqlConnection.Close();
-            if (!lowIncl)
+            if (!lowIncl && low != high)
             {
                 leftBracket = "(";
                 low += FVNumericUpDown.Increment;
             }
-            if (!highIncl)
+            if (!highIncl && low != high)
             {
                 rightBracket = ")";
                 high -= FVNumericUpDown.Increment;
