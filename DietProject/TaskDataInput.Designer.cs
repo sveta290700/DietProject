@@ -50,6 +50,7 @@ namespace DietProject
             this.DTUnselectButton.Name = "DTUnselectButton";
             this.DTUnselectButton.TabStop = false;
             this.DTUnselectButton.UseVisualStyleBackColor = false;
+            this.DTUnselectButton.Click += new System.EventHandler(this.DTUnselectButton_Click);
             // 
             // DTSelectButton
             // 
@@ -59,6 +60,7 @@ namespace DietProject
             this.DTSelectButton.Name = "DTSelectButton";
             this.DTSelectButton.TabStop = false;
             this.DTSelectButton.UseVisualStyleBackColor = false;
+            this.DTSelectButton.Click += new System.EventHandler(this.DTSelectButton_Click);
             // 
             // TDSolveButton
             // 
@@ -142,6 +144,7 @@ namespace DietProject
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TaskDataInput";
+            this.Load += new System.EventHandler(this.TaskDataInput_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PVFromNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

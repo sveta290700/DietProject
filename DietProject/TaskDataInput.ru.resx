@@ -68,15 +68,8 @@
   <data name="DTUnselectButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="DTUnselectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>381, 236</value>
-  </data>
   <data name="DTUnselectButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 30</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DTUnselectButton.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
   </data>
   <data name="DTUnselectButton.Text" xml:space="preserve">
     <value>&lt;&lt;</value>
@@ -90,14 +83,8 @@
   <data name="DTSelectButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="DTSelectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>381, 188</value>
-  </data>
   <data name="DTSelectButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 30</value>
-  </data>
-  <data name="DTSelectButton.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
   </data>
   <data name="DTSelectButton.Text" xml:space="preserve">
     <value>&gt;&gt;</value>
@@ -111,14 +98,8 @@
   <data name="TDSolveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="TDSolveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 377</value>
-  </data>
   <data name="TDSolveButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 38</value>
-  </data>
-  <data name="TDSolveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
   </data>
   <data name="TDSolveButton.Text" xml:space="preserve">
     <value>Решить задачу</value>
@@ -129,14 +110,8 @@
   <data name="DietProductsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="DietProductsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>425, 121</value>
-  </data>
   <data name="DietProductsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 24</value>
-  </data>
-  <data name="DietProductsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
   </data>
   <data name="DietProductsLabel.Text" xml:space="preserve">
     <value>Продукты рациона</value>
@@ -144,17 +119,12 @@
   <data name="DietProductsListBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="DietProductsListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="DietProductsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>425, 148</value>
-  </data>
   <data name="DietProductsListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 193</value>
-  </data>
-  <data name="DietProductsListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
   </data>
   <data name="DTProductsNamesLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
@@ -162,14 +132,8 @@
   <data name="DTProductsNamesLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="DTProductsNamesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 121</value>
-  </data>
   <data name="DTProductsNamesLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 24</value>
-  </data>
-  <data name="DTProductsNamesLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="DTProductsNamesLabel.Text" xml:space="preserve">
     <value>Названия продуктов</value>
@@ -180,23 +144,11 @@
   <data name="DTProductsNamesListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="DTProductsNamesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 148</value>
-  </data>
   <data name="DTProductsNamesListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 193</value>
   </data>
-  <data name="DTProductsNamesListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="PVFromNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 55</value>
-  </data>
   <data name="PVFromNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 23</value>
-  </data>
-  <data name="PVFromNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="TDLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -207,14 +159,8 @@
   <data name="TDLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="TDLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>239, 56</value>
-  </data>
   <data name="TDLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 21</value>
-  </data>
-  <data name="TDLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="TDLabel.Text" xml:space="preserve">
     <value>Доступный бюджет:</value>
