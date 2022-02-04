@@ -7,8 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Linq;
-using MathNet.Numerics;
-using MathNet.Numerics.LinearAlgebra;
+using Google.OrTools.LinearSolver;
+using System.Diagnostics;
 
 namespace DietProject
 {
@@ -124,8 +124,32 @@ namespace DietProject
                             systemLeft[counterFeatures, counterProducts] = featureValue;
                             counterFeatures++;
                         }
-                        counterProducts++;
+                        counterProducts++;               
                     }
+                    adapter = new SqlDataAdapter("SELECT Id FROM ProductsNames;", Program.sqlConnection);
+                    FeaturesTable.Clear();
+                    adapter.Fill(FeaturesTable);
+                    FeaturesIdList.Clear();
+                    FeaturesIdList = FeaturesTable.AsEnumerable().Select(n => n.Field<int>(0)).ToList();
+                    Solver solver = Solver.CreateSolver("GLOP");
+                    List<Variable> foods = new List<Variable>();
+                    for (int i = 0; i < DietProductsListBox.Items.Cast<string>().ToList().Count; ++i)
+                    {
+                        string varName = "x" + i;
+                        foods.Add(solver.MakeNumVar(0.0, double.PositiveInfinity, varName));
+                    }
+                    string newConstraint = "";
+                    for (int i = 0; i < featuresCount; i++)
+                    {
+                        string varName = "x" + i;
+                        for (int j = 0; j < counterProducts; j++)
+                        {
+                            newConstraint = newConstraint + systemLeft[i, j] + " * " + varName + " ";
+                        }
+                        newConstraint += "<= 14.0";
+                        solver.MakeConstraint(newConstraint);
+                    }
+                    Trace.WriteLine($"Number of constraints = {solver.NumConstraints()}");
                 }
                 else
                 {
