@@ -236,8 +236,9 @@ namespace DietProject
             string knowledgeErrors = CheckKnowledgeIntegrity();
             if (knowledgeErrors != "")
             {
-                ErrorFormIntegrity ErrorFormIntegrity = new ErrorFormIntegrity();
+                ErrorFormLarge ErrorFormIntegrity = new ErrorFormLarge();
                 ErrorFormIntegrity.ErrorLabel.Text = knowledgeErrors;
+                ErrorFormIntegrity.Text = "Проверка целостности базы знаний";
                 ErrorFormIntegrity.ShowDialog();
             }
             else 

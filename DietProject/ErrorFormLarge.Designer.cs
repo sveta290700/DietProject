@@ -1,7 +1,7 @@
 ﻿
 namespace DietProject
 {
-    partial class ErrorFormIntegrity
+    partial class ErrorFormLarge
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace DietProject
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ErrorFormIntegrity));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ErrorFormLarge));
             this.ErrorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -38,7 +38,7 @@ namespace DietProject
             resources.ApplyResources(this.ErrorLabel, "ErrorLabel");
             this.ErrorLabel.Name = "ErrorLabel";
             // 
-            // ErrorFormIntegrity
+            // ErrorFormLarge
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -47,7 +47,7 @@ namespace DietProject
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ErrorFormIntegrity";
+            this.Name = "ErrorFormLarge";
             this.ResumeLayout(false);
 
         }

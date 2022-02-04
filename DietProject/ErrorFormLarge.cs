@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace DietProject
 {
-    public partial class ErrorFormIntegrity : Form
+    public partial class ErrorFormLarge : Form
     {
-        public ErrorFormIntegrity()
+        public ErrorFormLarge()
         {
             InitializeComponent();
         }

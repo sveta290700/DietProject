@@ -70,6 +70,7 @@ namespace DietProject
             this.TDSolveButton.Name = "TDSolveButton";
             this.TDSolveButton.TabStop = false;
             this.TDSolveButton.UseVisualStyleBackColor = false;
+            this.TDSolveButton.Click += new System.EventHandler(this.TDSolveButton_Click);
             // 
             // DietProductsLabel
             // 
