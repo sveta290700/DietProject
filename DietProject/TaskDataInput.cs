@@ -99,7 +99,7 @@ namespace DietProject
                 {
                     ErrorFormLarge ErrorFormIncompatible = new ErrorFormLarge();
                     ErrorFormIncompatible.ErrorLabel.Text = notCompatibleMessagesString;
-                    ErrorFormIncompatible.Text = "Найдены несовместимые продукты";
+                    ErrorFormIncompatible.Text = "Найдены несовместимые продукты.";
                     ErrorFormIncompatible.ShowDialog();
                 }
                 Program.sqlConnection.Close();
