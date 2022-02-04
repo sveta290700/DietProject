@@ -90,7 +90,7 @@ namespace DietProject
                 deleteOld.ExecuteNonQuery();
                 string a = DNNumericUpDown.Value.ToString();
                 a = a.Replace(',', '.');
-                SqlCommand insertNewRecord = new SqlCommand("INSERT INTO DayNorms VALUES (" + selectedSubstanceId + ", CONVERT(DECIMAL(10, 7), " + a + "));", Program.sqlConnection);
+                SqlCommand insertNewRecord = new SqlCommand("INSERT INTO DayNorms VALUES (" + selectedSubstanceId + ", CONVERT(DECIMAL(11, 7), " + a + "));", Program.sqlConnection);
                 insertNewRecord.ExecuteNonQuery();
                 Program.sqlConnection.Close();
                 int selectedIndex = DNSubstanceComboBox.SelectedIndex;

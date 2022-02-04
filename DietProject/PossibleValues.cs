@@ -82,7 +82,7 @@ namespace DietProject
                 a = a.Replace(',', '.');
                 string b = PVToNumericUpDown.Value.ToString();
                 b = b.Replace(',', '.');
-                SqlCommand addPossibleValues = new SqlCommand("UPDATE PossibleFeaturesValues SET Low = CONVERT(DECIMAL(8, 5), " + a + "), LowIncl = " + Convert.ToByte(PVFromCheckbox.Checked) + ", High = CONVERT(DECIMAL(8, 5), " + b + "), HighIncl = " + Convert.ToByte(PVToCheckbox.Checked) + " WHERE FeatureId = " + featureId + ";", Program.sqlConnection);
+                SqlCommand addPossibleValues = new SqlCommand("UPDATE PossibleFeaturesValues SET Low = CONVERT(DECIMAL(9, 5), " + a + "), LowIncl = " + Convert.ToByte(PVFromCheckbox.Checked) + ", High = CONVERT(DECIMAL(9, 5), " + b + "), HighIncl = " + Convert.ToByte(PVToCheckbox.Checked) + " WHERE FeatureId = " + featureId + ";", Program.sqlConnection);
                 addPossibleValues.ExecuteNonQuery();
                 Program.sqlConnection.Close();
                 int selectedIndex = PVFeaturesListBox.SelectedIndex;

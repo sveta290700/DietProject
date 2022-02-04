@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Linq;
+using MathNet.Numerics;
+using MathNet.Numerics.LinearAlgebra;
 
 namespace DietProject
 {
@@ -56,9 +58,9 @@ namespace DietProject
         {
             if (DietProductsListBox.Items.Cast<string>().ToList().Count != 0)
             {
+                Program.sqlConnection.Open();
                 List<string> notCompatibleMessagesList = new List<string>();
                 string notCompatibleMessagesString = "";
-                Program.sqlConnection.Open();
                 foreach (var dietProductName1 in DietProductsListBox.Items)
                 {
                     SqlCommand getDietProductId1 = new SqlCommand("SELECT Id FROM ProductsNames WHERE Name = N'" + dietProductName1 + "';", Program.sqlConnection);
@@ -93,7 +95,37 @@ namespace DietProject
                 }
                 if (notCompatibleMessagesString.Length == 0)
                 {
-
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    DataTable FeaturesTable = new DataTable();
+                    List<int> FeaturesIdList = new List<int>();
+                    SqlCommand getFeaturesCount = new SqlCommand("SELECT COUNT (*) FROM Features;", Program.sqlConnection);
+                    int featuresCount = (int)getFeaturesCount.ExecuteScalar();
+                    double[,] systemLeft = new double[featuresCount, DietProductsListBox.Items.Count];
+                    int counterProducts = 0;
+                    foreach (var dietProductName in DietProductsListBox.Items)
+                    {
+                        SqlCommand getDietProductId = new SqlCommand("SELECT Id FROM ProductsNames WHERE Name = N'" + dietProductName + "';", Program.sqlConnection);
+                        int dietProductId = (int)getDietProductId.ExecuteScalar();
+                        adapter = new SqlDataAdapter("SELECT Id FROM Features;", Program.sqlConnection);
+                        FeaturesTable.Clear();
+                        adapter.Fill(FeaturesTable);
+                        FeaturesIdList.Clear();
+                        FeaturesIdList = FeaturesTable.AsEnumerable().Select(n => n.Field<int>(0)).ToList();
+                        int counterFeatures = 0;
+                        foreach (var featureId in FeaturesIdList)
+                        {
+                            SqlCommand getFeatureValue = new SqlCommand("SELECT Value FROM ProductsFeaturesValues WHERE ProductId = " + dietProductId + " AND FeatureId = " + featureId + ";", Program.sqlConnection);
+                            object featureValueRes = getFeatureValue.ExecuteScalar();
+                            double featureValue = 0.0;
+                            if (featureValueRes != null)
+                            {
+                                featureValue = decimal.ToDouble((decimal)featureValueRes);
+                            }
+                            systemLeft[counterFeatures, counterProducts] = featureValue;
+                            counterFeatures++;
+                        }
+                        counterProducts++;
+                    }
                 }
                 else
                 {

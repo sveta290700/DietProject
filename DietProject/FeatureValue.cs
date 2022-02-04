@@ -166,7 +166,7 @@ namespace DietProject
                     }
                     string a = FVNumericUpDown.Value.ToString();
                     a = a.Replace(',', '.');
-                    SqlCommand addValue = new SqlCommand("INSERT INTO ProductsFeaturesValues VALUES (" + selectedProductId + ", " + selectedFeatureId + ", CONVERT(DECIMAL(10, 7), " + a + "));", Program.sqlConnection);
+                    SqlCommand addValue = new SqlCommand("INSERT INTO ProductsFeaturesValues VALUES (" + selectedProductId + ", " + selectedFeatureId + ", CONVERT(DECIMAL(11, 7), " + a + "));", Program.sqlConnection);
                     addValue.ExecuteNonQuery();
                     Program.sqlConnection.Close();
                     int selectedIndex = FVFeaturesListBox.SelectedIndex;
