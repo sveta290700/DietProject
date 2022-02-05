@@ -195,7 +195,7 @@ namespace DietProject
                     break;
                 }
             }
-            if (countFVRes > 0 || errorFlag)
+            if (errorFlag)
             {
                 result.ResultCheck = false;
                 result.MessageCheck = "Не все значения признаков продуктов из признаковых описаний продуктов были заданы.\n\n";

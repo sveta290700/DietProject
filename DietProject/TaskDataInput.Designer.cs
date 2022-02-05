@@ -106,19 +106,19 @@ namespace DietProject
             // 
             resources.ApplyResources(this.PVFromNumericUpDown, "PVFromNumericUpDown");
             this.PVFromNumericUpDown.Maximum = new decimal(new int[] {
-            1000,
+            3000,
             0,
             0,
             0});
             this.PVFromNumericUpDown.Minimum = new decimal(new int[] {
-            300,
+            500,
             0,
             0,
             0});
             this.PVFromNumericUpDown.Name = "PVFromNumericUpDown";
             this.PVFromNumericUpDown.TabStop = false;
             this.PVFromNumericUpDown.Value = new decimal(new int[] {
-            300,
+            500,
             0,
             0,
             0});

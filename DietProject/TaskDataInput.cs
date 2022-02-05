@@ -171,7 +171,7 @@ namespace DietProject
                         {
                             if (i == 0)
                             {
-                                objective.SetCoefficient(foods[j], systemLeft[i, j]);                      
+                                objective.SetCoefficient(foods[j], systemLeft[i, j]);
                             }
                             constraint.SetCoefficient(foods[j], systemLeft[i, j]);
                         }
