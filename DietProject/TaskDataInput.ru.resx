@@ -147,6 +147,9 @@
   <data name="DTProductsNamesListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 193</value>
   </data>
+  <data name="PVFromNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 55</value>
+  </data>
   <data name="PVFromNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 23</value>
   </data>
@@ -158,6 +161,9 @@
   </data>
   <data name="TDLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="TDLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 56</value>
   </data>
   <data name="TDLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 21</value>

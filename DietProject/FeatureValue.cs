@@ -93,7 +93,7 @@ namespace DietProject
                 {
                     FVNumericUpDown.Value = (decimal)0.0000000;
                     Program.sqlConnection.Open();
-                    SqlCommand deleteOld = new SqlCommand("DELETE FROM ProductsFeaturesValues WHERE FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);
+                    SqlCommand deleteOld = new SqlCommand("DELETE FROM ProductsFeaturesValues WHERE FeatureId = " + selectedFeatureId + " AND ProductId = " + selectedProductId + ";", Program.sqlConnection);
                     deleteOld.ExecuteNonQuery();
                     Program.sqlConnection.Close();
                 }
