@@ -101,6 +101,7 @@ namespace DietProject
                     SqlCommand getFeaturesCount = new SqlCommand("SELECT COUNT (*) FROM Features;", Program.sqlConnection);
                     int featuresCount = (int)getFeaturesCount.ExecuteScalar();
                     double[,] systemLeft = new double[featuresCount, DietProductsListBox.Items.Count];
+                    double[] systemRight = new double[featuresCount];
                     int counterProducts = 0;
                     foreach (var dietProductName in DietProductsListBox.Items)
                     {
@@ -126,6 +127,21 @@ namespace DietProject
                         }
                         counterProducts++;               
                     }
+                    int counterFeaturesRight = 0;
+                    foreach (var featureId in FeaturesIdList)
+                    {
+                        if (featureId != 1)
+                        {
+                            SqlCommand getDayNorm = new SqlCommand("SELECT Value FROM DayNorms WHERE SubstanceId = " + featureId + ";", Program.sqlConnection);
+                            double dayNorm = decimal.ToDouble((decimal)getDayNorm.ExecuteScalar());
+                            systemRight[counterFeaturesRight] = dayNorm;
+                        }
+                        else
+                        {
+                            systemRight[counterFeaturesRight] = (double)PVFromNumericUpDown.Value;
+                        }
+                        counterFeaturesRight++;
+                    }
                     adapter = new SqlDataAdapter("SELECT Id FROM ProductsNames;", Program.sqlConnection);
                     FeaturesTable.Clear();
                     adapter.Fill(FeaturesTable);
@@ -136,26 +152,58 @@ namespace DietProject
                     for (int i = 0; i < DietProductsListBox.Items.Cast<string>().ToList().Count; ++i)
                     {
                         string varName = "x" + i;
-                        foods.Add(solver.MakeNumVar(0.0, double.PositiveInfinity, varName));
+                        foods.Add(solver.MakeNumVar(0.0, 10.0, varName));
                     }
-                    string newConstraint = "";
+                    List<Google.OrTools.LinearSolver.Constraint> constraints = new List<Google.OrTools.LinearSolver.Constraint>();
+                    Objective objective = solver.Objective();
                     for (int i = 0; i < featuresCount; i++)
                     {
-                        string varName = "x" + i;
-                        for (int j = 0; j < counterProducts; j++)
+                        Google.OrTools.LinearSolver.Constraint constraint = solver.MakeConstraint();
+                        if (i == 0)
                         {
-                            newConstraint = newConstraint + systemLeft[i, j] + " * " + varName + " ";
+                            constraint.SetBounds(0.0, systemRight[i]);
                         }
-                        newConstraint += "<= 14.0";
-                        solver.MakeConstraint(newConstraint);
+                        else
+                        {
+                            constraint.SetBounds(systemRight[i], double.PositiveInfinity);
+                        }
+                        for (int j = 0; j < DietProductsListBox.Items.Count; j++)
+                        {
+                            if (i == 0)
+                            {
+                                objective.SetCoefficient(foods[j], systemLeft[i, j]);                      
+                            }
+                            constraint.SetCoefficient(foods[j], systemLeft[i, j]);
+                        }
+                        constraints.Add(constraint);
                     }
-                    Trace.WriteLine($"Number of constraints = {solver.NumConstraints()}");
+                    objective.SetMinimization();
+                    Solver.ResultStatus resultStatus = solver.Solve();
+                    if (resultStatus == Solver.ResultStatus.INFEASIBLE)
+                    {
+                        ErrorForm ErrorForm = new ErrorForm();
+                        ErrorForm.ErrorLabel.Text = "Рацион с таким набором продуктов и доступным бюджетом составить нельзя.";
+                        ErrorForm.ShowDialog();
+                    }
+                    else
+                    {
+                        double[] solveResult = new double[DietProductsListBox.Items.Count];
+                        string dietReady = "";
+                        for (int i = 0; i < foods.Count; ++i)
+                        {
+                            dietReady += $"{DietProductsListBox.Items[i]} - {foods[i].SolutionValue():N3} кг\n\n";
+                        }
+                        MessageFormLarge TaskResultForm = new MessageFormLarge();
+                        TaskResultForm.LabelText.Text = dietReady;
+                        TaskResultForm.Text = "Результат решения задачи";
+                        TaskResultForm.ShowDialog();
+                    }
                 }
                 else
                 {
-                    ErrorFormLarge ErrorFormIncompatible = new ErrorFormLarge();
-                    ErrorFormIncompatible.ErrorLabel.Text = notCompatibleMessagesString;
-                    ErrorFormIncompatible.Text = "Найдены несовместимые продукты.";
+                    MessageFormLarge ErrorFormIncompatible = new MessageFormLarge();
+                    ErrorFormIncompatible.LabelText.Text = notCompatibleMessagesString;
+                    ErrorFormIncompatible.Text = "Найдены несовместимые продукты";
                     ErrorFormIncompatible.ShowDialog();
                 }
                 Program.sqlConnection.Close();
