@@ -176,9 +176,26 @@ namespace DietProject
         {
             Program.sqlConnection.Open();
             KECheck result = new KECheck();
-            SqlCommand countNullFV = new SqlCommand("SELECT COUNT(*) FROM ProductsFeaturesValues WHERE Value IS NULL;", Program.sqlConnection);
-            int countNullFVRes = (int)countNullFV.ExecuteScalar();
-            if (countNullFVRes > 0)
+            SqlCommand countFV = new SqlCommand("SELECT COUNT(*) FROM ProductsFeaturesValues;", Program.sqlConnection);
+            int countFVRes = (int)countFV.ExecuteScalar();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT Id FROM Features;", Program.sqlConnection);
+            DataTable FeaturesTable = new DataTable();
+            adapter.Fill(FeaturesTable);
+            List<int> FeaturesIdList = FeaturesTable.AsEnumerable().Select(n => n.Field<int>(0)).ToList();
+            bool errorFlag = false;
+            foreach (var featureId in FeaturesIdList)
+            {
+                SqlCommand countFDofFeature = new SqlCommand("SELECT COUNT(*) FROM FeatureDescriptions WHERE FeatureId = " + featureId + ";", Program.sqlConnection);
+                int countFDofFeatureRes = (int)countFDofFeature.ExecuteScalar();
+                SqlCommand countFVOfFeature = new SqlCommand("SELECT COUNT(*) FROM ProductsFeaturesValues WHERE FeatureId = " + featureId + ";", Program.sqlConnection);
+                int countFVOfFeatureRes = (int)countFVOfFeature.ExecuteScalar();
+                if (countFDofFeatureRes != countFVOfFeatureRes)
+                {
+                    errorFlag = true;
+                    break;
+                }
+            }
+            if (countFVRes > 0 || errorFlag)
             {
                 result.ResultCheck = false;
                 result.MessageCheck = "Не все значения признаков продуктов из признаковых описаний продуктов были заданы.\n\n";
