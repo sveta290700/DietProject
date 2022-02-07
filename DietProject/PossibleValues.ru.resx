@@ -69,10 +69,13 @@
     <value>NoControl</value>
   </data>
   <data name="PVSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>553, 297</value>
+    <value>794, 499</value>
+  </data>
+  <data name="PVSaveButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PVSaveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 38</value>
+    <value>173, 63</value>
   </data>
   <data name="PVSaveButton.Text" xml:space="preserve">
     <value>Сохранить</value>
@@ -84,10 +87,13 @@
     <value>NoControl</value>
   </data>
   <data name="PVFeaturesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 65</value>
+    <value>79, 137</value>
+  </data>
+  <data name="PVFeaturesLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="PVFeaturesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 24</value>
+    <value>515, 39</value>
   </data>
   <data name="PVFeaturesLabel.Text" xml:space="preserve">
     <value>Выберите признак продуктов:</value>
@@ -97,13 +103,16 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PVFeaturesListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>32</value>
   </data>
   <data name="PVFeaturesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 92</value>
+    <value>79, 182</value>
+  </data>
+  <data name="PVFeaturesListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PVFeaturesListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 256</value>
+    <value>514, 420</value>
   </data>
   <data name="PVValuesLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
@@ -112,10 +121,13 @@
     <value>NoControl</value>
   </data>
   <data name="PVValuesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>495, 124</value>
+    <value>707, 221</value>
+  </data>
+  <data name="PVValuesLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="PVValuesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 25</value>
+    <value>338, 40</value>
   </data>
   <data name="PVValuesLabel.Text" xml:space="preserve">
     <value>Границы интервала</value>
@@ -130,10 +142,13 @@
     <value>NoControl</value>
   </data>
   <data name="PVFromLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>500, 178</value>
+    <value>714, 310</value>
+  </data>
+  <data name="PVFromLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="PVFromLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 21</value>
+    <value>47, 32</value>
   </data>
   <data name="PVFromLabel.Text" xml:space="preserve">
     <value>От:</value>
@@ -148,10 +163,13 @@
     <value>NoControl</value>
   </data>
   <data name="PVToLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 68</value>
+    <value>6, 133</value>
+  </data>
+  <data name="PVToLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="PVToLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 21</value>
+    <value>50, 32</value>
   </data>
   <data name="PVToLabel.Text" xml:space="preserve">
     <value>До:</value>
@@ -160,10 +178,13 @@
     <value>True</value>
   </data>
   <data name="PVFromCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>622, 181</value>
+    <value>223, 44</value>
+  </data>
+  <data name="PVFromCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PVFromCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 19</value>
+    <value>109, 29</value>
   </data>
   <data name="PVFromCheckbox.Text" xml:space="preserve">
     <value>Включая</value>
@@ -175,34 +196,52 @@
     <value>NoControl</value>
   </data>
   <data name="PVToCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>621, 236</value>
+    <value>223, 135</value>
+  </data>
+  <data name="PVToCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PVToCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 19</value>
+    <value>109, 29</value>
   </data>
   <data name="PVToCheckbox.Text" xml:space="preserve">
     <value>Включая</value>
   </data>
   <data name="PVFromNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>538, 179</value>
+    <value>769, 312</value>
+  </data>
+  <data name="PVFromNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PVFromNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 23</value>
+    <value>138, 31</value>
   </data>
   <data name="PVToNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>538, 233</value>
+    <value>769, 402</value>
+  </data>
+  <data name="PVToNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PVToNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 23</value>
+    <value>138, 31</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>495, 152</value>
+  <data name="PVBorderPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>707, 267</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 125</value>
+  <data name="PVBorderPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="PVBorderPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 207</value>
+  </data>
+  <data name="PVBorderPanel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 25</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1143, 750</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -65,8 +65,14 @@
   <data name="ProductsNamesLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="ProductsNamesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 80</value>
+  </data>
+  <data name="ProductsNamesLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="ProductsNamesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 24</value>
+    <value>578, 39</value>
   </data>
   <data name="ProductsNamesLabel.Text" xml:space="preserve">
     <value>Продукты</value>
@@ -76,10 +82,16 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PNProductsNamesListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>32</value>
+  </data>
+  <data name="PNProductsNamesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 122</value>
+  </data>
+  <data name="PNProductsNamesListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PNProductsNamesListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 235</value>
+    <value>577, 388</value>
   </data>
   <data name="PNAddButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -90,8 +102,14 @@
   <data name="PNAddButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="PNAddButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 605</value>
+  </data>
+  <data name="PNAddButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="PNAddButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 38</value>
+    <value>139, 63</value>
   </data>
   <data name="PNAddButton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -108,8 +126,14 @@
   <data name="PNDeleteButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="PNDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>844, 605</value>
+  </data>
+  <data name="PNDeleteButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="PNDeleteButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 38</value>
+    <value>139, 63</value>
   </data>
   <data name="PNDeleteButton.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -120,8 +144,20 @@
   <data name="ProductNameTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
+  <data name="ProductNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>181, 620</value>
+  </data>
+  <data name="ProductNameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="ProductNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 29</value>
+    <value>348, 39</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 25</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1143, 750</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2884,5 +2920,8 @@
         AAAAoQAAALMAAAC2AAAAMwAAAAAAAAAAAAAAAAAAAADwjwAA8I8AAPAvAADwLwAA8C8AAPCPAADwjwAA
         8I8AAPCHAADgJwAA5jcAAOA3AADgJwAA4CcAAOAHAADgDwAA
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
 </root>

@@ -68,8 +68,14 @@
   <data name="FDUnselectButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="FDUnselectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 397</value>
+  </data>
+  <data name="FDUnselectButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="FDUnselectButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 30</value>
+    <value>56, 50</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="FDUnselectButton.TabIndex" type="System.Int32, mscorlib">
@@ -87,8 +93,14 @@
   <data name="FDSelectButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="FDSelectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 317</value>
+  </data>
+  <data name="FDSelectButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="FDSelectButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 30</value>
+    <value>57, 50</value>
   </data>
   <data name="FDSelectButton.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -96,8 +108,14 @@
   <data name="FDSelectButton.Text" xml:space="preserve">
     <value>&gt;&gt;</value>
   </data>
+  <data name="FDProductsComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 122</value>
+  </data>
+  <data name="FDProductsComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="FDProductsComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 23</value>
+    <value>1107, 33</value>
   </data>
   <data name="FDProductsComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -111,8 +129,14 @@
   <data name="FDSaveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="FDSaveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>486, 631</value>
+  </data>
+  <data name="FDSaveButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="FDSaveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 38</value>
+    <value>182, 63</value>
   </data>
   <data name="FDSaveButton.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -129,8 +153,14 @@
   <data name="FDChoiceLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="FDChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 57</value>
+  </data>
+  <data name="FDChoiceLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="FDChoiceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 21</value>
+    <value>346, 32</value>
   </data>
   <data name="FDChoiceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -144,8 +174,14 @@
   <data name="SelectedFeaturesLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="SelectedFeaturesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>610, 205</value>
+  </data>
+  <data name="SelectedFeaturesLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="SelectedFeaturesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 24</value>
+    <value>515, 39</value>
   </data>
   <data name="SelectedFeaturesLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -157,10 +193,16 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="FDSelectedFeaturesListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>32</value>
+  </data>
+  <data name="FDSelectedFeaturesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>610, 250</value>
+  </data>
+  <data name="FDSelectedFeaturesListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="FDSelectedFeaturesListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 193</value>
+    <value>514, 292</value>
   </data>
   <data name="FDSelectedFeaturesListBox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -171,8 +213,14 @@
   <data name="FDFeaturesLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="FDFeaturesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 205</value>
+  </data>
+  <data name="FDFeaturesLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="FDFeaturesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 24</value>
+    <value>515, 39</value>
   </data>
   <data name="FDFeaturesLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -184,13 +232,25 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="FDFeaturesListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>32</value>
+  </data>
+  <data name="FDFeaturesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 250</value>
+  </data>
+  <data name="FDFeaturesListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="FDFeaturesListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 193</value>
+    <value>514, 292</value>
   </data>
   <data name="FDFeaturesListBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 25</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1143, 750</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2953,5 +3013,8 @@
         AAAAoQAAALMAAAC2AAAAMwAAAAAAAAAAAAAAAAAAAADwjwAA8I8AAPAvAADwLwAA8C8AAPCPAADwjwAA
         8I8AAPCHAADgJwAA5jcAAOA3AADgJwAA4CcAAOAHAADgDwAA
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
 </root>

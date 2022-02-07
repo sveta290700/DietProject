@@ -62,16 +62,15 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="FeatureTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 367</value>
-  </data>
-  <data name="FeatureTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 29</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="FeatureTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>171, 616</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FeatureTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="FeatureTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>325, 39</value>
+  </data>
   <data name="FDeleteButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -82,13 +81,13 @@
     <value>NoControl</value>
   </data>
   <data name="FDeleteButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>584, 364</value>
+    <value>834, 607</value>
+  </data>
+  <data name="FDeleteButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="FDeleteButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 38</value>
-  </data>
-  <data name="FDeleteButton.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>139, 63</value>
   </data>
   <data name="FDeleteButton.Text" xml:space="preserve">
     <value>Удалить</value>
@@ -103,13 +102,13 @@
     <value>NoControl</value>
   </data>
   <data name="FAddButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 364</value>
+    <value>609, 607</value>
+  </data>
+  <data name="FAddButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="FAddButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 38</value>
-  </data>
-  <data name="FAddButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>139, 63</value>
   </data>
   <data name="FAddButton.Text" xml:space="preserve">
     <value>Добавить</value>
@@ -121,13 +120,13 @@
     <value>NoControl</value>
   </data>
   <data name="FeaturesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 49</value>
+    <value>277, 82</value>
+  </data>
+  <data name="FeaturesLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="FeaturesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 24</value>
-  </data>
-  <data name="FeaturesLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>578, 39</value>
   </data>
   <data name="FeaturesLabel.Text" xml:space="preserve">
     <value>Признаки продуктов</value>
@@ -135,17 +134,24 @@
   <data name="FFeaturesListBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="FFeaturesListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>32</value>
   </data>
   <data name="FFeaturesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 74</value>
+    <value>277, 123</value>
+  </data>
+  <data name="FFeaturesListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="FFeaturesListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 235</value>
+    <value>577, 388</value>
   </data>
-  <data name="FFeaturesListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 25</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1143, 750</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2908,5 +2914,8 @@
         AAAAoQAAALMAAAC2AAAAMwAAAAAAAAAAAAAAAAAAAADwjwAA8I8AAPAvAADwLwAA8C8AAPCPAADwjwAA
         8I8AAPCHAADgJwAA5jcAAOA3AADgJwAA4CcAAOAHAADgDwAA
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
 </root>

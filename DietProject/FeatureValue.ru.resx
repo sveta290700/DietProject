@@ -58,14 +58,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="FVProductsNamesComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 155</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FVProductsNamesComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="FVProductsNamesComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>595, 23</value>
+    <value>848, 33</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="FVProductsNamesComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="FVSaveButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -76,10 +82,13 @@
     <value>NoControl</value>
   </data>
   <data name="FVSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>553, 273</value>
+    <value>777, 449</value>
+  </data>
+  <data name="FVSaveButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="FVSaveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 38</value>
+    <value>195, 63</value>
   </data>
   <data name="FVSaveButton.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -96,14 +105,20 @@
   <data name="FVProductNameChoiceLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="FVProductNameChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 88</value>
+  </data>
+  <data name="FVProductNameChoiceLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="FVProductNameChoiceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 21</value>
+    <value>346, 32</value>
   </data>
   <data name="FVProductNameChoiceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="FVProductNameChoiceLabel.Text" xml:space="preserve">
-    <value>Выберите название продукт:а</value>
+    <value>Выберите название продукта:</value>
   </data>
   <data name="FVFeaturesLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
@@ -111,8 +126,14 @@
   <data name="FVFeaturesLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="FVFeaturesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 235</value>
+  </data>
+  <data name="FVFeaturesLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="FVFeaturesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 24</value>
+    <value>515, 39</value>
   </data>
   <data name="FVFeaturesLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -124,10 +145,16 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="FVFeaturesListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>32</value>
+  </data>
+  <data name="FVFeaturesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 280</value>
+  </data>
+  <data name="FVFeaturesListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="FVFeaturesListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 193</value>
+    <value>514, 292</value>
   </data>
   <data name="FVFeaturesListBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -141,8 +168,14 @@
   <data name="FVValueChoiceLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="FVValueChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>760, 307</value>
+  </data>
+  <data name="FVValueChoiceLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="FVValueChoiceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 21</value>
+    <value>240, 32</value>
   </data>
   <data name="FVValueChoiceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -151,10 +184,19 @@
     <value>Выберите значение:</value>
   </data>
   <data name="FVNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>552, 227</value>
+    <value>789, 381</value>
+  </data>
+  <data name="FVNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="FVNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
+    <value>165, 31</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 25</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1143, 750</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

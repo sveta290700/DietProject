@@ -66,10 +66,13 @@
     <value>NoControl</value>
   </data>
   <data name="PCProductsNamesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 123</value>
+    <value>23, 205</value>
+  </data>
+  <data name="PCProductsNamesLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="PCProductsNamesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 24</value>
+    <value>515, 39</value>
   </data>
   <data name="PCProductsNamesLabel.Text" xml:space="preserve">
     <value>Названия продуктов</value>
@@ -79,13 +82,16 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PCProductsNamesListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>32</value>
   </data>
   <data name="PCProductsNamesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 150</value>
+    <value>23, 250</value>
+  </data>
+  <data name="PCProductsNamesListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PCProductsNamesListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 193</value>
+    <value>514, 292</value>
   </data>
   <data name="ProductsCategoryLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
@@ -94,10 +100,13 @@
     <value>NoControl</value>
   </data>
   <data name="ProductsCategoryLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>427, 123</value>
+    <value>610, 205</value>
+  </data>
+  <data name="ProductsCategoryLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="ProductsCategoryLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 24</value>
+    <value>515, 39</value>
   </data>
   <data name="ProductsCategoryLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -109,13 +118,16 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="PCProductsCategoryListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>32</value>
   </data>
   <data name="PCProductsCategoryListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>427, 150</value>
+    <value>610, 250</value>
+  </data>
+  <data name="PCProductsCategoryListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PCProductsCategoryListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 193</value>
+    <value>514, 292</value>
   </data>
   <data name="PCProductsCategoryListBox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -130,10 +142,13 @@
     <value>NoControl</value>
   </data>
   <data name="PCSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 379</value>
+    <value>485, 632</value>
+  </data>
+  <data name="PCSaveButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PCSaveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 38</value>
+    <value>174, 63</value>
   </data>
   <data name="PCSaveButton.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -151,10 +166,13 @@
     <value>NoControl</value>
   </data>
   <data name="PCChoiceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 34</value>
+    <value>16, 57</value>
+  </data>
+  <data name="PCChoiceLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="PCChoiceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 21</value>
+    <value>376, 32</value>
   </data>
   <data name="PCChoiceLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -163,10 +181,13 @@
     <value>Выберите категорию продуктов:</value>
   </data>
   <data name="PCCategoriesComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 73</value>
+    <value>20, 122</value>
+  </data>
+  <data name="PCCategoriesComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PCCategoriesComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 23</value>
+    <value>1107, 33</value>
   </data>
   <data name="PCCategoriesComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -181,10 +202,13 @@
     <value>NoControl</value>
   </data>
   <data name="PCSelectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>383, 190</value>
+    <value>547, 317</value>
+  </data>
+  <data name="PCSelectButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PCSelectButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 30</value>
+    <value>57, 50</value>
   </data>
   <data name="PCSelectButton.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -202,16 +226,25 @@
     <value>NoControl</value>
   </data>
   <data name="PCUnselectButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>383, 238</value>
+    <value>547, 397</value>
+  </data>
+  <data name="PCUnselectButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PCUnselectButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 30</value>
+    <value>56, 50</value>
   </data>
   <data name="PCUnselectButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="PCUnselectButton.Text" xml:space="preserve">
     <value>&lt;&lt;</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 25</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1143, 750</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2974,5 +3007,8 @@
         AAAAoQAAALMAAAC2AAAAMwAAAAAAAAAAAAAAAAAAAADwjwAA8I8AAPAvAADwLwAA8C8AAPCPAADwjwAA
         8I8AAPCHAADgJwAA5jcAAOA3AADgJwAA4CcAAOAHAADgDwAA
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
 </root>

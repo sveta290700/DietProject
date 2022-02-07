@@ -40,10 +40,10 @@ namespace DietProject
             this.PVToCheckbox = new System.Windows.Forms.CheckBox();
             this.PVFromNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.PVToNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.PVBorderPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PVFromNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PVToNumericUpDown)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.PVBorderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // PVSaveButton
@@ -140,12 +140,14 @@ namespace DietProject
             this.PVToNumericUpDown.Name = "PVToNumericUpDown";
             this.PVToNumericUpDown.TabStop = false;
             // 
-            // panel1
+            // PVBorderPanel
             // 
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.PVToLabel);
-            this.panel1.Name = "panel1";
+            resources.ApplyResources(this.PVBorderPanel, "PVBorderPanel");
+            this.PVBorderPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PVBorderPanel.Controls.Add(this.PVToLabel);
+            this.PVBorderPanel.Controls.Add(this.PVFromCheckbox);
+            this.PVBorderPanel.Controls.Add(this.PVToCheckbox);
+            this.PVBorderPanel.Name = "PVBorderPanel";
             // 
             // PossibleValues
             // 
@@ -154,14 +156,12 @@ namespace DietProject
             this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.PVToNumericUpDown);
             this.Controls.Add(this.PVFromNumericUpDown);
-            this.Controls.Add(this.PVToCheckbox);
-            this.Controls.Add(this.PVFromCheckbox);
             this.Controls.Add(this.PVFromLabel);
             this.Controls.Add(this.PVValuesLabel);
             this.Controls.Add(this.PVSaveButton);
             this.Controls.Add(this.PVFeaturesLabel);
             this.Controls.Add(this.PVFeaturesListBox);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PVBorderPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -169,8 +169,8 @@ namespace DietProject
             this.Load += new System.EventHandler(this.PossibleValues_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PVFromNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PVToNumericUpDown)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.PVBorderPanel.ResumeLayout(false);
+            this.PVBorderPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,6 +188,6 @@ namespace DietProject
         private System.Windows.Forms.CheckBox PVToCheckbox;
         private System.Windows.Forms.NumericUpDown PVFromNumericUpDown;
         private System.Windows.Forms.NumericUpDown PVToNumericUpDown;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PVBorderPanel;
     }
 }
