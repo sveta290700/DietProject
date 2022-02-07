@@ -8,7 +8,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Linq;
 using Google.OrTools.LinearSolver;
-using System.Diagnostics;
 
 namespace DietProject
 {

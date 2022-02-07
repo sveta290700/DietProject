@@ -85,7 +85,7 @@ namespace DietProject
             if (countCompatibleCategoriesRes == 0)
             {
                 result.ResultCheck = false;
-                result.MessageCheck = "Не задано ни одного отношения совместимости категорий продуктов.\n\n";
+                result.MessageCheck = "Нет хотя бы одной пары совместимых категорий продуктов.\n\n";
                 ErrorsList.Add(result);
             }
             Program.sqlConnection.Close();
