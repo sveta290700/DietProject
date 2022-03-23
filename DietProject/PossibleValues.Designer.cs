@@ -41,6 +41,8 @@ namespace DietProject
             this.PVFromNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.PVToNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.PVBorderPanel = new System.Windows.Forms.Panel();
+            this.PVSizeToLabel = new System.Windows.Forms.Label();
+            this.PVSizeFromLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PVFromNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PVToNumericUpDown)).BeginInit();
             this.PVBorderPanel.SuspendLayout();
@@ -144,19 +146,31 @@ namespace DietProject
             // 
             resources.ApplyResources(this.PVBorderPanel, "PVBorderPanel");
             this.PVBorderPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PVBorderPanel.Controls.Add(this.PVSizeToLabel);
+            this.PVBorderPanel.Controls.Add(this.PVSizeFromLabel);
+            this.PVBorderPanel.Controls.Add(this.PVToNumericUpDown);
             this.PVBorderPanel.Controls.Add(this.PVToLabel);
+            this.PVBorderPanel.Controls.Add(this.PVFromNumericUpDown);
             this.PVBorderPanel.Controls.Add(this.PVFromCheckbox);
+            this.PVBorderPanel.Controls.Add(this.PVFromLabel);
             this.PVBorderPanel.Controls.Add(this.PVToCheckbox);
             this.PVBorderPanel.Name = "PVBorderPanel";
+            // 
+            // PVSizeToLabel
+            // 
+            resources.ApplyResources(this.PVSizeToLabel, "PVSizeToLabel");
+            this.PVSizeToLabel.Name = "PVSizeToLabel";
+            // 
+            // PVSizeFromLabel
+            // 
+            resources.ApplyResources(this.PVSizeFromLabel, "PVSizeFromLabel");
+            this.PVSizeFromLabel.Name = "PVSizeFromLabel";
             // 
             // PossibleValues
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.Controls.Add(this.PVToNumericUpDown);
-            this.Controls.Add(this.PVFromNumericUpDown);
-            this.Controls.Add(this.PVFromLabel);
             this.Controls.Add(this.PVValuesLabel);
             this.Controls.Add(this.PVSaveButton);
             this.Controls.Add(this.PVFeaturesLabel);
@@ -172,7 +186,6 @@ namespace DietProject
             this.PVBorderPanel.ResumeLayout(false);
             this.PVBorderPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -189,5 +202,7 @@ namespace DietProject
         private System.Windows.Forms.NumericUpDown PVFromNumericUpDown;
         private System.Windows.Forms.NumericUpDown PVToNumericUpDown;
         private System.Windows.Forms.Panel PVBorderPanel;
+        private System.Windows.Forms.Label PVSizeToLabel;
+        private System.Windows.Forms.Label PVSizeFromLabel;
     }
 }

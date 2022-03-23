@@ -34,6 +34,7 @@ namespace DietProject
             this.DNSubstanceComboBox = new System.Windows.Forms.ComboBox();
             this.DNAddButton = new System.Windows.Forms.Button();
             this.DNSubstanceChoiceLabel = new System.Windows.Forms.Label();
+            this.DNSizeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DNNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,11 +79,17 @@ namespace DietProject
             resources.ApplyResources(this.DNSubstanceChoiceLabel, "DNSubstanceChoiceLabel");
             this.DNSubstanceChoiceLabel.Name = "DNSubstanceChoiceLabel";
             // 
+            // DNSizeLabel
+            // 
+            resources.ApplyResources(this.DNSizeLabel, "DNSizeLabel");
+            this.DNSizeLabel.Name = "DNSizeLabel";
+            // 
             // DayNorms
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.DNSizeLabel);
             this.Controls.Add(this.DNNumericUpDown);
             this.Controls.Add(this.DNSubstanceComboBox);
             this.Controls.Add(this.DNAddButton);
@@ -103,5 +110,6 @@ namespace DietProject
         private System.Windows.Forms.ComboBox DNSubstanceComboBox;
         private System.Windows.Forms.Button DNAddButton;
         private System.Windows.Forms.Label DNSubstanceChoiceLabel;
+        private System.Windows.Forms.Label DNSizeLabel;
     }
 }

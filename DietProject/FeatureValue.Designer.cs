@@ -37,6 +37,7 @@ namespace DietProject
             this.FVFeaturesListBox = new System.Windows.Forms.ListBox();
             this.FVValueChoiceLabel = new System.Windows.Forms.Label();
             this.FVNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.FVSizeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.FVNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,11 +102,17 @@ namespace DietProject
             this.FVNumericUpDown.Name = "FVNumericUpDown";
             this.FVNumericUpDown.TabStop = false;
             // 
+            // FVSizeLabel
+            // 
+            resources.ApplyResources(this.FVSizeLabel, "FVSizeLabel");
+            this.FVSizeLabel.Name = "FVSizeLabel";
+            // 
             // FeatureValue
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.FVSizeLabel);
             this.Controls.Add(this.FVNumericUpDown);
             this.Controls.Add(this.FVValueChoiceLabel);
             this.Controls.Add(this.FVProductsNamesComboBox);
@@ -132,5 +139,6 @@ namespace DietProject
         private System.Windows.Forms.ListBox FVFeaturesListBox;
         private System.Windows.Forms.Label FVValueChoiceLabel;
         private System.Windows.Forms.NumericUpDown FVNumericUpDown;
+        private System.Windows.Forms.Label FVSizeLabel;
     }
 }

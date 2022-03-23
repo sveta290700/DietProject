@@ -40,7 +40,7 @@
     <Compile Update="ProductsNames.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TaskDataInput.cs">
+    <Compile Update="TaskSolver.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="WaterMarkTextBox.cs">

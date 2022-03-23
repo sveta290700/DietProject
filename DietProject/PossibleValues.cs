@@ -101,8 +101,19 @@ namespace DietProject
         {
             if (PVFeaturesListBox.SelectedIndex != -1)
             {
-                Program.sqlConnection.Open();
                 DataRowView feature = (DataRowView)PVFeaturesListBox.SelectedItem;
+                string featureName = feature.Row[1].ToString();
+                if (featureName == "стоимость за 1 кг продукта")
+                {
+                    PVSizeFromLabel.Text = "руб";
+                    PVSizeToLabel.Text = "руб";
+                }
+                else
+                {
+                    PVSizeFromLabel.Text = "кг";
+                    PVSizeToLabel.Text = "кг";
+                }
+                Program.sqlConnection.Open();
                 int featId = (int)feature.Row[0];
                 SqlCommand getLow = new SqlCommand("SELECT Low FROM PossibleFeaturesValues WHERE FeatureId = " + featId + ";", Program.sqlConnection);
                 object getLowRes = getLow.ExecuteScalar();

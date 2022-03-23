@@ -260,8 +260,8 @@ namespace DietProject
             }
             else 
             {
-                TaskDataInput TaskDataInput = new TaskDataInput();
-                TaskDataInput.ShowDialog();
+                TaskSolver TaskSolver = new TaskSolver();
+                TaskSolver.ShowDialog();
             }
         }
     }

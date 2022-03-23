@@ -41,9 +41,18 @@ namespace DietProject
         {
             if (FVFeaturesListBox.SelectedIndex != -1)
             {
+                DataRowView itemFeat = (DataRowView)FVFeaturesListBox.SelectedItem;
+                string featureName = itemFeat.Row[1].ToString();
+                if (featureName == "стоимость за 1 кг продукта")
+                {
+                    FVSizeLabel.Text = "руб";
+                }
+                else
+                {
+                    FVSizeLabel.Text = "кг";
+                }
                 DataRowView itemProd = (DataRowView)FVProductsNamesComboBox.SelectedItem;
                 int selectedProductId = (int)itemProd.Row[0];
-                DataRowView itemFeat = (DataRowView)FVFeaturesListBox.SelectedItem;
                 int selectedFeatureId = (int)itemFeat.Row[0];
                 Program.sqlConnection.Open();
                 SqlCommand getValue = new SqlCommand("SELECT Value FROM ProductsFeaturesValues WHERE ProductId = " + selectedProductId + " AND FeatureId = " + selectedFeatureId + ";", Program.sqlConnection);

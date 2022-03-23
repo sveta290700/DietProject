@@ -82,7 +82,7 @@
     <value>NoControl</value>
   </data>
   <data name="FVSaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>777, 449</value>
+    <value>781, 449</value>
   </data>
   <data name="FVSaveButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -91,7 +91,7 @@
     <value>195, 63</value>
   </data>
   <data name="FVSaveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="FVSaveButton.Text" xml:space="preserve">
     <value>Сохранить</value>
@@ -184,13 +184,31 @@
     <value>Выберите значение:</value>
   </data>
   <data name="FVNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>789, 381</value>
+    <value>777, 382</value>
   </data>
   <data name="FVNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
   <data name="FVNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 31</value>
+  </data>
+  <data name="FVSizeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FVSizeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="FVSizeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="FVSizeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="FVSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 32</value>
+  </data>
+  <data name="FVSizeLabel.Text" xml:space="preserve">
+    <value>кг</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>10, 25</value>
