@@ -134,7 +134,7 @@ namespace DietProject
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // TaskDataInput
+            // TaskSolver
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,7 +151,7 @@ namespace DietProject
             this.Controls.Add(this.DTProductsNamesListBox);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "TaskDataInput";
+            this.Name = "TaskSolver";
             this.Load += new System.EventHandler(this.TaskDataInput_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PVFromNumericUpDown)).EndInit();
             this.ResumeLayout(false);

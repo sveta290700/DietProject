@@ -100,7 +100,7 @@
     <value>447, 80</value>
   </data>
   <data name="ButtonToTS.Text" xml:space="preserve">
-    <value>Решатель задачи</value>
+    <value>Система решения задачи</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>10, 25</value>
