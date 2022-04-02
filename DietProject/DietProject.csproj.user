@@ -10,7 +10,7 @@
     <Compile Update="DayNorms.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ErrorForm.cs">
+    <Compile Update="MessageFormSmall.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MessageFormLarge.cs">

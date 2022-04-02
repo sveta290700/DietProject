@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
@@ -260,6 +261,10 @@ namespace DietProject
             }
             else 
             {
+                MessageFormSmall OKFormIntegrity = new MessageFormSmall();
+                OKFormIntegrity.LabelText.Text = "Проверка целостности базы знаний прошла успешно.\nЗакройте это окно для дальнейшей работы.";
+                OKFormIntegrity.Text = "Проверка целостности базы знаний";
+                OKFormIntegrity.ShowDialog();
                 TaskSolver TaskSolver = new TaskSolver();
                 TaskSolver.ShowDialog();
             }

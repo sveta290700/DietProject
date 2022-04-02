@@ -91,8 +91,9 @@ namespace DietProject
             }
             else
             {
-                ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "Нижняя граница интервала не может быть больше верхней.";
+                MessageFormSmall ErrorForm = new MessageFormSmall();
+                ErrorForm.LabelText.Text = "Нижняя граница интервала не может быть больше верхней.";
+                ErrorForm.Text = "Ошибка";
                 ErrorForm.ShowDialog();
             }
         }

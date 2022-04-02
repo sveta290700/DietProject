@@ -23,8 +23,9 @@ namespace DietProject
         {
             if (FeatureTextBox.Text == "")
             {
-                ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "Название признака не может быть пустым.";
+                MessageFormSmall ErrorForm = new MessageFormSmall();
+                ErrorForm.LabelText.Text = "Название признака не может быть пустым.";
+                ErrorForm.Text = "Ошибка";
                 ErrorForm.ShowDialog();
             }
             else
@@ -47,8 +48,9 @@ namespace DietProject
                 }
                 else
                 {
-                    ErrorForm ErrorForm = new ErrorForm();
-                    ErrorForm.ErrorLabel.Text = "Признак продуктов с таким названием уже существует.";
+                    MessageFormSmall ErrorForm = new MessageFormSmall();
+                    ErrorForm.LabelText.Text = "Признак продуктов с таким названием уже существует.";
+                    ErrorForm.Text = "Ошибка";
                     ErrorForm.ShowDialog();
                 }
                 Program.sqlConnection.Close();
@@ -60,8 +62,9 @@ namespace DietProject
             int choice = FFeaturesListBox.SelectedIndex;
             if (choice == -1)
             {
-                ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "Выберите признак продукта.";
+                MessageFormSmall ErrorForm = new MessageFormSmall();
+                ErrorForm.LabelText.Text = "Выберите признак продукта.";
+                ErrorForm.Text = "Ошибка";
                 ErrorForm.ShowDialog();
             }
             else
@@ -70,8 +73,9 @@ namespace DietProject
                 string nameToDelete = item.Row[1].ToString();
                 if (nameToDelete == "стоимость за 1 кг продукта")
                 {
-                    ErrorForm ErrorForm = new ErrorForm();
-                    ErrorForm.ErrorLabel.Text = "Признак стоимости является зафиксированным.\nЕго удаление невозможно.";
+                    MessageFormSmall ErrorForm = new MessageFormSmall();
+                    ErrorForm.LabelText.Text = "Признак стоимости является зафиксированным.\nЕго удаление невозможно.";
+                    ErrorForm.Text = "Ошибка";
                     ErrorForm.ShowDialog();
                 }
                 else

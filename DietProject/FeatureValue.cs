@@ -184,15 +184,17 @@ namespace DietProject
                 }
                 else
                 {
-                    ErrorForm ErrorForm = new ErrorForm();
-                    ErrorForm.ErrorLabel.Text = "Значение лежит вне границ заданного интервала возможных значений выбранного признака " + leftBracket + low + "; " + high + rightBracket + ".";
+                    MessageFormSmall ErrorForm = new MessageFormSmall();
+                    ErrorForm.LabelText.Text = "Значение лежит вне границ заданного интервала возможных значений выбранного признака " + leftBracket + low + "; " + high + rightBracket + ".";
+                    ErrorForm.Text = "Ошибка";
                     ErrorForm.ShowDialog();
                 }
             }
             else
             {
-                ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "Выберите название продукта.";
+                MessageFormSmall ErrorForm = new MessageFormSmall();
+                ErrorForm.LabelText.Text = "Выберите название продукта.";
+                ErrorForm.Text = "Ошибка";
                 ErrorForm.ShowDialog();
             }
         }

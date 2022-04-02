@@ -99,8 +99,9 @@ namespace DietProject
             }
             else
             {
-                ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "Выберите признак-вещество для задания суточной нормы.";
+                MessageFormSmall ErrorForm = new MessageFormSmall();
+                ErrorForm.LabelText.Text = "Выберите признак-вещество для задания суточной нормы.";
+                ErrorForm.Text = "Ошибка";
                 ErrorForm.ShowDialog();
             }
         }

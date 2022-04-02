@@ -23,8 +23,9 @@ namespace DietProject
         {
             if (ProductNameTextBox.Text == "")
             {
-                ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "Название продукта не может быть пустым.";
+                MessageFormSmall ErrorForm = new MessageFormSmall();
+                ErrorForm.LabelText.Text = "Название продукта не может быть пустым.";
+                ErrorForm.Text = "Ошибка";
                 ErrorForm.ShowDialog();
             }
             else
@@ -47,8 +48,9 @@ namespace DietProject
                 }
                 else
                 {
-                    ErrorForm ErrorForm = new ErrorForm();
-                    ErrorForm.ErrorLabel.Text = "Продукт с таким названием уже существует.";
+                    MessageFormSmall ErrorForm = new MessageFormSmall();
+                    ErrorForm.LabelText.Text = "Продукт с таким названием уже существует.";
+                    ErrorForm.Text = "Ошибка";
                     ErrorForm.ShowDialog();
                 }
                 Program.sqlConnection.Close();
@@ -60,8 +62,9 @@ namespace DietProject
             int choice = PNProductsNamesListBox.SelectedIndex;
             if (choice == -1)
             {
-                ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "Выберите название продукта.";
+                MessageFormSmall ErrorForm = new MessageFormSmall();
+                ErrorForm.LabelText.Text = "Выберите название продукта.";
+                ErrorForm.Text = "Ошибка";
                 ErrorForm.ShowDialog();
             }
             else

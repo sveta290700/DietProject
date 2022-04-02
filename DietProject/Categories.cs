@@ -23,8 +23,9 @@ namespace DietProject
         {
             if (CategoryTextBox.Text == "")
             {
-                ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "Название категории не может быть пустым.";
+                MessageFormSmall ErrorForm = new MessageFormSmall();
+                ErrorForm.LabelText.Text = "Название категории не может быть пустым.";
+                ErrorForm.Text = "Ошибка";
                 ErrorForm.ShowDialog();
             }
             else
@@ -47,8 +48,9 @@ namespace DietProject
                 }
                 else
                 {
-                    ErrorForm ErrorForm = new ErrorForm();
-                    ErrorForm.ErrorLabel.Text = "Категория с таким названием уже существует.";
+                    MessageFormSmall ErrorForm = new MessageFormSmall();
+                    ErrorForm.LabelText.Text = "Категория с таким названием уже существует.";
+                    ErrorForm.Text = "Ошибка";
                     ErrorForm.ShowDialog();
                 }
                 Program.sqlConnection.Close();
@@ -60,8 +62,9 @@ namespace DietProject
             int choice = CCategoriesListBox.SelectedIndex;
             if (choice == -1)
             {
-                ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "Выберите название категории.";
+                MessageFormSmall ErrorForm = new MessageFormSmall();
+                ErrorForm.LabelText.Text = "Выберите название категории.";
+                ErrorForm.Text = "Ошибка";
                 ErrorForm.ShowDialog();
             }
             else

@@ -22,8 +22,9 @@ namespace DietProject
             {
                 case -1:
                     {
-                        ErrorForm ErrorForm = new ErrorForm();
-                        ErrorForm.ErrorLabel.Text = "Выберите раздел.";
+                        MessageFormSmall ErrorForm = new MessageFormSmall();
+                        ErrorForm.LabelText.Text = "Выберите раздел.";
+                        ErrorForm.Text = "Ошибка";
                         ErrorForm.ShowDialog();
                         break;
                     }

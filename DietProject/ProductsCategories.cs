@@ -118,8 +118,9 @@ namespace DietProject
             }
             else
             {
-                ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "Выберите категорию продуктов.";
+                MessageFormSmall ErrorForm = new MessageFormSmall();
+                ErrorForm.LabelText.Text = "Выберите категорию продуктов.";
+                ErrorForm.Text = "Ошибка";
                 ErrorForm.ShowDialog();
             }
         }

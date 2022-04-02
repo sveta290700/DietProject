@@ -180,8 +180,9 @@ namespace DietProject
                     Solver.ResultStatus resultStatus = solver.Solve();
                     if (resultStatus == Solver.ResultStatus.INFEASIBLE)
                     {
-                        ErrorForm ErrorForm = new ErrorForm();
-                        ErrorForm.ErrorLabel.Text = "Рацион с таким набором продуктов и доступным бюджетом составить нельзя.";
+                        MessageFormSmall ErrorForm = new MessageFormSmall();
+                        ErrorForm.LabelText.Text = "Рацион с таким набором продуктов и доступным бюджетом составить нельзя.";
+                        ErrorForm.Text = "Ошибка";
                         ErrorForm.ShowDialog();
                     }
                     else
@@ -209,8 +210,9 @@ namespace DietProject
             }
             else
             {
-                ErrorForm ErrorForm = new ErrorForm();
-                ErrorForm.ErrorLabel.Text = "В рацион должен входить хотя бы один продукт.";
+                MessageFormSmall ErrorForm = new MessageFormSmall();
+                ErrorForm.LabelText.Text = "В рацион должен входить хотя бы один продукт.";
+                ErrorForm.Text = "Ошибка";
                 ErrorForm.ShowDialog();
             }
         }

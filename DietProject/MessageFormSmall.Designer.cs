@@ -1,7 +1,7 @@
 ﻿
 namespace DietProject
 {
-    partial class ErrorForm
+    partial class MessageFormSmall
     {
         /// <summary>
         /// Required designer variable.
@@ -29,31 +29,31 @@ namespace DietProject
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ErrorForm));
-            this.ErrorLabel = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageFormSmall));
+            this.LabelText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // ErrorLabel
+            // LabelText
             // 
-            resources.ApplyResources(this.ErrorLabel, "ErrorLabel");
-            this.ErrorLabel.Name = "ErrorLabel";
+            resources.ApplyResources(this.LabelText, "LabelText");
+            this.LabelText.Name = "LabelText";
             // 
-            // ErrorForm
+            // MessageFormSmall
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.Controls.Add(this.ErrorLabel);
+            this.Controls.Add(this.LabelText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ErrorForm";
+            this.Name = "MessageFormSmall";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.Label ErrorLabel;
+        public System.Windows.Forms.Label LabelText;
     }
 }
